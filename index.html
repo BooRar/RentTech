@@ -1,0 +1,5063 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+        <meta charset="utf-8">
+        <title></title>
+
+
+
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+
+
+
+
+        <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons"   rel="stylesheet"-->
+
+
+        <link href="./css/web-fonts/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/bulma.css">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="css/styleEdited.css"> -->
+        <link href="./css2/font-style.css" rel="stylesheet">
+        <link href="./css2/main.css" rel="stylesheet">
+        <link href="./css2/flexslider.css" rel="stylesheet">
+        <link href="./css2/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="./css2/style.css" rel="stylesheet">
+        <link href="./css2/IntegrationStyle.css" media="screen" rel="stylesheet">
+        <link href="./css2/jet-tree-view.css" media="screen" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/lightpick.css">
+        <link rel="stylesheet" type="text/css" href="./css/jet-work-bench.css">
+        <link rel="stylesheet" type="text/css" href="./css/jet-notification.css">
+        <link rel="stylesheet" type="text/css" href="./css/jet-progressbar.css">
+
+        <link rel="stylesheet" type="text/css" href="./css/jet_popin_table.css">
+
+
+
+        <!-- <link rel="stylesheet" href="css4/style-origional.css"> -->
+        <!-- <link rel="stylesheet" href="css4/style.css"> -->
+        <style media="screen">
+        .tree:before {
+                z-index: -1;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100px;
+                height: 100px;
+                background: red;
+                transform-origin: 0 0;
+                transition: all 8s;
+        }
+</style>
+<style media="screen">
+#maincontent {
+        display: inline-block;;
+        vertical-align: middle;
+}
+
+#overlayme {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        /* background: #16191c; */
+        background: #fff;
+        background: linear-gradient(to right bottom, #fff, #0E59A3);
+        border: 3px solid  #0E59A3;
+        /* margin-right: :15px; */
+        width: 100%;
+        height: 100%;
+        z-index:10;
+        visibility: hidden;
+        transition: all 1s ease;
+
+
+        background: linear-gradient(224deg, #01347b, #095da1, #f7f7f7);
+
+}
+#overlaySoft {
+        position: absolute;
+        opacity: 0.3;
+        top: 0;
+        bottom: 0;
+        /* background: #16191c; */
+        background: #fff;
+        background: linear-gradient(to  bottom, #000, #0E59A3);
+        border: 3px solid  #0E59A3;
+        /* margin-right: :15px; */
+        width: 100%;
+        height: 100%;
+        z-index:10;
+        visibility: hidden;
+        transition: all 1s ease;
+
+
+        /* background: linear-gradient(224deg, #01347b, #095da1, #f7f7f7); */
+
+}
+.popup {
+        position: absolute;
+        top: 50%;
+        /* left: calc(50% + 50px); */
+        /*  background: #fff;*/
+        width: 400px;
+        /* height: 400px; */
+        /* margin-left: -250px; /*Half the value of width to center div*/
+        margin-top: -250px; /*Half the value of height to center div*/
+        z-index: -1;
+        visibility: hidden;
+}
+#popupclose {
+
+        cursor: pointer;
+}
+
+#button {
+        cursor: pointer;
+}
+
+.popup[data-pop="pop-in"] {
+        transform: scale(0);
+        -webkit-transition: all .15s ease-in-out;
+        transition: all .15s ease-in-out;
+        /*  transition: all .2s ease-in-out;*/
+}
+.popup[data-pop="pop-in"].show {
+        transform: scale(1);
+        visibility: visible;
+        z-index: 200;
+        opacity: 1;
+}
+.popup[data-pop="pop-in"].showEmbeded {
+        transform: scale(1);
+        visibility: visible;
+        z-index: 2;
+        opacity: 1;
+}
+#overlayme.show {
+        opacity: .8;
+        visibility: visible;
+        z-index: 100;
+
+
+}
+#overlaySoft.show {
+        opacity: .5;
+        visibility: visible;
+        z-index: 100;
+
+
+}
+
+
+.startHeader{
+        width: 100%;
+        text-align: center;
+        color: #DFDFDF;
+        background: none;
+        padding-top: 65px;
+
+}
+
+.credits{
+        display: block;
+
+        text-align: center;
+        color: #D6D6D6;
+        font-size: 13px;
+
+}
+.in {
+        background-color: #0f5cd091;
+}
+strong {
+        color: #ffffff;
+        font-weight: 700;
+}
+
+
+
+/*grid test EXPERIMENTAL */
+/* Grid row styles */
+.row-grid {
+        margin: 10px;
+        /* margin: 40px auto; */
+        /* max-width: 400px; */
+        display: grid;
+        grid-gap: 29px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.row-grid .grid-item {
+
+        border: 1px solid #0079F1;
+        border-radius: 5px;
+        /* text-align: center; */
+        color: #27cafb;
+        padding: 10px;
+        box-shadow: 2px 2px 5px 0px #000000;
+        background-color: #187fe621;
+        transition: all .15s ease-in-out;
+}
+.row-grid .grid-item:hover
+{
+
+        background-color: #187fe6a8;
+        box-shadow: 2px 2px 6px 0px #000000;
+        transition: all .15s ease-in-out;
+}
+.row-grid .inlet {
+
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+        grid-gap: 10px;
+        /* text-align: center; */
+
+}
+.row-grid .plain{
+        padding: 2px 4px;
+        text-align: left;
+        MARGIN-TOP: 10PX;
+}
+
+.row-grid .timestamp {
+        border: 1px solid #0079F1;
+        border-radius: 5px;
+        /* text-align: center; */
+
+
+        box-shadow: 2px 2px 5px 0px #000000;
+        background-color: #187fe621;
+        transition: all .15s ease-in-out;
+        color: white;
+        /* border-top: 1px solid #a80; */
+        padding: 2px 4px;
+        text-align: right;
+        MARGIN-TOP: 10PX;
+}
+
+
+.or {
+        width: 100%;
+        margin: .1em auto;
+        overflow: hidden;
+        text-align: center;
+        font-weight:300;
+        color: #3090ff;
+}
+.or:before, .or:after {
+        content: "";
+        display: inline-block;
+        width: 50%;
+        margin: 0 .5em 0 -55%;
+        vertical-align: middle;
+        border-bottom: 2px solid;
+}
+.or:after {
+        margin: 0 -55% 0 .5em;
+}
+
+
+/* Table Manipulator*/
+td.vert-cell {
+        display: block;
+}
+/* Hide table headers (but not display: none;, for accessibility) */
+
+th.vert-cell,
+.hide {
+        /* position: absolute;
+        top: -9999px;
+        left: -9999px; */
+        display: none;
+}
+
+td.vert-cell {
+        /* Behave  like a "row" */
+        border: none;
+        /* border-top: 1px solid #ccc; */
+        /* border-right: 1px solid #ccc; */
+        position: relative;
+        padding-left: 20%;
+        text-align: -webkit-right;
+        min-width: 420px;
+}
+
+td.vert-cell:before {
+        /* Now like a table header */
+
+        position: absolute;
+        /* top: 6px; */
+        left: 6px;
+        width: 15%;
+        /* padding-right: 10px; */
+        white-space: nowrap;
+        text-align: -webkit-left;
+}
+
+
+
+th.hidden-header:before {
+        content: "More stuff";
+}
+
+
+
+</style>
+
+
+
+
+</head>
+
+<body class="platform-win32  theme-dark blueTheme">
+
+
+
+
+        <div class="" id="desktop-app-title-bar">
+                <div class="resize-handle top"></div>
+                <div class="resize-handle left"></div>
+                <svg aria-hidden="true" class="octicon app-icon" version="1.1" viewBox="0 0 60 60">
+                        <path d="M 30.658203 0.80664062 A 29.7995 29.7995 0 0 0 0.859375 30.605469 A 29.7995 29.7995 0 0 0 30.658203 60.404297 A 29.7995 29.7995 0 0 0 60.458984 30.605469 A 29.7995 29.7995 0 0 0 30.658203 0.80664062 z M 49.160156 19.048828 L 49.205078 23.767578 L 32.101562 23.810547 L 32.011719 19.091797 L 49.160156 19.048828 z M 29.175781 19.132812 L 29.175781 42.304688 L 28.140625 44.492188 L 25.708984 46.980469 L 23.728516 47.710938 L 17.607422 47.796875 L 15.582031 46.939453 L 13.376953 44.664062 L 12.027344 41.488281 L 12.027344 40.029297 L 16.978516 39.988281 L 17.023438 41.574219 L 17.742188 42.5625 L 18.914062 43.205078 L 22.558594 43.291016 L 23.820312 42.5625 L 24.404297 41.574219 L 24.179688 23.896484 L 14.546875 23.939453 L 14.501953 19.175781 L 29.175781 19.132812 z M 32.101562 31.482422 L 46.279297 31.492188 L 46.234375 35.783203 L 32.236328 35.816406 L 32.101562 31.482422 z"></path>
+                </svg>
+                <!--
+                ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        -->
+
+        <div id="app-menu-bar" role="menubar" aria-label="Application menu">
+
+        </div>
+        <!--
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-->
+<div class="window-controls">
+        <button id='min-btn' aria-label="Minimize" tabindex="-1" class="window-control minimize">
+                <svg aria-hidden="true" version="1.1" width="10" height="10">
+                        <path d="M 0,5 10,5 10,6 0,6 Z"></path>
+                </svg>
+        </button>
+        <button  id='max-btn' aria-label="Maximize" tabindex="-1" class="window-control maximize">
+                <svg aria-hidden="true" version="1.1" width="10" height="10">
+                        <path d="M 0,0 0,10 10,10 10,0 Z M 1,1 9,1 9,9 1,9 Z"></path>
+                </svg>
+        </button>
+        <button id='close-btn' aria-label="Close" tabindex="-1" class="window-control close">
+                <svg aria-hidden="true" version="1.1" width="10" height="10">
+                        <path d="M 0,0 0,0.7 4.3,5 0,9.3 0,10 0.7,10 5,5.7 9.3,10 10,10 10,9.3 5.7,5 10,0.7 10,0 9.3,0 5,4.3 0.7,0 Z"></path>
+                </svg>
+        </button>
+</div>
+</div>
+
+
+
+<div class="foo" style="">
+
+</div>
+
+<!-- <script src="resizerPanel.js"></script> -->
+<script type="text/javascript">
+
+
+
+
+
+</script>
+<div id="wholescreen">
+
+
+        <div id="overlayme" class="overlayme" data-pop="pop-in">
+
+
+
+                <header class='startHeader'>
+                        <i class="fas fa-house-damage fa-3x "></i>
+
+                        <h1>Accounts Administration</h1>
+                        <div class="credits">
+                                Powered By JamesSoftware
+                        </div>
+                </header>
+
+        </div>
+
+
+        <div id="overlaySoft" class="overlaySoft" data-pop="pop-in">
+        </div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+
+var jetModalForm =  require('jet-modal-form');
+
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+var jetmenu = require('jetmenu');
+var ChartJS = require('chart.js');
+var jetcanvajsextender = require('jetcanvajsextender');
+var jetTreeView = require('jet-tree-view');
+var jetWorkBench = require('jet-work-bench');
+var jetInfoCards = require('jet-info-cards');
+
+//
+// Tree Structure
+
+
+
+//============================================================
+// Create the JetMenu
+
+var menu  = require("./app_modules/menu");
+var t = new jetmenu(menu.menu, 'app-menu-bar');
+
+//=========================================================================
+
+
+var sliderPanelSettings =     {
+        hasMenu: true,
+        hasFooter: true,
+        menuSize: "5px",
+        footerSize: "5px",
+        hasBottomSlider: true,
+        style: "grayTheme"
+};
+
+
+
+var jetpannel = require("jetpannel");
+var mynew = new jetpannel(".foo", sliderPanelSettings);
+
+//==================================================================
+
+
+var panel  = require("./app_modules/panel");
+var jetformspanel = require("jetformspanel");
+var responsLayout = new jetformspanel("MainNav", panel.layout1);
+
+
+//=========================================================================
+// HTML STRINGS
+
+var htmlstrings = require("./app_modules/html-stings.js");
+
+
+
+
+
+//=========================================================================
+///form
+
+
+
+var jetform = require("jet-input-form");
+var form  = require("./app_modules/form");
+var maiform = new jetform(form.formSample,"Pane2");
+
+//=========================================================================
+///jetMask
+var jetMask = require("jet-mask");
+
+//=========================================================================
+///XHR
+
+var jetXhr = require('jet-xhr');
+
+
+//=========================================================================
+///Notifications
+
+var jetNotifications = require('jet-notifications');
+
+var jsonStruct = { container:'wholescreen'};
+
+var m = new jetNotifications(jsonStruct);
+
+
+//=========================================================================
+//JET = DATASTORE
+var jetWizardDatastore = require('jet-wizard-datastore');
+var dataStore = new  jetWizardDatastore();
+
+/*
+I only believe there should be one instance of the data Store used globally
+i is meant to hold data between the wizard in the capture process and I field
+that there should only be one at a time
+*/
+
+//======================================================
+
+var jetPopinTable = require('jet-popin-table');
+//======================================================
+
+
+
+//=========================================================================
+///Tables
+
+
+
+var tableSettings={
+        tableId : "accountR1",
+        tableBoxName : "table_box_bootstrap",
+        columnWidths:[40,40,20],
+        ActivePagenation : "true",
+};
+
+
+var jetTables = require("jet-tables");
+var table  = require("./app_modules/table");
+var maiTable = new jetTables(table.sampleTable,"Pane3",tableSettings);
+
+
+var jetPaginator = require("jet-paginator");
+var box =new jetPaginator({
+        table: document.getElementById("accountR1"),
+        box_mode: "list",
+});
+box.className = "boxo";
+document.getElementById("table_box_bootstrap").appendChild(box);
+
+
+
+//=========================================================================
+//Left Docking Menu
+//=========================================================================
+
+
+var leftDock = document.getElementById('mySidenav');
+var leftMenuContainer = document.createElement('div');
+var header =document.createElement('div');
+header.setAttribute('style','background-color:#0079F1; width 100% ;margin:5px ;    margin-left: 14px;');
+header.innerHTML ='<h5 style="color:#FFF">Quicklinks</h5>';
+
+var leftMenu = document.createElement('div');
+leftMenuContainer.setAttribute('style',' min-width:330px');
+leftMenuContainer.setAttribute('id','leftMenuContainer');
+leftMenu.setAttribute('id','tree');
+leftMenu.setAttribute('style','min-width : 0px;');
+
+leftDock.appendChild(leftMenuContainer);
+leftMenuContainer.appendChild(header);
+leftMenuContainer.appendChild(leftMenu);
+
+var tree = [{
+
+        name: 'New',
+        myEvent: 'speak',
+        jetCommonName:'none',
+        children: [{
+                name: 'Property',
+                myEvent: 'Property',
+                jetCommonName:'none',
+                children: []
+        }, {
+                name: 'Beneficiaries',
+                myEvent: 'Beneficiaries',
+                jetCommonName:'none',
+                children: []
+        }, {
+                name: 'Tenants',
+                myEvent: 'Tenants',
+                jetCommonName:'none',
+                children: []
+        }]
+}, {
+        name: 'Other Links',
+        myEvent: 'speak',
+        jetCommonName:'none',
+        children: [{
+                name: 'Unreconciled Direct Deposits',
+                myEvent: 'Unreconciled',
+                jetCommonName:'none',
+                children: []
+        },{
+                name: 'Payments To Approve',
+                myEvent: 'Payments',
+                jetCommonName:'none',
+                children: []
+        },
+        {
+                name: 'Documents',
+                children: [{
+                        name: 'Resources',
+                        myEvent: 'Resources',
+                        jetCommonName:'none',
+                        children: []
+                }]
+        }, ]
+}];
+
+var tree = new jetTreeView(tree, 'tree');
+tree.on('select2', function () {
+        //console.log(arguments[0].data);
+
+        //Property
+        //P
+        //P
+        if(arguments[0].data.myEvent=="Property")
+        {
+                callSection('creatNewProporty');
+        }
+        //Beneficiaries
+        if(arguments[0].data.myEvent=="Beneficiaries")
+        {
+                callSection('CreateBeneficiary');
+        }
+        //Tenants
+        if(arguments[0].data.myEvent=="Tenants")
+        {
+                callSection('CreateTenant');
+        }
+        //T
+        //Unreconciled
+        //U
+        if(arguments[0].data.myEvent=="Unreconciled")
+        {
+                callSection('UnreconciledDirectDeposits');
+        }
+        //Payments
+        if(arguments[0].data.myEvent=="Payments")
+        {
+                callSection('PaymentsToApprove');
+        }
+        //Resources
+        //R
+        if(arguments[0].data.myEvent=="Resources")
+        {
+                callSection('resources');
+        }
+});
+// tree.on('select2', function () { console.log('select2'); });
+// tree.on('expand', function () { console.log('expand'); });
+// tree.on('collapse', function () { console.log('collapse'); });
+
+//===================================================================
+// hiding menu
+
+var leftDockButton = document.getElementById('toggleButton1');
+
+function someFunction(){
+
+        if(leftDock.classList.contains("hiding")){
+                document.getElementById("leftMenuContainer").setAttribute('style','margin-left:-330px;transition-duration: 500ms; min-width : 250px ');
+        }else{
+                //console.log("=================-------------works");
+                document.getElementById("leftMenuContainer").setAttribute('style','margin-left:0px; transition-duration: 500ms; min-width : 250px ');
+        }
+}
+someFunction();
+
+
+leftDockButton.addEventListener('click', someFunction, false);
+
+
+
+
+
+//=================================================================
+//login
+//
+
+
+//================================================================================================================================================
+
+
+var jsonInfo =     {
+        sizeFromTop: "144px",
+        modalwidth : "600",
+        formName: "A basic Application Form",
+        formId : "doGood",
+        popupId : "tip2",
+        dialogClass : 'create-repository',
+        postAction:"http://localhost/05_API_tests/post.php",
+        formElements : [{
+                type : "html",
+                labelName : "progressbar",
+                dataName : "progressbar",
+                id :"progressbar",
+                placeholder:"your surname"
+
+
+        },
+        {
+                type : "html",
+                labelName : "tablePad",
+                dataName : "tablePad",
+                id :"tablePad",
+                placeholder:"your surname"
+
+
+        },{
+                type : "textBox",
+                labelName : "Surname",
+                dataName : "Surname",
+                id :"theIDName",
+                placeholder:"your surname"
+
+
+        },
+        {
+                type : "checkBox",
+
+                dataName : "colgroup",
+                labelName : "Checkbox Initialize this repository with a README for 3",
+                id :"__Checkbox_Initialize_this_repository_with_a_README",
+
+
+
+        },
+        {
+                type : "dropBox",
+                dataName : "furname",
+                labelName : "Has a Value String",
+                id :"__Select_Git_ignore",
+                option:["none","something","something_else","something_fun"]
+
+
+        },
+        {
+                type : "fileSelect",
+                dataName : "filename",
+                labelName : "Checkbox Initialize this repository with a README",
+                id :"file2fileupload",
+
+
+
+        }
+],
+
+menuSize: "33px",
+footerSize: "10px",
+hasBottomSlider: true,
+style: "grayTheme"
+};
+
+
+
+var o =   new jetModalForm(jsonInfo,"jsonsetup","wholescreen");
+
+
+
+// Initialize Variables
+var closePopup = document.getElementById("popupclose");
+var overlayme = document.getElementById("overlayme");
+var popup = document.getElementById("tip2");
+var button = document.getElementById("button");
+// Close Popup Event
+overlayme.onclick = function() {
+        overlayme.className = '';
+        popup.className = '';
+};
+// Close Popup Event
+closePopup.onclick = function() {
+        overlayme.className = '';
+        popup.className = '';
+};
+// Show Overlay and Popup
+// button.onclick = function() {
+//     overlayme.className = 'show';
+//     popup.className = 'show';
+// }
+
+var jetProgressBar = require('jet-progressBar');
+
+var setup = {
+        container : 'progressbar',
+        entries : [
+                {title : 'Add Property' , body : 'The property has been captured .   ' , progress: 'done'},
+                {title : 'Add Benificiary' , body : 'The Primary Benificiary or the owner that will recieve the rent. ' , progress: 'done'},
+                {title : 'Add Tenants ' , body : 'Capture the Tenant details by using the search / capture a new tenant ' , progress: 'active'},
+                {title : 'Setup Client Accounts' , body : 'Capture details of the lease agreement ' , progress: ''}
+        ]
+
+}
+
+//var o = new jetProgressBar(setup);
+//console.log(t);
+
+// o.updateStatus(0 ,'done');
+// o.updateStatus(1 ,'done');
+// o.updateStatus(2 ,'done');
+// o.updateStatus(3 ,'active');
+// o.renderUpdate();
+
+function runthis(panelToAppend)
+{
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        //var responsLayout = new jetformspanel("MainNav", panel.allproportiesTable);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.allproporties,panelToAppend,tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("progressbar").appendChild(box);
+
+}
+
+runthis('tablePad');
+
+
+
+//overlay
+function showlogin(){
+
+
+        overlayme.className = 'show';
+        popup.classList.add('show');
+}
+showlogin()
+
+//side panel maximize
+jetpannel.togglePanelLeft();
+someFunction();
+
+//selcting the right form
+//callSection('dashboard');
+
+callSection('workbench');
+//=======================================================================
+//   jetworkbench
+//=======================================================================
+
+
+//=========================================================================
+//MAIN Application ALgorythem
+//=========================================================================
+var appWindow;
+
+function callSection(ApplicationForm)
+{
+        //Just here so that i can find the app logic from the console
+        appWindow = ApplicationForm;
+
+        if (ApplicationForm == "newPropertyWizard")
+        {
+                clearPanel();
+
+
+                //the ID is main
+                //
+                var jsonInfo =     {
+                        sizeFromTop: "144px",
+                        modalwidth : "600",
+                        formName: "Capture Wizard",
+                        formId : "foome",
+                        popupId : "tip3",
+                        elevation : "bottom", // bottom / top
+                        dialogClass : 'create-repository',
+                        postAction:"http://localhost/05_API_tests/post.php",
+                        formElements : [{
+                                type : "html",
+                                labelName : "progressbar",
+                                dataName : "progressbar",
+                                id :"progressbar",
+                                placeholder:""
+
+
+                        },
+                        {
+                                type : "html",
+                                labelName : "or",
+                                dataName : "or",
+                                id :"or",
+                                placeholder:"<h2 class='or'>Add New Beneficiary</h2>"
+
+
+                        },
+                        {
+                                type : "html",
+                                labelName : "or",
+                                dataName : "or",
+                                id :"or",
+                                placeholder:"<center style='width:100%'><button id='newBenificiary' class='button-component-new' style='width:50%' type='button'>Add New Benificiary</button></center>"
+
+
+                        },
+                        {
+                                type : "html",
+                                labelName : "or",
+                                dataName : "or",
+                                id :"or",
+                                placeholder:"<h2 class='or'>Search  An Existing Record</h2>"
+
+
+                        },
+                        {
+                                type : "dropBox",
+                                dataName : "catogorySearch",
+                                labelName : "Search Criteria",
+                                id :"catogorySearch",
+                                option:["Persons ID","Last Name","Company Registration Number","Company Name"]
+
+
+                        },
+                        {
+                                type : "textBox",
+                                labelName : "stringSearch",
+                                dataName : "stringSearch",
+                                id :"stringSearch",
+                                placeholder:"your surname"
+
+
+                        }
+                ],
+
+                menuSize: "33px",
+                footerSize: "10px",
+                hasBottomSlider: true,
+                style: "grayTheme"
+        };
+
+
+        //
+        var o =   new jetModalForm(jsonInfo,"jsonsetup","MainNav");
+
+        o.show();
+
+        var newRecordsButton = document.getElementById('newBenificiary');
+        newRecordsButton.addEventListener('click',function(){
+                dataStore.setKeyValuePair('wizardCaptuer','true')
+                //CreateBeneficiary
+                callSection("CreateBeneficiary");
+                console.log('NewButton is Working ')
+        });
+
+        //o.on('select',function(){console.log('The Response WORKS' );})
+
+        //progress background
+        var setup = {
+                container : 'progressbar',
+                entries : [
+                        {title : 'Add Property' , body : 'The property has been captured .   ' , progress: 'done'},
+                        {title : 'Add Benificiary' , body : 'The Primary Benificiary or the owner that will recieve the rent. ' , progress: 'done'},
+                        {title : 'Add Tenants ' , body : 'Capture the Tenant details by using the search / capture a new tenant ' , progress: 'active'},
+                        {title : 'Setup Client Accounts' , body : 'Capture details of the lease agreement ' , progress: ''}
+                ]
+
+        }
+
+        var o = new jetProgressBar(setup);
+
+        //xhr
+        //
+        var theForm =  document.getElementById('Create_property');
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/search_benificiary.php';
+        var meth ='POST';
+        var JsonStructure2=   {
+                "search": {
+                        "catogorySearch":"Last Name",
+                        "stringSearch":"etn"
+                }
+
+        };
+
+        var thisTest2 = new jetXhr('foome',destin,meth,JsonStructure2,true);
+        thisTest2.on('PostSuccess',function(){
+
+
+                //console.log('The Response WORKS'+ thisTest2.serverResponse() );
+
+                var serverResponse =JSON.parse(thisTest2.serverResponse());
+
+                //console.log(serverResponse);
+                //        console.log(serverResponse.First_operation.message);
+                // var jetWizardDatastore = require('jet-wizard-datastore');
+                // let dataStore = new  jetWizardDatastore();
+
+                // {
+                //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                dataStore.setKeyValuePair('searchResult',serverResponse)
+                // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                // let x = dataStore.getKeyValuePair('Property_id')
+
+                // let xx = dataStore.getAllKeys();
+                //
+                // console.log(x);
+                // console.log(xx);
+                // dataStore.clear();
+
+                //the callback function triggeres by the notication
+                // function openWizard()
+                // {
+                //         console.log('Foo - -= -=-= -=- =-=- =-=');
+                //         clearPanel();
+                //         callSection("newPropertyWizard");
+                // }
+                // var notifystr = {
+                //         notificationId:'note4',
+                //         message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Property_id ,//'This is a sample message from JSON',
+                //         heading:'Server Response Success'
+                // }
+                //
+                // m.successNotification(notifystr);
+                // m.myCallback(openWizard);
+
+                callSection("searchBenificiaryResults");
+        })
+
+        thisTest2.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+
+
+
+}
+
+
+if (ApplicationForm == "newTenantWizard")
+{
+        clearPanel();
+
+
+        //the ID is main
+        //
+        var jsonInfo =     {
+                sizeFromTop: "144px",
+                modalwidth : "600",
+                formName: "Capture Wizard Tenant",
+                formId : "foome",
+                popupId : "tip3",
+                elevation : "bottom", // bottom / top
+                dialogClass : 'create-repository',
+                postAction:"http://localhost/05_API_tests/post.php",
+                formElements : [{
+                        type : "html",
+                        labelName : "progressbar",
+                        dataName : "progressbar",
+                        id :"progressbar",
+                        placeholder:""
+
+
+                },
+                {
+                        type : "html",
+                        labelName : "or",
+                        dataName : "or",
+                        id :"or",
+                        placeholder:"<h2 class='or'>Add New Tenant</h2>"
+
+
+                },
+                {
+                        type : "html",
+                        labelName : "or",
+                        dataName : "or",
+                        id :"or",
+                        placeholder:"<center style='width:100%'><button class='button-component-new' style='width:50%' type='button' id='newTenant'>Add New Tenant</button></center>"
+
+
+                },
+                {
+                        type : "html",
+                        labelName : "or",
+                        dataName : "or",
+                        id :"or",
+                        placeholder:"<h2 class='or'>Search  An Existing Record</h2>"
+
+
+                },
+                {
+                        type : "dropBox",
+                        dataName : "catogorySearch",
+                        labelName : "Search Criteria",
+                        id :"catogorySearch",
+                        option:["Persons ID","Last Name","Company Registration Number","Company Name"]
+
+
+                },
+                {
+                        type : "textBox",
+                        labelName : "stringSearch",
+                        dataName : "stringSearch",
+                        id :"stringSearch",
+                        placeholder:"your surname"
+
+
+                }
+        ],
+
+        menuSize: "33px",
+        footerSize: "10px",
+        hasBottomSlider: true,
+        style: "grayTheme"
+};
+
+
+//
+var o =   new jetModalForm(jsonInfo,"jsonsetup","MainNav");
+o.show();
+//o.on('select',function(){console.log('The Response WORKS' );})
+
+var newRecordsButton = document.getElementById('newTenant');
+newRecordsButton.addEventListener('click',function(){
+        dataStore.setKeyValuePair('wizardCaptuer','true')
+        //CreateBeneficiary
+        callSection("CreateTenant");
+        console.log('NewButton is Working ')
+});
+
+
+
+
+//progress background
+var setup = {
+        container : 'progressbar',
+        entries : [
+                {title : 'Add Property' , body : 'The property has been captured .   ' , progress: 'done'},
+                {title : 'Add Benificiary' , body : 'The Primary Benificiary or the owner that will recieve the rent. ' , progress: 'done'},
+                {title : 'Add Tenants ' , body : 'Capture the Tenant details by using the search / capture a new tenant ' , progress: 'active'},
+                {title : 'Setup Client Accounts' , body : 'Capture details of the lease agreement ' , progress: ''}
+        ]
+
+}
+
+var o = new jetProgressBar(setup);
+
+//xhr
+//
+var theForm =  document.getElementById('Create_property');
+
+var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/search_tenant.php';
+var meth ='POST';
+var JsonStructure2=   {
+        "search": {
+                "catogorySearch":"Last Name",
+                "stringSearch":"etn"
+        }
+
+};
+
+var thisTest2 = new jetXhr('foome',destin,meth,JsonStructure2,true);
+thisTest2.on('PostSuccess',function(){
+
+
+        //console.log('The Response WORKS'+ thisTest2.serverResponse() );
+
+        var serverResponse =JSON.parse(thisTest2.serverResponse());
+
+        //console.log(serverResponse);
+        //        console.log(serverResponse.First_operation.message);
+        // var jetWizardDatastore = require('jet-wizard-datastore');
+        // let dataStore = new  jetWizardDatastore();
+
+        // {
+        //         "First_operation":{"message":"Property Created","Property_id":"178"},
+        //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+        //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+        //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+        dataStore.setKeyValuePair('searchResult',serverResponse)
+        // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+        // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+        // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+        // let x = dataStore.getKeyValuePair('Property_id')
+
+        // let xx = dataStore.getAllKeys();
+        //
+        // console.log(x);
+        // console.log(xx);
+        // dataStore.clear();
+
+        //the callback function triggeres by the notication
+        // function openWizard()
+        // {
+        //         console.log('Foo - -= -=-= -=- =-=- =-=');
+        //         clearPanel();
+        //         callSection("newPropertyWizard");
+        // }
+        // var notifystr = {
+        //         notificationId:'note4',
+        //         message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Property_id ,//'This is a sample message from JSON',
+        //         heading:'Server Response Success'
+        // }
+        //
+        // m.successNotification(notifystr);
+        // m.myCallback(openWizard);
+
+        callSection("searchTenantResults");
+})
+
+thisTest2.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+
+
+
+}
+
+
+
+if(ApplicationForm == "searchBenificiaryResults")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+
+        let xx =  dataStore.getKeyValuePair('searchResult')
+
+        //console.log(xx,44);
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                magicRowNumber : 5,
+                ActivePagenation : "true",
+
+                inputFormForXHR : {
+                        isFormActive : true,
+                        FormId : 'embeded12',
+                        primaryKey : 'idbenificiary',
+                        formElements : [ {
+                                id : 'embeded12',
+                                type : 'radio',
+                                name : 'idbenificiary',
+                                label : 'Select',
+                                defaultValue : 'embeded12'
+
+                        }]
+                }
+        };
+        //console.log(tableSettings);
+
+        var responsLayout = new jetformspanel("MainNav", panel.viewAllTenants);
+        // logit(table.allproporties);
+
+        //ok here we edit out the undesired columns
+        //
+        var jetJsonEditor = require('jet-json-editor');
+
+        var editJson = {
+                renameKeys : {
+                        businessorindividua : "Type",
+                        idnumber : "ID Number",
+                        firstname : "First Name",
+                        businessname : "Name Of Business",
+                        //idbenificiary : "id",
+                        firstname : "First Name",
+                        firstname : "First Name",
+                        lastname : "Last Name"
+                },
+                deleteKeys : {
+                        busfirstname : "",
+                        buslastname : '',
+                        notes : '',
+                        complex : '',
+                        street : '',
+                        suburb : '',
+                        city : '',
+                        province : '',
+                        postalcode : '',
+                        country : '',
+                        smsnotifications :''
+
+
+                },
+        };
+        //console.log(xx);
+
+        var editorResult = new jetJsonEditor(xx,editJson);
+
+        //console.log(editorResult,'edited Results');
+
+
+        var maiTable = new jetTables(editorResult.modifiedJSON,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+
+
+        //Do the XJR request
+        let JsonStructure=    {
+                "bridge_property_benificiary":
+                {
+                        "idbenificiary":11,
+                        "property_id":dataStore.getKeyValuePair('Property_id')
+
+                }
+        };
+
+
+        var theForm =  document.getElementById('Create_property');
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/bridge_property_benificiary.php';
+        var meth ='POST';
+
+
+        var thisTest = new jetXhr('embeded12',destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+                //console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                var serverResponse =JSON.parse(thisTest.serverResponse());
+
+                //console.log(serverResponse);
+                //console.log(serverResponse.First_operation.message);
+                //var jetWizardDatastore = require('jet-wizard-datastore');
+                //let dataStore = new  jetWizardDatastore();
+
+                // {
+                //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                // dataStore.setKeyValuePair('Property_id',serverResponse.First_operation.Property_id)
+                // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                // let x = dataStore.getKeyValuePair('Property_id')
+
+                let xx = dataStore.getAllKeys();
+
+                //        console.log(x);
+                //console.log(xx);
+                //dataStore.clear();
+
+                //the callback function triggeres by the notication
+                function openWizard()
+                {
+                        //        console.log('Foo - -= -=-= -=- =-=- =-=');
+                        //delete thisTest;
+                        clearPanel();
+                        callSection("newTenantWizard");
+                }
+                var notifystr = {
+                        notificationId:'note4',
+                        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Bridge_Id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+
+                m.successNotification(notifystr);
+                m.myCallback(openWizard);
+        })
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+
+
+
+
+}
+
+if(ApplicationForm == "searchTenantResults")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+
+        let xx =  dataStore.getKeyValuePair('searchResult')
+
+        //console.log(xx,44);
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                magicRowNumber : 5,
+                ActivePagenation : "true",
+
+                inputFormForXHR : {
+                        isFormActive : true,
+                        FormId : 'embeded12',
+                        primaryKey : 'id_tenants',
+                        formElements : [ {
+                                id : 'embeded12',
+                                type : 'radio',
+                                name : 'id_tenants',
+                                label : 'Select',
+                                defaultValue : 'embeded12'
+
+                        }]
+                }
+        };
+        //console.log(tableSettings);
+
+        var responsLayout = new jetformspanel("MainNav", panel.viewAllTenants);
+        // logit(table.allproporties);
+
+        //ok here we edit out the undesired columns
+        //
+        var jetJsonEditor = require('jet-json-editor');
+
+        var editJson = {
+                renameKeys : {
+                        businessorindividua : "Type",
+                        idnumber : "ID Number",
+                        firstname : "First Name",
+                        businessname : "Name Of Business",
+                        //idbenificiary : "id",
+                        firstname : "First Name",
+                        firstname : "First Name",
+                        lastname : "Last Name"
+                },
+                deleteKeys : {
+                        busfirstname : "",
+                        buslastname : '',
+                        notes : '',
+                        complex : '',
+                        street : '',
+                        suburb : '',
+                        city : '',
+                        province : '',
+                        postalcode : '',
+                        country : '',
+                        smsnotifications :''
+
+
+                },
+        };
+        //console.log(xx);
+
+        var editorResult = new jetJsonEditor(xx,editJson);
+
+        //console.log(editorResult,'edited Results');
+
+
+        var maiTable = new jetTables(editorResult.modifiedJSON,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+
+
+        //Do the XJR request
+        let JsonStructure=    {
+                "bridge_property_tenant":
+                {
+                        "id_tenants":11,
+                        "property_id":dataStore.getKeyValuePair('Property_id')
+
+                }
+        };
+
+
+        var theForm =  document.getElementById('Create_property');
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/bridge_property_tenant.php';
+        var meth ='POST';
+
+
+        var thisTest = new jetXhr('embeded12',destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+                //console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                var serverResponse =JSON.parse(thisTest.serverResponse());
+
+                console.log(serverResponse);
+                //console.log(serverResponse.First_operation.message);
+                //var jetWizardDatastore = require('jet-wizard-datastore');
+                //let dataStore = new  jetWizardDatastore();
+
+                // {
+                //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                dataStore.setKeyValuePair('id_tenant',serverResponse.First_operation.id_tenant)
+                // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                // let x = dataStore.getKeyValuePair('Property_id')
+
+                let xx = dataStore.getAllKeys();
+
+                //        console.log(x);
+                //console.log(xx);
+                //dataStore.clear();
+
+                //the callback function triggeres by the notication
+                function openWizard()
+                {
+                        //console.log('Foo - -= -=-= -=- =-=- =-=');
+                        //delete thisTest;
+                        //clearPanel();
+                        callSection("CreateNewLease");
+                }
+                var notifystr = {
+                        notificationId:'note4',
+                        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Bridge_Id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+
+                m.successNotification(notifystr);
+
+                return openWizard();
+        })
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+
+
+
+
+}
+
+
+///Create new Lease
+if(ApplicationForm == "CreateNewLease")
+{
+        // var mainPanel = document.getElementById("MainNav");
+        // mainPanel.innerHTML = "";
+        //
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.CreateTenant);
+        var maiform = new jetform(form.createNewLease,"Pane1");
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/create_lease_agreement.php';
+        var meth ='POST';
+
+        let xx = dataStore.getAllKeys();
+
+
+        var JsonStructure=
+        {
+                "create_lease_agreement": {
+
+
+                        "contract_inception":"2001-10-10",
+                        "contract_expiration":"2002-10-30",
+                        "deposit_ammount":"7000",
+                        "rental_term":"12",
+                        "rental_frequency":"monthly",
+                        "rental_ammount":"7000",
+                        "monthly_payment_due_by":"31",
+                        "week1_payment_by":"",
+                        "week2_payment_by":"",
+                        "week3_payment_by":"",
+                        "week4_payment_by":"",
+                        "notes":"this is a contract",
+                        "isActive":"true"
+
+                },
+
+                "linkk_tenant_lease_property":{
+
+                        "id_tenant":xx.id_tenant,
+                        "property_id":xx.Property_id
+
+                }
+        }
+
+        var thisTest = new jetXhr(form.createNewLease.formId,destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+                //console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                //console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                var serverResponse =JSON.parse(thisTest.serverResponse());
+
+                //console.log(serverResponse);
+                //console.log(serverResponse.First_operation.message);
+                //var jetWizardDatastore = require('jet-wizard-datastore');
+                //let dataStore = new  jetWizardDatastore();
+
+                // {
+                //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                // dataStore.setKeyValuePair('Property_id',serverResponse.First_operation.Property_id)
+                // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                // let x = dataStore.getKeyValuePair('Property_id')
+
+                let xx = dataStore.getAllKeys();
+
+                //        console.log(x);
+                //console.log(xx);
+                //dataStore.clear();
+
+                //the callback function triggeres by the notication
+                function openWizard()
+                {
+                        //console.log('Foo - -= -=-= -=- =-=- =-=');
+                        //delete thisTest;
+                        clearPanel();
+                        callSection("quicklinks");
+                }
+                var notifystr = {
+                        notificationId:'note4',
+                        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Bridge_Id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+
+                m.successNotification(notifystr);
+                m.myCallback(openWizard);
+
+
+
+        })
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+}
+
+
+
+
+
+if (ApplicationForm == "workbench")
+{
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.workbench);
+
+        var container = document.getElementById("Pane1");
+
+        var heading = document.createElement("h2");
+        heading.innerHTML=` Seeff Summerset West Workspace <br><br><br>
+
+
+        <p >What do you need to do today ?</p>`;//style="text-align : left;"
+
+        container.appendChild(heading);
+        var jsonInfoWorkbench =     {
+
+                ListElements : [{
+                        jetFunction : "dashboard",
+                        jetFunctionParams:["f02"],
+                        icon : ['fas','fa-chart-pie','fa-5x'],
+                        title : "Dashboard",
+                        description : "An overview of how the business is performing "
+                },
+                {
+                        jetFunction : "UnreconciledDirectDeposits",
+                        jetFunctionParams: ["f01"],
+                        icon : ["fas" ,"fa-hand-holding-usd" ,"fa-5x"],
+                        title : "Un-reconsiled Deposit's",
+                        description : "Allocate a direct deposit "
+                },
+                {
+                        jetFunction : "benificiariesWithABalance",
+                        jetFunctionParams: ["f01"],
+                        icon : ["fas" ,"fa-donate" ,"fa-4x"],
+                        title : "Pay Beneficiary",
+                        description : "Create a Payment to a Beneficiary "
+                },
+                {
+                        jetFunction : "PaymentsToApprove",
+                        jetFunctionParams: ["f01"],
+                        icon : ["fas" ,"fa-comments-dollar" ,"fa-4x"],
+                        title : "Payments to Approve",
+                        description : "Accept or Reject Payments and un-Reconciled Deposit's"
+                },
+                {
+                        jetFunction : "doIt",
+                        jetFunctionParams: ["f01"],
+                        icon : ["far" ,"fa-credit-card" ,"fa-4x"],
+                        title : "TPN Credit Check",
+                        description : "Run a Credit Check on a Client  "
+                },
+                {
+                        jetFunction : "doIt",
+                        jetFunctionParams: ["f01"],
+                        icon : ["fas" ,"fa-city" ,"fa-4x"],
+                        title : "LightStone Property Lookup ",
+                        description : "Residential Property Information "
+                },
+                {
+                        jetFunction : "doIt",
+                        jetFunctionParams: ["f01"],
+                        icon : ["fas" ,"fa-file-invoice-dollar" ,"fa-4x"],
+                        title : "Beneficiary Statements",
+                        description : " Statements / Invoices to beneficiaries / lessee"
+                },
+                {
+                        jetFunction : "doIt",
+                        jetFunctionParams: ["f01"],
+                        icon : ["fab" ,"fa-adobe" ,"fa-4x"],
+                        title : "Lease Agreement",
+                        description : "Automated Lease Agreements "
+                },    {
+                        jetFunction : "doIt",
+                        jetFunctionParams: ["f00"],
+                        icon : ["fas","fa-file-invoice","fa-4x"],
+                        title : "Generate an invoice",
+                        description : "Invoice a client for rent due"
+                },
+                {
+                        jetFunction : "doIt",
+                        jetFunctionParams: ["f00"],
+                        icon : ["fas","fa-cloud-upload-alt","fa-4x"],
+                        title : "Import Client Data ",
+                        description : "CSV Import Existing Client Data"
+                },
+                {
+                        jetFunction : "resources",
+                        jetFunctionParams: ["f00"],
+                        icon : ["fas","fa-file-video","fa-4x"],
+                        title : "System Administration Training",
+                        description : "Training Videos and PDF Reference Documents"
+                }]
+
+
+        };
+
+
+        var tap = new jetWorkBench(jsonInfoWorkbench,container);
+
+        tap.on('select', function () {
+                //console.log(arguments[0]);
+                let parameters = (arguments[0].data.jetFunctionParams);
+                let JetFunction = (arguments[0].data.jetFunction);
+                if(JetFunction){
+
+
+                        if(parameters){
+
+                                //console.log(parameters);
+                                //console.log(JetFunction);
+                                window[JetFunction].apply(this, parameters);//
+                        }else{
+
+
+                                //console.log('%c NOTE : \n  jetFunctionParams not defined check the JSON entry....','background: #fff; color: green;');
+                        }
+                }else{
+                        //console.log('%c NOTE : \n jetFunction not defined check the JSON entry....','background: #fff; color: orange;');
+                }
+        });
+
+}
+if(ApplicationForm == "Bulma")
+{
+        clearPanel();
+
+        //  const { BrowserWindow } = require('electron').remote
+        //  const PDFWindow = require('electron-pdf-window')
+        //  const win = new BrowserWindow({
+        //  width:1200,
+        //  height:1000,
+        //  modal :true,
+        //  titleBarStyle :'hidden',
+        //  autoHideMenuBar :true,
+        //  darkTheme:true,
+        //  frame:true,
+        //  	webPreferences: {
+        //      plugins: true
+        //    }
+        // })
+        //
+        //  PDFWindow.addSupport(win)
+        //
+        //  win.loadURL('../../../../a.pdf');
+
+        var responsLayout = new jetformspanel("MainNav", panel.dashboard);
+        var main =document.getElementById("Pane13");
+        main.innerHTML = htmlstrings.htmstr_bulma;
+
+        //test calandaer
+        //
+        var Lightpick = require('lightpick');
+
+
+        var container = document.getElementById("Pane12");
+        var inputBox = document.createElement("input");
+        inputBox.setAttribute("type","text");
+        inputBox.setAttribute("id","demo-1");
+        var para = document.createElement("p");
+        para.setAttribute("id","result-1");
+
+
+        container.appendChild(inputBox);
+        container.appendChild(para);
+
+        var picker = new Lightpick({
+                field: document.getElementById('demo-1'),
+                singleDate: false,
+                onSelect: function(start, end){
+                        //console.log("fucking loggeeddddd");
+                        var str = '';
+                        str += start ? start.format('Do MMMM YYYY') + ' to ' : '';
+                        str += end ? end.format('Do MMMM YYYY') : '...';
+                        document.getElementById('result-1').innerHTML = str;
+                }
+        });
+
+
+}
+if(ApplicationForm == "dashboard")
+{
+
+        clearPanel();
+
+
+        var responsLayout = new jetformspanel("MainNav", panel.dashboard);
+
+        var container = document.getElementById("Pane13");
+
+        container.innerHTML = htmlstrings.htmlStr;
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        // var myChart = new Chart(ctx, {
+        //     type: 'bar',
+        //     data: data,
+        //     options: options
+        // });
+        //
+        //
+        var gradientFill = ctx.createLinearGradient(0, 0, 0, 480);
+        gradientFill.addColorStop(0, "rgba(0, 214, 180, 0.5)");
+        gradientFill.addColorStop(1, "rgba(29, 31, 33, 0.0)");
+        var gradientFill2 = ctx.createLinearGradient(0, 0, 0, 500);
+        gradientFill2.addColorStop(0, "rgba(31, 142, 241, 0.9)");
+        gradientFill2.addColorStop(1, "rgba(31, 142, 241, 0.1)");
+
+
+        var mixedChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                        datasets: [ {
+                                label: 'Agent Commision',
+                                data: [9, 14, 25, 34,"", 10, 10, ""],
+                                backgroundColor: gradientFill,
+                                borderColor:                   'rgba(0, 214, 180, 0.9)',
+
+                                borderWidth: 2,
+                                lineWidth: 2,
+
+                                // Changes this dataset to become a line
+                                type: 'line'
+                        },{
+                                label: 'Income',
+                                data: [10, 20, 30, 40,"",10,10,""],
+                                backgroundColor:gradientFill2,
+                                borderColor:     "rgba(31, 142, 241, 0.9)",
+                                borderWidth: 2,
+                                lineWidth: 2,
+                                type: 'bar'
+                        }
+                ],
+                labels: ['January', 'February', 'March', 'April','January', 'February', 'March', 'April']
+        },
+        options:     {  responsive : false ,      legend: {
+                display: true,
+                labels: {
+                        fontColor:'rgba(31, 132, 223,0.9)'
+                }
+        },
+
+        scales: {
+                yAxes: [{
+                        gridLines: {
+                                fontcolor : "rgba(31, 142, 241, 0.2)",
+                                drawBorder: false,
+                                display:true,
+                                color:  "rgba(31, 142, 241, 0.2)"
+                        },
+                        ticks: {
+                                min: 0,
+                                max:60,
+                                fontColor: 'rgba(31, 132, 223,0.9)'
+                        }
+
+                }],
+                xAxes: [{
+                        gridLines: {
+                                drawBorder: false,
+                                color:  "rgba(31, 142, 241, 0.08)"
+                        },    ticks: {
+
+                                fontColor: 'rgba(31, 132, 223,0.9)'
+                        }
+
+                }]
+
+        },
+
+
+
+}
+});
+
+
+//==================================
+//==================================
+
+
+container.insertAdjacentHTML( 'beforeend', htmlstrings.str2 );
+
+
+
+var cnv = document.getElementById('openedCanvas');
+var ctx = document.getElementById('openedCanvas').getContext("2d");
+var gradientStroke = ctx.createLinearGradient(0, 0, cnv.width*2,cnv.height/2);
+gradientStroke.addColorStop(0, "rgb(36, 193, 237)");
+gradientStroke.addColorStop(1, "rgb(149, 76, 233)");
+
+var revGradientStroke = ctx.createLinearGradient(0, 0, cnv.width,cnv.height/2);
+revGradientStroke.addColorStop(0, "rgb(36, 193, 237)");
+revGradientStroke.addColorStop(1, "rgb(149, 76, 233)");
+
+var gradientStroke2 = ctx.createLinearGradient(0, 0, cnv.width*2,cnv.height/2);
+gradientStroke2.addColorStop(0, "rgb(16, 173, 217)");
+gradientStroke2.addColorStop(1, "rgb(119, 46, 213)");
+
+var gradientStroke3 = ctx.createLinearGradient(0, 0, cnv.width*2,cnv.height/2);
+gradientStroke3.addColorStop(0, "rgb(56, 233, 277)");
+gradientStroke3.addColorStop(1, "rgb(169, 146, 253)");
+
+
+
+var deliveredData = {
+        labels: [
+                "Value"
+        ],
+        datasets: [
+                {
+                        data: [50,0],
+                        backgroundColor: [
+                                gradientStroke,
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        hoverBackgroundColor: [
+                                revGradientStroke,
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        borderWidth: [
+                                0, 0
+                        ],
+                        borderColor:gradientStroke
+                },{
+                        data: [0,0],
+                        backgroundColor: [
+                                gradientStroke2,
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        hoverBackgroundColor: [
+                                revGradientStroke,
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        borderWidth: [
+                                0, 0
+                        ],
+                        borderColor:gradientStroke
+                }
+                ,{
+                        data: [0,0],
+                        backgroundColor: [
+                                gradientStroke3,
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        hoverBackgroundColor: [
+                                revGradientStroke,
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        borderWidth: [
+                                0, 0
+                        ],
+                        borderColor:gradientStroke
+                }
+                ,{
+                        data: [0,0],
+                        backgroundColor: [
+                                "blue",
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        hoverBackgroundColor: [
+                                revGradientStroke,
+                                "rgba(22, 23, 25,1)"
+                        ],
+                        borderWidth: [
+                                0, 0
+                        ],
+                        borderColor:gradientStroke
+                }
+        ]
+};
+
+
+var progress;
+
+//console.log('>>>>>>>>>>>>>>>>>>>>>>>>');
+//console.log(jetcanvajsextender);
+
+
+var deliveredOpt = {
+        responsive : false ,
+        cutoutPercentage: 68,
+        goalAmmount: 100,
+        salesAmmount: 180,
+        animation: {
+                animationRotate: true,
+                animateScale: false,
+                duration: 2000,
+                onProgress:function(animation) {      jetcanvajsextender.updateText(this,(animation.animationObject.currentStep / animation.animationObject.numSteps));       }
+
+        },
+        events: [
+                {
+                        hover: {mode: null}
+                }
+        ],
+        legend: {
+                display: false
+        },
+        tooltips: {
+                enabled: false
+        },
+        elements: {
+                center: {
+                        text: '',
+                        color: '#FFFFFF', // Default is #000000
+                        fontStyle: 'sans-serif', // Default is Arial
+                        sidePadding: 30 ,// Defualt is 20 (as a percentage)
+
+
+                }
+        }
+};
+
+
+
+
+var jetcanvajsextender2 =new  jetcanvajsextender('a','b','c');
+//console.log(jetcanvajsextender2);
+jetcanvajsextender.valueofTarget(deliveredOpt,deliveredData);
+
+
+
+
+
+
+var newElm = document.getElementById('openedCanvas');
+var chart = new Chart(newElm, {
+        type: 'doughnut',
+        data: deliveredData,
+        options: deliveredOpt,
+        percentile : 33
+});
+
+
+// add the blocks
+//
+
+
+
+
+
+
+
+var pane12 = document.getElementById('Pane12');
+pane12.innerHTML = htmlstrings.str_portfolioGrowth;
+
+//income thing
+var pane15 = document.getElementById('Pane15');
+container.insertAdjacentHTML( 'beforeend', htmlstrings.str_incomeGrowth ); //+= htmlstr3;
+
+}
+if(ApplicationForm == "resources")
+{
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.resources);
+
+
+        //var maiform = new jetform(form.creatNewProporty,"Pane1");
+        var container = document.getElementById('Pane2');
+        var container2 = document.getElementById('Pane1');
+
+        container.insertAdjacentHTML( 'beforeend', htmlstrings.res_trainingMan );
+        container2.insertAdjacentHTML( 'beforeend', htmlstrings.res_Lease );
+        container2.insertAdjacentHTML('beforeend',htmlstrings.res_other);
+
+        //the event to open a document
+        //
+        function dotheform(){
+
+                const { BrowserWindow } = require('electron').remote
+                const PDFWindow = require('electron-pdf-window')
+                const win = new BrowserWindow({
+                        width:1200,
+                        height:1000,
+                        modal :true,
+                        titleBarStyle :'hidden',
+                        autoHideMenuBar :true,
+                        darkTheme:true,
+                        frame:true,
+                        webPreferences: {
+                                plugins: true
+                        }
+                })
+
+                PDFWindow.addSupport(win)
+
+                win.loadURL('../../../../a.pdf');
+
+        }
+        container2.addEventListener("mousedown",dotheform);
+        //container2.on('click', dotheform);
+
+
+
+}
+
+if(ApplicationForm == "creatNewProporty")
+{
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.creatNewProporty);
+
+
+        var maiform = new jetform(form.creatNewProporty,"Pane1");
+
+        //mask the value
+        var InputMask ={
+                InputMask : ['','' ,'' , '', '-', '', '', '-','', ''],
+                Options : "none",
+                FormElement :'Listing_to'
+
+        };
+        var InputMask2 ={
+                InputMask : ['','' ,'' , '', '-', '', '', '-','', ''],
+                Options : "none",
+                FormElement :'Listing_from'
+
+        };
+
+        var t = new jetMask(InputMask);
+        var y = new jetMask(InputMask2);
+
+
+
+        //overide the xhr function
+        //
+
+        //
+        // console.log('9999999999999999999999999999999999999');
+        // console.log(maiform);
+        // console.log('9999999999999999999999999999999999999');
+
+        var theForm =  document.getElementById('Create_property');
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/create.php';
+        var meth ='POST';
+        let JsonStructure=   {
+                "addressDetails":
+                {
+                        "propertyname":"the house of the rising sun",
+                        "complex":"21 Ba",
+                        "street":"14 garrison street",
+                        "suburb":"bentlyburg",
+                        "city":"filadalfia",
+                        "province":"filadalfia",
+                        "postalcode":"9123"
+                },
+                "agentDetails":
+                {
+                        "agentId":3,
+                        "agentName":"Bob Fungro",
+                        "adminId":2,
+                        "adminName":"Elain Jaffie"
+                },
+                "listingDetails":
+                {
+                        "managed"  :"true",
+                        "allowPayments"  :"true",
+                        "monthlyPayment"  :"1200",
+                        "minimumBalance"  :"900",
+                        "paymentsToPropAccount"  :"true",
+                        "listingFrom"  :"2001-02-02",
+                        "listingTo"  :"2010-02-02",
+                        "notes"  :"this is a note"
+                },
+                "auditLog":
+                {
+
+
+                        "adminid":3
+                        // "time":"",
+                        // "date":"",
+                        // "changemade":"",
+                        // "propertyid":"",
+                        // "benificiartid":6,
+                        // "tenantid":"",
+                        // "accountid":"",
+                        // "settingsid":"",
+                        // "leaseid":"",
+                        // "damagedepositid":""
+                }
+
+        };
+
+        var thisTest = new jetXhr('Create_property',destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+                //console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                var serverResponse =JSON.parse(thisTest.serverResponse());
+
+                //console.log(serverResponse);
+                //console.log(serverResponse.First_operation.message);
+                //var jetWizardDatastore = require('jet-wizard-datastore');
+                //let dataStore = new  jetWizardDatastore();
+
+                // {
+                //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                dataStore.setKeyValuePair('Property_id',serverResponse.First_operation.Property_id)
+                dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                let x = dataStore.getKeyValuePair('Property_id')
+
+                let xx = dataStore.getAllKeys();
+
+                //console.log(x);
+                //console.log(xx);
+                //dataStore.clear();
+
+                //the callback function triggeres by the notication
+                function openWizard()
+                {
+                        //console.log('Foo - -= -=-= -=- =-=- =-=');
+                        delete thisTest;
+                        clearPanel();
+                        callSection("newPropertyWizard");
+                }
+                var notifystr = {
+                        notificationId:'note4',
+                        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Property_id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+
+                m.successNotification(notifystr);
+                m.myCallback(openWizard);
+        })
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+        // for some reason the function below does not work
+
+        // theForm.onsubmit = function(e){
+        //         e.preventDefault();
+        //         console.log('second==========function==============runs');
+        // }
+
+
+
+}
+
+//create_agent
+//
+if(ApplicationForm == "createAgent")
+{
+        //console.log("NEW AGENT !!!");
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.createNewAgent);
+        var maiform = new jetform(form.createNewAgent,"Pane1");
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/create_agent.php';
+        var meth ='POST';
+        var JsonStructure=  {
+                "agent": {
+                        "firstname" : "",
+                        "lastname" : "",
+                        "cell" : "",
+                        "telephonenumber" : "",
+                        "agentcode" : "",
+                        "idnumber" : ""
+
+
+                },
+                "auditLog":
+                {
+
+
+                        "adminid":3
+                        // "time":"",
+                        // "date":"",
+                        // "changemade":"",
+                        // "propertyid":"",
+                        // "benificiartid":6,
+                        // "tenantid":"",
+                        // "accountid":"",
+                        // "settingsid":"",
+                        // "leaseid":"",
+                        // "damagedepositid":""
+                }
+        };
+
+        var thisTest = new jetXhr(form.createNewAgent.formId,destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+
+                //        console.log('The Response WORKS'+ thisTest.serverResponse() );
+                var notifystr = {
+                        notificationId:'note7',
+                        message:'thisTest.serverResponse()',
+                        heading:'Server Response '
+                }
+                m.infoNotification(notifystr);
+
+
+        })
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+}
+//Administrators
+if(ApplicationForm == "createAdmin")
+{
+        //console.log("NEW Admin !!!");
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.createNewAdmin);
+        var maiform = new jetform(form.createNewAdmin,"Pane1");
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/create_admin.php';
+        var meth ='POST';
+        var JsonStructure=  {
+                "admin": {
+                        "firstname":"",
+                        "lastname":"",
+                        "email":"",
+                        "enableemail":"",
+                        "mobilenumber":"",
+                        "enablesms":"",
+                        "password":"",
+                        "permpropupdate":"",
+                        "permproprestore":"",
+                        "permpropaccesbudget":"",
+                        "permpropaccesallprop":"",
+                        "permbencreate":"",
+                        "permbenubdate":"",
+                        "permbenupdatebank":"",
+                        "permbenrestore":"",
+                        "permbencreatpayments":"",
+                        "permtencreate":"",
+                        "permtenarchiveorrestore":"",
+                        "permtenbankdetails":"",
+                        "permteninvoices":"",
+                        "permtendebitorcreditnotes":"",
+                        "permtendamagedep":"",
+                        "permtenapprovedamagedeprelease":"",
+                        "permtentenantcredtreport":"",
+                        "permtensendpaymentreminder":"",
+                        "permtencreditcheck":"",
+                        "permtenlettersofdemand":"",
+                        "permtenviewtenantarrears":"",
+                        "permrepviewcomm":"",
+                        "permrepviewtransactionhist":"",
+                        "permrepviewpaymentconfirmation":"",
+                        "permrepviewauditlog":"",
+                        "permbankrejectbenpayments":"",
+                        "permbankviewdirectdeposits":"",
+                        "permbankrecondirectdeposits":"",
+                        "permbankapprovebenpayments":"",
+                        "permsyscreateusers":"",
+                        "permsysupdatesettings":"",
+                        "permsysimportdata":"",
+                        "permsysexportdata":"",
+                        "permsysupdatetpn":"",
+                        "permsysuploaddocuments":""
+
+
+                },        "auditLog":
+                {
+
+
+                        "adminid":3
+                        // "time":"",
+                        // "date":"",
+                        // "changemade":"",
+                        // "propertyid":"",
+                        // "benificiartid":6,
+                        // "tenantid":"",
+                        // "accountid":"",
+                        // "settingsid":"",
+                        // "leaseid":"",
+                        // "damagedepositid":""
+                }
+        };
+
+        //function for the selectBox Select ALL
+        var selectAll = document.getElementById('permpropupdate');
+        selectAll.addEventListener( 'change', function() {
+                if(this.checked) {
+                        // Checkbox is checked..
+                        //
+                        var inputs = document.getElementsByTagName("input");
+                        for(var i = 0; i < inputs.length; i++) {
+                                if(inputs[i].type == "checkbox") {
+                                        inputs[i].checked = true;
+                                }
+                        }
+                } else {
+                        // Checkbox is not checked..
+                        var inputs = document.getElementsByTagName("input");
+                        for(var i = 0; i < inputs.length; i++) {
+                                if(inputs[i].type == "checkbox") {
+                                        inputs[i].checked = false;
+                                }
+                        }
+                }
+        });
+
+        var thisTest = new jetXhr(form.createNewAdmin.formId,destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){console.log('The Response WORKS'+ thisTest.serverResponse() );})
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+}
+
+
+if(ApplicationForm == "CreateBeneficiary")
+{
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.CreateBeneficiary);
+        var maiform = new jetform(form.CreateBeneficiary,"Pane1");
+        // console.log(form.CreateBeneficiary.formId);
+        // console.log(maiform);
+
+
+
+
+
+
+        //maskit
+        //mask the value
+        var InputMask ={
+                InputMask : ['','' ,'' , '-', '', '', '', '-','','','', ''],
+                Options : "none",
+                FormElement :'mobilenumber'
+
+        };
+        var InputMask2 ={
+                InputMask : ['(','' ,'' , '', ')', ' ', '', '','', '-', '', '', '', ''],
+                Options : "none",
+                FormElement :'phonenumber'
+
+        };
+        var InputMask3 ={
+                InputMask : ['(','' ,'' , '', ')', ' ', '', '','', '-', '', '', '', ''],
+                Options : "none",
+                FormElement :'faxnumber'
+
+        };
+
+        var t = new jetMask(InputMask);
+        var y = new jetMask(InputMask2);
+        var y = new jetMask(InputMask3);
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/create_beneficiary.php';
+        var meth ='POST';
+        var JsonStructure=  {
+                "beneficiaries": {
+
+                        "businessorindividual":"Business",
+                        "firstname":"MacMan",
+                        "lastname":"Chan",
+                        "idnumber":"79020205115082",
+                        "businessname":"",
+                        "busfirstname":"",
+                        "buslastname":"",
+                        "registrationno":"",
+                        "vatno":"",
+                        "email":"ep@rial.com",
+                        "mobilenumber":"0766676654",
+                        "smsnotifications":"true",
+                        "phonenumber":"0212234432",
+                        "faxnumber":"0212234432",
+                        "notes":"This is the first note",
+                        "complex":"12b1",
+                        "street":"147 PoopStreet",
+                        "suburb":"Kensington",
+                        "city":"Capetown",
+                        "province":"Western Cape",
+                        "postalcode":"2001",
+                        "country":"South Africa"
+                },
+                "bankingdetials":{
+                        "accountname":"",
+                        "bank":"",
+                        "branchname":"",
+                        "branchcode":"",
+                        "accountno":"",
+                        "accounttype":""
+
+                },
+                "auditLog":
+                {
+
+
+                        "adminid":3
+                        // "time":"",
+                        // "date":"",
+                        // "changemade":"",
+                        // "propertyid":"",
+                        // "benificiartid":6,
+                        // "tenantid":"",
+                        // "accountid":"",
+                        // "settingsid":"",
+                        // "leaseid":"",
+                        // "damagedepositid":""
+                }
+        };
+
+        var thisTest = new jetXhr(form.CreateBeneficiary.formId,destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+                console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+
+                var serverResponse =JSON.parse(thisTest.serverResponse());
+                //Check to see if the wizard refered it
+                //C
+                let xx = dataStore.getAllKeys();
+
+                console.log(xx);
+
+                var notifystr = {
+                        notificationId:'note4',
+                        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Beneficiary_id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+
+                m.successNotification(notifystr);
+                //this will only be set if the property wizard is initiated
+                if (xx.wizardCaptuer == 'true')
+                {
+                        console.log('was refered from wizard');
+                        console.log('++++++++++++++++++++++++++++++++++');
+
+                        dataStore.setKeyValuePair('Beneficiary_id',serverResponse.First_operation.Beneficiary_id)
+                        if(dataStore.getKeyValuePair('Beneficiary_id_list')==undefined)
+                        {
+                                let t = [dataStore.getKeyValuePair('Beneficiary_id')];
+                                //console.log(t,556);
+
+                                //t.push("55");
+
+                                dataStore.setKeyValuePair('Beneficiary_id_list',t)
+                        }
+                        else
+                        {
+                                let t = dataStore.getKeyValuePair('Beneficiary_id_list');
+                                t.push(dataStore.getKeyValuePair('Beneficiary_id'));
+                                dataStore.setKeyValuePair('Beneficiary_id_list',t)
+
+                        }
+                        console.log(serverResponse);
+
+                        let xx = dataStore.getAllKeys();
+                        console.log(xx);
+                        console.log('++++++++++++++++++++++++++++++++++');
+
+                        linkAndUpdateWizard();
+
+
+                }else{
+                        console.log(xx.wizardCaptuer);
+                }
+
+                //put the popup loop in here to see if the process was repeated
+
+
+
+        })
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+        function linkAndUpdateWizard()
+        {
+                console.log("=============LINKED",4454);
+                //Do the XJR request
+                let JsonStructure=    {
+                        "bridge_property_benificiary":
+                        {
+                                "idbenificiary":dataStore.getKeyValuePair('Beneficiary_id'),
+                                "property_id":dataStore.getKeyValuePair('Property_id')
+
+                        }
+                };
+
+
+                var theForm =  document.getElementById('Create_property');
+                var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/bridge_property_benificiary.php';
+                var meth ='POST';
+
+
+                var thisTest = new jetXhr('overide',destin,meth,JsonStructure,true);
+                thisTest.on('PostSuccess',function(){
+                        //console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                        var serverResponse =JSON.parse(thisTest.serverResponse());
+
+                        //console.log(serverResponse);
+                        //console.log(serverResponse.First_operation.message);
+                        //var jetWizardDatastore = require('jet-wizard-datastore');
+                        //let dataStore = new  jetWizardDatastore();
+
+                        // {
+                        //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                        //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                        //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                        //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                        // dataStore.setKeyValuePair('Property_id',serverResponse.First_operation.Property_id)
+                        // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                        // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                        // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                        // let x = dataStore.getKeyValuePair('Property_id')
+
+                        let xx = dataStore.getAllKeys();
+
+                        //        console.log(x);
+                        //console.log(xx);
+                        //dataStore.clear();
+
+                        //the callback function triggeres by the notication
+                        function openWizard()
+                        {
+                                //        console.log('Foo - -= -=-= -=- =-=- =-=');
+                                //delete thisTest;
+                                clearPanel();
+                                //callSection("newTenantWizard");
+                                callSection("repeater");
+                        }
+                        var notifystr = {
+                                notificationId:'note4',
+                                message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Bridge_Id ,//'This is a sample message from JSON',
+                                heading:'Server Response Success'
+                        }
+
+                        m.successNotification(notifystr);
+                        m.myCallback(openWizard);
+                })
+                thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+        }
+}
+
+//=======================================================================================================================================
+
+
+if (ApplicationForm == "repeater"){
+        clearPanel();
+
+
+        //the ID is main
+        //
+        var jsonInfo =     {
+                sizeFromTop: "144px",
+                modalwidth : "600",
+                formName: "Capture Wizard Tenant",
+                formId : "foome",
+                popupId : "tip3",
+                elevation : "bottom", // bottom / top
+                dialogClass : 'create-repository',
+                postAction:"http://localhost/05_API_tests/post.php",
+                formElements : [
+                        {
+                                type : "html",
+                                labelName : "or",
+                                dataName : "or",
+                                id :"or",
+                                placeholder:"<P >At this point you can add an additional Principal Benificiary such as landlord / owners / corporates </P>"
+
+
+                        },
+                        {
+                                type : "html",
+                                labelName : "or",
+                                dataName : "or",
+                                id :"or",
+                                placeholder:"<h2 class='or'>Would you like to add a primary benificiary </h2>"
+
+
+                        },
+                        {
+                                type : "html",
+                                labelName : "or",
+                                dataName : "or",
+                                id :"or",
+                                placeholder:"<center style='width:100%'><button class='button-component-new' style='width:40% ; margin-right:5px' type='button' id='newBenificiary'>Additional Benificiary's</button><button class='button-component-new' style='width:40% ; margin-left:5px' type='button' id='newTenant'>Continue to New Tenant</button></center>"
+
+
+                        }
+
+                ],
+
+                menuSize: "33px",
+                footerSize: "10px",
+                hasBottomSlider: true,
+                style: "grayTheme",
+                hasFooterButtons: false
+
+        };
+
+
+        //
+        var o =   new jetModalForm(jsonInfo,"jsonsetup","MainNav");
+        o.show();
+        //get the buttns and attach events
+        //
+        var bttn1 = document.getElementById('newBenificiary');
+        var bttn2 = document.getElementById('newTenant');
+
+        bttn1.addEventListener("click", function(){
+                callSection("newPropertyWizard");
+        });
+        bttn2.addEventListener("click", function(){
+                callSection("newTenantWizard");
+        });
+
+}
+
+
+if(ApplicationForm == "allproportiesTable")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.allproportiesTable);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.allproporties,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+
+
+if(ApplicationForm == "activeProporties")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.activeProporties);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.activeProporties,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+if(ApplicationForm == "disabledProporties")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.disabledProporties);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.disabledProporties,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+if(ApplicationForm == "viewAllTenants")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.viewAllTenants);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.viewAllTenants,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//arrearsAnalysis
+if(ApplicationForm == "arrearsAnalysis")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.arrearsAnalysis);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.arrearsAnalysis,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//viewAllBeneficiaries
+if(ApplicationForm == "viewAllBeneficiaries")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.viewAllBenificiaries);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.viewAllBenificiaries,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//CreateTenant
+if(ApplicationForm == "CreateTenant")
+{
+        // var mainPanel = document.getElementById("MainNav");
+        // mainPanel.innerHTML = "";
+        //
+        clearPanel();
+        var responsLayout = new jetformspanel("MainNav", panel.CreateTenant);
+        var maiform = new jetform(form.CreateTenant,"Pane1");
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/create_tenant.php';
+        var meth ='POST';
+
+        var JsonStructure= {
+                "tenantdetails": {
+
+                        "businessorindividual":"Business",
+                        "firstname":"MacMan",
+                        "lastname":"Chan",
+                        "idnumber":"79020205115082",
+                        "dateofbirth":"",
+                        "businessname":"",
+                        "busfirstname":"",
+                        "buslastname":"",
+                        "registrationno":"",
+                        "vatno":"",
+                        "email":"ep@rial.com",
+                        "mobilenumber":"0766676654",
+                        "smsnotifications":"true",
+                        "phonenumber":"0212234432",
+                        "faxnumber":"0212234432",
+                        "notes":"This is the first note"
+                },
+                "bankingdetials" :{
+                        "accountname":"gooPass",
+                        "bank":"STD",
+                        "branchname":"Belville",
+                        "branchcode":"2134",
+                        "accountno":"123123123",
+                        "accounttype":"SAVINGS"
+
+                },
+                "auditLog":
+                {
+
+
+                        "adminid":3,
+                        // "time":"",
+                        // "date":"",
+                        // "changemade":"",
+                        // "propertyid":"",
+                        "benificiartid":6
+                        // "tenantid":"",
+                        // "accountid":"",
+                        // "settingsid":"",
+                        // "leaseid":"",
+                        // "damagedepositid":""
+                }
+        }
+
+        var thisTest = new jetXhr(form.CreateTenant.formId,destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+                console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                var serverResponse =JSON.parse(thisTest.serverResponse());
+                let xx = dataStore.getAllKeys();
+
+                console.log(xx);
+
+                var notifystr = {
+                        notificationId:'note4',
+                        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Tenant_id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+
+                m.successNotification(notifystr);
+
+                if (xx.wizardCaptuer == 'true')
+                {
+                        console.log('was refered from wizard');
+                        console.log('++++++++++++++++++++++++++++++++++');
+
+                        dataStore.setKeyValuePair('Tenant_id',serverResponse.First_operation.Tenant_id)
+                        console.log(serverResponse);
+                        let xx = dataStore.getAllKeys();
+                        console.log(xx);
+                        console.log('++++++++++++++++++++++++++++++++++');
+
+                        linkAndUpdateWizard();
+
+
+                }else{
+                        console.log(xx.wizardCaptuer);
+                }
+
+
+
+
+
+
+
+        })
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+        function linkAndUpdateWizard()
+        {
+                console.log("=============LINKED",4454);
+                //Do the XJR request
+
+                //Do the XJR request
+                let JsonStructure=    {
+                        "bridge_property_tenant":
+                        {
+                                "id_tenants":dataStore.getKeyValuePair('Tenant_id'),
+                                "property_id":dataStore.getKeyValuePair('Property_id')
+
+                        }
+                };
+
+
+                var theForm =  document.getElementById('Create_property');
+
+                var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/bridge_property_tenant.php';
+                var meth ='POST';
+
+
+                var thisTest = new jetXhr('overide',destin,meth,JsonStructure,true);
+                thisTest.on('PostSuccess',function(){
+                        //console.log('The Response WORKS'+ thisTest.serverResponse() );
+
+                        var serverResponse =JSON.parse(thisTest.serverResponse());
+
+                        console.log(serverResponse);
+                        //console.log(serverResponse.First_operation.message);
+                        //var jetWizardDatastore = require('jet-wizard-datastore');
+                        //let dataStore = new  jetWizardDatastore();
+
+                        // {
+                        //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                        //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                        //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                        //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                        dataStore.setKeyValuePair('id_tenant',serverResponse.First_operation.id_tenant)
+                        // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                        // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                        // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                        // let x = dataStore.getKeyValuePair('Property_id')
+
+                        let xx = dataStore.getAllKeys();
+
+                        //        console.log(x);
+                        //console.log(xx);
+                        //dataStore.clear();
+
+                        //the callback function triggeres by the notication
+                        function openWizard()
+                        {
+                                //console.log('Foo - -= -=-= -=- =-=- =-=');
+                                //delete thisTest;
+                                //clearPanel();
+                                callSection("CreateNewLease");
+                        }
+                        var notifystr = {
+                                notificationId:'note4',
+                                message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Bridge_Id ,//'This is a sample message from JSON',
+                                heading:'Server Response Success'
+                        }
+
+                        m.successNotification(notifystr);
+
+                        m.myCallback(openWizard);
+                })
+                thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+
+        }///////////////////////////////////////
+
+}
+//
+//
+if(ApplicationForm == "CreditChecks")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.CreditChecks);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.CreditChecks,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//DamageDeposits
+if(ApplicationForm == "DamageDeposits")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.DamageDeposits);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.DamageDeposits,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//////////////////////////
+//////////////////////////
+if(ApplicationForm == "DamageDepositsMovement")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.DamageDepositMovement);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.DamageDepositMovement,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//
+if(ApplicationForm == "ActiveTenants")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.ActiveTenants);
+        // logit(table.allproporties);
+        var maiTable = new jetTables(table.ActiveTenants,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//
+if(ApplicationForm == "BlockedAccounts")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.BlockedAccounts);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.BlockedAccounts,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//TenantMovement
+if(ApplicationForm == "TenantMovement")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.TenantMovement);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.TenantMovement,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//DebitOrders
+if(ApplicationForm == "DebitOrders")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.DebitOrders);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.DebitOrders,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+
+        // logit(' allproportiesTable is Logged');
+        //clearPanel();
+        var tableSettings={
+                tableId : "accountR112",
+                tableBoxName : "table_box_bootstrap2",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        //var responsLayout = new jetformspanel("MainNav", panel.DebitOrders);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.RejectedDebitOrders,"Pane2",tableSettings);
+
+
+
+
+        //var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR112"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap2").appendChild(box);
+
+}
+
+//
+//TenantStatements
+if(ApplicationForm == "TenantStatements")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.TenantStatements);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.TenantStatements,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//benificiariesWithABalance
+if(ApplicationForm == "benificiariesWithABalance")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.benificiariesWithABalance);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.benificiariesWithABalance,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+
+//Activebenificiaries
+if(ApplicationForm == "Activebenificiaries")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.Activebenificiaries);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.Activebenificiaries,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//DisabledBeneficiaries
+if(ApplicationForm == "DisabledBeneficiaries")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.DisabledBeneficiaries);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.DisabledBeneficiaries,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//CommissionPayments
+if(ApplicationForm == "CommissionPayments")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.CommissionPayments);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.CommissionPayments,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//DirectDeposits
+if(ApplicationForm == "DirectDeposits")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.DirectDeposits);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.DirectDeposits,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//UnreconciledDirectDeposits
+if(ApplicationForm == "UnreconciledDirectDeposits")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.UnreconciledDirectDeposits);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.UnreconciledDirectDeposits,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+
+//UnreconciledDirectDeposits2
+if(ApplicationForm == "UnreconciledDirectDeposits2")
+{
+
+        //first thing i need to do is call the data from php via xhr
+
+
+
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+
+
+
+
+function get__Properties(){
+        // load the data for the select options
+
+        var destination = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/select_all_properties.php';
+        var meth ='POST';
+        var JsonStructure3=   {
+                "directDeposits": {
+                        "thisBranch":"12343"
+
+                }
+
+        };
+
+        var thisTest3 = new jetXhr('overide',destination,meth,JsonStructure3,true);
+        thisTest3.on('PostSuccess',function(){
+
+
+                //console.log('The Response WORKS'+ thisTest2.serverResponse() );
+
+                var serverResponse =JSON.parse(thisTest3.serverResponse());
+
+                //console.log(serverResponse);
+                //        console.log(serverResponse.First_operation.message);
+                // var jetWizardDatastore = require('jet-wizard-datastore');
+                // let dataStore = new  jetWizardDatastore();
+
+                // {
+                //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                dataStore.setKeyValuePair('all_properties',serverResponse)
+
+                //loadme();
+                // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                // let x = dataStore.getKeyValuePair('all_properties')
+
+                // let xx = dataStore.getAllKeys();
+                //
+                // console.log(x);
+                // console.log(xx);
+                // dataStore.clear();
+
+                //the callback function triggeres by the notication
+                // function openWizard()
+                // {
+                //         console.log('Foo - -= -=-= -=- =-=- =-=');
+                //         clearPanel();
+                //         callSection("newPropertyWizard");
+                // }
+                var notifystr = {
+                        notificationId:'note4',
+                        //         message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Property_id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+                //
+                m.successNotification(notifystr);
+                return load__DirectDeposits();
+
+                // m.myCallback(openWizard);
+
+                //callSection("searchBenificiaryResults");
+        })
+
+        thisTest3.on('PostFail',function(){console.log('The Error WORKS'+ thisTest3.serverResponse() );})
+        return 1;
+}
+
+
+
+
+
+function load__DirectDeposits()
+{
+
+
+        /// load the data for the rows in the table
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/bank_direct_deposits.php';
+        var meth ='POST';
+        var JsonStructure2=   {
+                "directDeposits": {
+                        "account_no":"12343",
+                        "start_date":"01-02-2020",
+                        "end_date":"01-02-2020"
+                }
+
+        };
+
+        var thisTest2 = new jetXhr('overide',destin,meth,JsonStructure2,true);
+        thisTest2.on('PostSuccess',function(){
+
+
+                //console.log('The Response WORKS'+ thisTest2.serverResponse() );
+
+                //var serverResponse =JSON.parse(thisTest2.serverResponse());
+                var serverResponse =JSON.parse(thisTest2.serverResponse());
+                //console.log(thisTest2.serverResponse());
+                //console.log(serverResponse);
+                //        console.log(serverResponse.First_operation.message);
+                // var jetWizardDatastore = require('jet-wizard-datastore');
+                // let dataStore = new  jetWizardDatastore();
+
+                // {
+                //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+
+
+
+                dataStore.setKeyValuePair('searchResult',serverResponse)
+
+
+                // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+
+                // let x = dataStore.getKeyValuePair('Property_id')
+
+                // let xx = dataStore.getAllKeys();
+                //
+                // console.log(x);
+                // console.log(xx);
+                // dataStore.clear();
+
+                //the callback function triggeres by the notication
+                // function openWizard()
+                // {
+                //         console.log('Foo - -= -=-= -=- =-=- =-=');
+                //         clearPanel();
+                //         callSection("newPropertyWizard");
+                // }
+                var notifystr = {
+                        notificationId:'note49',
+                        //        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Property_id ,//'This is a sample message from JSON',
+                        heading:'Server Response Success'
+                }
+                //
+                m.successNotification(notifystr);
+                // m.myCallback(openWizard);
+                //
+                return load__me();
+
+                //callSection("searchBenificiaryResults");
+        })
+
+        thisTest2.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+        return 1;
+}
+
+
+
+function load__me(){
+        //TEST jetPopinTable
+        //TEST
+        //TEST
+
+
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        //new TestTheLog
+        let xx =  dataStore.getKeyValuePair('searchResult')
+
+        let all_properties = dataStore.getKeyValuePair('all_properties');
+
+        //console.log(xx,44);
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                //magicRowNumber : 0,
+                ActivePagenation : "true",
+
+                inputFormForXHR : {
+                        isFormActive : true,
+                        FormId : 'embeded12',
+                        primaryKey : 'id',// this is the key the form element will use to match a unique identifier from the JSON Data
+                        formElements : [ {
+                                id : 'rad12',
+                                //type : 'radio',
+                                type : 'checkBox',
+                                name : 'splitPayments',
+                                //label : 'Select',
+                                label : 'Split Payment',
+                                defaultValue : 'dt'
+
+                        }
+                        // ,{
+                        //         inputToColumn:'property', //optional setting for input to be in a column
+                        //
+                        //         id:'',
+                        //         type : 'selectInput',//'textInput',
+                        //         name : 'property',
+                        //         label : 'LinkProperty',
+                        //         defaultValue : 'embeded12',
+                        //         arrayData : all_properties
+                        // }
+                        ,{
+                                inputToColumn:'property', //optional setting for input to be in a column
+
+                                id:'',
+                                type : 'jetInputTable',//'textInput',
+                                name : 'property',
+                                label : 'LinkProperty',
+                                defaultValue : 'embeded12'
+                                //arrayData : jsonStruct
+                        }]
+                }
+        };
+
+        var jetJsonEditor = require('jet-json-editor');
+
+        var editJson = {
+                renameKeys : {
+                        businessorindividua : "Type",
+                        idnumber : "ID Number",
+                        firstname : "First Name",
+                        businessname : "Name Of Business",
+                        //idbenificiary : "id",
+                        firstname : "First Name",
+                        firstname : "First Name",
+                        lastname : "Last Name"
+                },
+                deleteKeys : {
+                        busfirstname : "",
+                        buslastname : '',
+                        notes : '',
+                        complex : '',
+                        street : '',
+                        suburb : '',
+                        city : '',
+                        province : '',
+                        postalcode : '',
+                        country : '',
+                        smsnotifications :''
+
+
+                },
+        };
+        //console.log(xx);
+
+        var editorResult = new jetJsonEditor(xx,editJson);
+
+        //console.log(editorResult,'edited Results');
+//property comes from MSQL columns
+//but in order to solve split payments we need ither to add at the end like the radio or add another column here we can append to
+
+        //var maiTable = new jetTables(editorResult.modifiedJSON,"Pane1",tableSettings);
+
+        var responsLayout = new jetformspanel("MainNav", panel.UnreconciledDirectDeposits);
+        logit(table.allproporties);
+        //var maiTable = new jetTables(table.UnreconciledDirectDeposits,"Pane1",tableSettings);
+        //console.log(xx);
+        var maiTable = new jetTables(xx,"Pane1",tableSettings);
+
+console.log(maiTable.jetPopinArray);
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+
+        //TEST jetPopinTable
+        //TEST
+        //TEST
+        // let jsonStruct ={
+        //         settings:{
+        //                 columns : '20px 180px 180px 180px auto ',
+        //                 width:'700px',
+        //                 buttonText: 'foo is my sample'
+        //         },
+        //         properties :[ {
+        //                 "id":"2",
+        //                 "name":"Himount Estate",
+        //                 "address":"147 hillcrest ave",
+        //                 "suburb":"Kempton Park",
+        //                 "owner":"David Ignor"
+        //
+        //         },
+        //         {
+        //                 "id":"3",
+        //                 "name":"Dunkans Estate",
+        //                 "address":"27 Rowlane ave",
+        //                 "suburb":"Banero Park",
+        //                 "owner":"Mark Ignor"
+        //
+        //         },
+        //         {
+        //                 "id":"4",
+        //                 "name":"Tomas House",
+        //                 "address":"17 hillcrest ave",
+        //                 "suburb":"Kempton Park",
+        //                 "owner":"John Tomas"
+        //
+        //         },
+        //         {
+        //                 "id":"5",
+        //                 "name":"Burgandy Hill",
+        //                 "address":"14 Eva ave",
+        //                 "suburb":"DurbanNorth",
+        //                 "owner":"Roger Ignor"
+        //
+        //         }
+        // ]
+        // };
+
+        //Get the values from the All - properties XHR
+        let propertyArray = dataStore.getKeyValuePair('all_properties');
+
+        console.log(propertyArray,'propertyArray');
+
+//1 rename the keys
+//2 delete a few
+
+var editJson = {
+        renameKeys : {
+                businessorindividua : "Type",
+                idProperties : "id",
+                firstname : "First Name",
+                businessname : "Name Of Business",
+                //idbenificiary : "id",
+                firstname : "First Name",
+                firstname : "First Name",
+                lastname : "Last Name"
+        },
+        deleteKeys : {
+
+
+
+                 complex : '',
+                // street : '',
+                // suburb : '',
+                // city : '',
+                // province : '',
+                 postalcode : '',
+                 country : '',
+
+
+
+        },
+        mergeKeys : {
+
+                address : {
+
+                                 //complex : '',
+                                 street : '',
+
+
+                                 suburb : '',
+                                 city : '',
+                                // province : '',
+                                // postalcode : '',
+                                // country : '',
+
+                                }
+},
+};
+//console.log(xx);
+
+var editorResult = new jetJsonEditor(propertyArray,editJson);
+
+console.log(editorResult,45564);
+
+console.log(propertyArray,'propertyArray');
+
+        let jsonStruct ={
+                settings:{
+                        columns : '50px 100px 100px auto',
+                        width:'500px',
+                        buttonNew:false,
+                        buttonSelectorList: maiTable.jetPopinArray,
+                        buttonText: 'foo is my sample'
+                },
+                properties :propertyArray
+        };
+
+        // city: "filadalfia"
+        // complex: "21 Ba"
+        // idProperties: "24"
+        // postalcode: "9123"
+        // propertyname: ""
+        // province: null
+        // street: "14 garrison street"
+        // suburb: "bentlyburg"
+
+//         [ {
+//                 "id":"2",
+//                 "name":"Himount Estate",
+//                 "address":"147 hillcrest ave",
+//                 "suburb":"Kempton Park",
+//                 "owner":"David Ignor"
+//
+//         },
+//         {
+//                 "id":"3",
+//                 "name":"Dunkans Estate",
+//                 "address":"27 Rowlane ave",
+//                 "suburb":"Banero Park",
+//                 "owner":"Mark Ignor"
+//
+//         },
+//         {
+//                 "id":"4",
+//                 "name":"Tomas House",
+//                 "address":"17 hillcrest ave",
+//                 "suburb":"Kempton Park",
+//                 "owner":"John Tomas"
+//
+//         },
+//         {
+//                 "id":"5",
+//                 "name":"Burgandy Hill",
+//                 "address":"14 Eva ave",
+//                 "suburb":"DurbanNorth",
+//                 "owner":"Roger Ignor"
+//
+//         }
+// ]
+        // console.log(maiTable.jetPopinArray, 7777);
+        //
+        // function insertPopin(theId){
+        //
+        // console.log(theId,3233);
+        //
+        //
+        // console.log(theId);
+        // }
+        // var array = maiTable.jetPopinArray;
+        // array.map(insertPopin)
+        //var theId = new jetPopinTable("embeded12", jsonStruct);
+        var theId = new jetPopinTable("Pane1", jsonStruct);
+        //var theId = new jetPopinTable("Pane1", jsonStruct);
+        theId.on('select', function(){
+                console.log('callback applied');
+        },this);
+
+
+
+        //
+        // // this was a simple check to see what data is posted...
+        JsonStructure = {
+                "foo":"myfoo",
+                "id345":''
+        }
+        JsonStructure.retner = "alo";
+        ////////////////////////////////////////////////////////////////////
+        var element = {};
+        var theForm = document.getElementById('embeded12')
+
+
+
+
+
+
+//................................................
+theForm.addEventListener('submit', (e) => {
+  // on form submission, prevent default
+  e.preventDefault();
+
+  // construct a FormData object, which fires the formdata event
+ // new FormData(formElem);
+  let data = new FormData(theForm);
+ // console.log(FormData,5456);
+  for(var pair of data.entries()) {
+        //  console.log(pair);
+        //  console.log(pair[0]+ ', '+ pair[1]);
+         element[ pair[0].toString() ] = pair[1];
+  }
+
+});
+//.......................................................
+
+
+
+
+
+        JsonStructure.updates = element;
+        console.log(element,4538);
+        // ////////////////////////////////////////////////////////////////////////
+        //
+        //
+        //
+        //
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/01_callback.php';
+        var meth ='POST';
+
+
+        var thisTest = new jetXhr('embeded12',destin,meth,JsonStructure,true);
+        thisTest.on('PostSuccess',function(){
+                //         //console.log('The Response WORKS'+ thisTest.serverResponse() );
+                //
+                var serverResponse =JSON.parse(thisTest.serverResponse());
+                //
+                console.log(serverResponse);
+                //         //console.log(serverResponse.First_operation.message);
+                //         //var jetWizardDatastore = require('jet-wizard-datastore');
+                //         //let dataStore = new  jetWizardDatastore();
+                //
+                //         // {
+                //         //         "First_operation":{"message":"Property Created","Property_id":"178"},
+                //         //         "Second_operation":{"message":"New Admin & Agent Created","created_id":"122"},
+                //         //         "Third_operation":{"message":"New Listing Created","created_id":"90"},
+                //         //         "Fourth_operation":{"message":"New Audit Log Entry","audit_id":"82"}}
+                //
+                //
+                //
+                //         //dataStore.setKeyValuePair('id_tenant',serverResponse.First_operation.id_tenant)
+                //         // dataStore.setKeyValuePair('Agent_id',serverResponse.Second_operation.created_id)
+                //         // dataStore.setKeyValuePair('Listing_id',serverResponse.Third_operation.created_id)
+                //         // dataStore.setKeyValuePair('audit_id',serverResponse.Fourth_operation.audit_id)
+                //
+                //         // let x = dataStore.getKeyValuePair('Property_id')
+                //
+                //         let xx = dataStore.getAllKeys();
+                //
+                //         //        console.log(x);
+                //         //console.log(xx);
+                //         //dataStore.clear();
+                //
+                //         //the callback function triggeres by the notication
+                //         function openWizard()
+                //         {
+                //                 //console.log('Foo - -= -=-= -=- =-=- =-=');
+                //                 //delete thisTest;
+                //                 //clearPanel();
+                //                 callSection("CreateNewLease");
+                //         }
+                //         var notifystr = {
+                //                 notificationId:'note4',
+                //         //        message:serverResponse.First_operation.message + ' ID ' + serverResponse.First_operation.Bridge_Id ,//'This is a sample message from JSON',
+                //                 heading:'Server Response Success'
+                //         }
+                //
+                //         m.successNotification(notifystr);
+                //
+                //         return openWizard();
+        })
+
+
+
+        return 1;
+}
+
+// var runinOrder =async function(e)
+// {
+//         //console.log(e);
+//         //e.preventDefault();
+//         //console.log('Captured Submit');
+//         try {
+//                 const getProperties = await getProperties() ;
+//                 const loadDirectDeposits = await  loadDirectDeposits();
+//                 const loadme = await loadme();
+//
+//         } catch(err) {
+//                 // catches errors both in fetch and response.json
+//                 console.log(err);
+//         }
+//
+// }//.bind(self);
+// runinOrder();
+
+// (async () => {
+//         try{
+//                 const getProperties = await get__Properties() ;
+//                 const loadDirectDeposits = await  load__DirectDeposits();
+//                 //const loadme = await load__me();
+//
+//         }
+//          catch(err)
+//         {
+//                 // catches errors both in fetch and response.json
+//                 console.log(err);
+//         }
+//
+// })();
+
+//getProperties()
+get__Properties();
+
+
+
+
+}
+//PendingDirectDeposits
+if(ApplicationForm == "PendingDirectDeposits")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.PendingDirectDeposits);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.PendingDirectDeposits,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//PaymentsToApprove
+if(ApplicationForm == "PaymentsToApprove")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        // var tableSettings={
+        //     tableId : "accountR11",
+        //     tableBoxName : "table_box_bootstrap",
+        //     columnWidths:[10,40,20,40],
+        //     ActivePagenation : "true",
+        // };
+
+        var responsLayout = new jetformspanel("MainNav", panel.PaymentsToApprove);
+        var container2 = document.getElementById('Pane1');
+
+        container2.insertAdjacentHTML( 'beforeend', htmlstrings.PaymentsToApprove );
+
+
+        // logit(table.allproporties);
+        // var maiTable = new jetTables(table.PaymentsToApprove,"Pane1",tableSettings);
+        //
+        //
+        //
+        //
+        // var jetPaginator = require("jet-paginator");
+        // var box =new jetPaginator({
+        //     table: document.getElementById("accountR11"),
+        //     box_mode: "list",
+        // });
+        // box.className = "boxo";
+        // document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//inv_cred_deb
+//
+if(ApplicationForm == "inv_cred_deb")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        // var tableSettings={
+        //     tableId : "accountR11",
+        //     tableBoxName : "table_box_bootstrap",
+        //     columnWidths:[10,40,20,40],
+        //     ActivePagenation : "true",
+        // };
+
+        var responsLayout = new jetformspanel("MainNav", panel.inv_cred_deb);
+        var container2 = document.getElementById('Pane1');
+
+        container2.insertAdjacentHTML( 'beforeend', htmlstrings.inv_cred_deb );
+
+
+        // logit(table.allproporties);
+        // var maiTable = new jetTables(table.PaymentsToApprove,"Pane1",tableSettings);
+        //
+        //
+        //
+        //
+        // var jetPaginator = require("jet-paginator");
+        // var box =new jetPaginator({
+        //     table: document.getElementById("accountR11"),
+        //     box_mode: "list",
+        // });
+        // box.className = "boxo";
+        // document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//audi
+if(ApplicationForm == "audi")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        // var tableSettings={
+        //     tableId : "accountR11",
+        //     tableBoxName : "table_box_bootstrap",
+        //     columnWidths:[10,40,20,40],
+        //     ActivePagenation : "true",
+        // };
+
+        var responsLayout = new jetformspanel("MainNav", panel.audi);
+        var container2 = document.getElementById('Pane1');
+
+        container2.insertAdjacentHTML( 'beforeend', htmlstrings.audi );
+
+
+        // logit(table.allproporties);
+        // var maiTable = new jetTables(table.PaymentsToApprove,"Pane1",tableSettings);
+        //
+        //
+        //
+        //
+        // var jetPaginator = require("jet-paginator");
+        // var box =new jetPaginator({
+        //     table: document.getElementById("accountR11"),
+        //     box_mode: "list",
+        // });
+        // box.className = "boxo";
+        // document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//
+//
+//ContactDetails
+if(ApplicationForm == "ContactDetails")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.ContactDetails);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.ContactDetails,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+
+//Reminders
+//R
+if(ApplicationForm == "Reminders")
+{
+        // logit(' allproportiesTable is Logged');
+        clearPanel();
+        var tableSettings={
+                tableId : "accountR11",
+                tableBoxName : "table_box_bootstrap",
+                columnWidths:[10,40,20,40],
+                ActivePagenation : "true",
+        };
+
+        var responsLayout = new jetformspanel("MainNav", panel.Reminders);
+        logit(table.allproporties);
+        var maiTable = new jetTables(table.Reminders,"Pane1",tableSettings);
+
+
+
+
+        var jetPaginator = require("jet-paginator");
+        var box =new jetPaginator({
+                table: document.getElementById("accountR11"),
+                box_mode: "list",
+        });
+        box.className = "boxo";
+        document.getElementById("table_box_bootstrap").appendChild(box);
+
+}
+//quicklinks
+if(ApplicationForm == "quicklinks")
+{
+        logit(' quicklinks is Logged');
+        console.log(' quicklinks is Logged');
+
+        let tt = dataStore.getAllKeys();
+        console.log(tt);
+
+        //do the XHR request here with a special function to ignore forms
+
+        var destin = 'http://127.0.0.1/00_Seeff/acc_endpoint-api/api/post/search_single_property.php';
+        var meth ='POST';
+        //115 for testing
+        var JsonStructure= {
+                "search": {
+
+                        "property_id":tt.Property_id
+
+                }
+        }
+
+        var allocatethis;
+        var obj;
+
+        var thisTest = new jetXhr('overide',destin,meth,JsonStructure,true);
+
+        console.log('PostSuccess');
+        thisTest.on('PostSuccess',function(){
+                console.log('The Response WORKS'+ thisTest.serverResponse() );
+                console.log('PostSuccess Running');
+                allocatethis =thisTest.serverResponse()
+
+
+
+
+
+                console.log('========================');
+                obj = JSON.parse(allocatethis);
+                console.log(obj.tenants);
+
+                return doLayout(obj);
+        })//end of the xhr Event Statment
+
+
+        clearPanel();
+
+        // var notifystr = {
+        //         notificationId:'note4',
+        //         message:'This is a sample message from JSON',
+        //         heading:'Server Response Success'
+        // }
+        // m.successNotification(notifystr);
+        //
+        // var notifystr = {
+        //         notificationId:'note5',
+        //         message:'This is a sample message from JSON',
+        //         heading:'Server Response Error;'
+        // }
+        // m.errorNotification(notifystr);
+        // var notifystr = {
+        //         notificationId:'note6',
+        //         message:'This is a sample message from JSON',
+        //         heading:'Server Response Info'
+        // }
+        // m.infoNotification(notifystr);
+        //
+        // var notifystr = {
+        //         notificationId:'note7',
+        //         message:'This is a sample message from JSON',
+        //         heading:'Server Response Success'
+        // }
+        // m.infoNotification(notifystr);
+        //
+        // var notifystr = {
+        //         notificationId:'note8',
+        //         message:'This is a sample message from JSON',
+        //         heading:'Server Response Error;'
+        // }
+        // m.infoNotification(notifystr);
+        // var notifystr = {
+        //         notificationId:'note9',
+        //         message:'This is a sample message from JSON',
+        //         heading:'Server Response Info'
+        // }
+        // m.infoNotification(notifystr);
+
+        //{idProperties: "115", propertyname: "TestTheLog", complex: "123 Caroson Hous ", street: "12 bently ave ", city: "Benoni", …}
+        //{
+        // "idProperties":"115","propertyname":"TestTheLog","complex":"123 Caroson Hous ","street":"12 bently ave ","city":"Benoni","province":"GP","postalcode":"2121"},
+        //
+
+
+        function doLayout(obj){
+
+                var responsLayout = new jetformspanel("MainNav", panel.quickLinks);
+                var jsonLayout = {
+                        settings: 'Run Example...',
+                        cards:[      {
+                                Name : 'Property ',
+                                icon : 'fas fa-store-alt fa-2x',
+                                Fields :{
+                                        "Property ID":obj.property.idProperties,
+                                        "Property Name":obj.property.propertyname,
+                                        "Complex":obj.property.complex,
+                                        "Street":obj.property.street,
+                                        "city":obj.property.city,
+                                        "Province":obj.property.province,
+                                        "Postal Code":obj.property.postalcode
+                                },
+
+                                jetCommonName: 'jono',
+                                jetFunction: 'jono',
+                                jetFunctionParams: []
+
+                        },
+                        // "Beneficiary":{"idbenificiary":"19","businessorindividual":"Business","firstname":"Rold","lastname":"Etner","idnumber":"9001012001082","registrationno":"21344"
+                        // ,"vatno":"21343","email":"etner@etnerHoldings","mobilenumber":"084-049-9221","phonenumber":"(021) 443-4321","faxnumber":"(021) 331-3312"},
+
+
+
+
+                        // "Tenant":{"id_tenants":"1","businessorindividual":"Business","firstname":"MacMan","lastname":"Chan","idnumber":"79020205115082","registrationno":"","vatno":"","email":"ep@rial.com","mobilenumber":"0766676654","phonenumber":"0212234432","faxnumber":"0212234432"},
+                        //
+                        {
+
+
+                                Name : 'Tenant',
+                                icon : 'fas fa-user-tag fa-2x',
+                                Fields :{
+                                        "id_tenants" :obj.Tenant.id_tenants,
+                                        "businessorindividual" :obj.Tenant.businessorindividual,
+                                        "firstname" :obj.Tenant.firstname,
+                                        "lastname" :obj.Tenant.lastname,
+                                        "idnumber" :obj.Tenant.idnumber,
+                                        "registrationno" :obj.Tenant.registrationno,
+                                        "vatno" :obj.Tenant.vatnovatno,
+                                        "email" :obj.Tenant.email,
+                                        "mobilenumber" :obj.Tenant.mobilenumber,
+                                        "phonenumber" :obj.Tenant.phonenumber,
+                                        "faxnumber" :obj.Tenant.faxnumber,
+
+
+                                },
+                                jetCommonName: 'jono',
+                                jetFunction: 'jono',
+                                jetFunctionParams: []
+                        },
+                        // "agent":{"idAgent":"3","firstname":"jono2","lastname":"James","cell":"0740496002","telephonenumber":"(028)316-3224","agentcode":"123"},
+                        //
+                        {
+
+
+
+                                Name : 'Agent',
+                                icon : 'fas fa-user-tie fa-2x',
+                                Fields :{
+                                        "idAgent" :obj.agent.idAgent,
+                                        "firstname" :obj.agent.firstname,
+                                        "lastname" :obj.agent.lastname,
+                                        "cell" :obj.agent.cell,
+                                        "telephonenumber" :obj.agent.telephonenumber,
+                                        "agentcode" :obj.agent.agentcode
+
+                                },
+                                jetCommonName: 'jono',
+                                jetFunction: 'jono',
+                                jetFunctionParams: []
+                        },
+                        // "lease_agreement":{"id_lease":"14","contract_inception":"2001-10-10","contract_expiration":"2002-10-30","deposit_ammount":"7000","rental_term":"12","rental_frequency":"monthly","rental_ammount":"7000","monthly_payment_due_by":"31","week1_payment_by":"","week2_payment_by":"","week3_payment_by":"","week4_payment_by":"","isActive":"true"}}
+
+                        {
+
+                                Name : 'Lease Agreement',
+                                icon : 'fas fa-copy fa-2x',
+                                Fields :{
+                                        "id_lease" :obj.lease_agreement.id_lease,
+                                        "contract_inception" :obj.lease_agreement.contract_inception,
+                                        "contract_expiration" :obj.lease_agreement.contract_expiration,
+                                        "deposit_ammount" :obj.lease_agreement.deposit_ammount,
+                                        "rental_term" :obj.lease_agreement.rental_term,
+                                        "rental_frequency" :obj.lease_agreement.rental_frequency,
+                                        "rental_ammount" :obj.lease_agreement.rental_ammount,
+                                        "monthly_payment_due_by" :obj.lease_agreement.monthly_payment_due_by,
+                                        "week1_payment_by" :obj.lease_agreement.week1_payment_by,
+                                        "week2_payment_by" :obj.lease_agreement.week2_payment_by,
+                                        "week3_payment_by" :obj.lease_agreement.week3_payment_by,
+                                        "week4_payment_by" :obj.lease_agreement.week4_payment_by,
+                                        "isActive" :obj.lease_agreement.isActive
+
+                                },
+                                jetCommonName: 'jono',
+                                jetFunction: 'jono',
+                                jetFunctionParams: []
+                        },
+                        {
+
+                                Name : 'Statements',
+                                icon : 'fas fa-clipboard-list fa-2x',
+                                Fields :{
+                                        descfirstLine:' This is line one ',
+                                        descsecondLine:'line 2',
+                                        descsecondLine3:'line 2',
+                                        descsecondLine4:'line 2',
+                                        descthirdLine:'line3'
+                                },
+                                jetCommonName: 'jono',
+                                jetFunction: 'jono',
+                                jetFunctionParams: []
+                        }]
+
+                };
+
+
+                var demo ={
+                        Name : 'Benificiary',
+                        icon : 'fas fa-user-friends fa-2x',
+                        Fields :{
+                                "idbenificiary" :obj.Beneficiary.idbenificiary ,
+                                "businessorindividual" :obj.Beneficiary.businessorindividual,
+                                "firstname" :obj.Beneficiary.firstname ,
+                                "lastname" :obj.Beneficiary.lastname ,
+                                "idnumber" :obj.Beneficiary.idnumber ,
+                                "registrationno" :obj.Beneficiary.registrationno ,
+                                "vatno" :obj.Beneficiary.vatno ,
+                                "email" :obj.Beneficiary.email ,
+                                "mobilenumber" :obj.Beneficiary.mobilenumber ,
+                                "phonenumber" :obj.Beneficiary.phonenumber ,
+                                "faxnumber" :obj.Beneficiary.faxnumber
+
+
+
+                        },
+                        jetCommonName: 'jono',
+                        jetFunction: 'jono',
+                        jetFunctionParams: []
+                };
+
+                // console.log("foora===============================");
+                // console.log(obj.Beneficiary.length);
+                // console.log("foora===============================");
+
+                var benArray = '';
+
+                for(let i = 0 ; i<obj.Beneficiary.length ;i++)
+                {
+                        benArray ={
+                                Name : 'Benificiary / Landlord',
+                                icon : 'fas fa-user-friends fa-2x',
+                                Fields :{
+                                        "idbenificiary" :obj.Beneficiary[i].idbenificiary ,
+                                        "businessorindividual" :obj.Beneficiary[i].businessorindividua,
+                                        "firstname" :obj.Beneficiary[i].firstname ,
+                                        "lastname" :obj.Beneficiary[i].lastname ,
+                                        "idnumber" :obj.Beneficiary[i].idnumber ,
+                                        "registrationno" :obj.Beneficiary[i].registrationno ,
+                                        "vatno" :obj.Beneficiary[i].vatno ,
+                                        "email" :obj.Beneficiary[i].email ,
+                                        "mobilenumber" :obj.Beneficiary[i].mobilenumber ,
+                                        "phonenumber" :obj.Beneficiary[i].phonenumber ,
+                                        "faxnumber" :obj.Beneficiary[i].faxnumber
+
+
+
+                                },
+                                jetCommonName: 'jono',
+                                jetFunction: 'jono',
+                                jetFunctionParams: []
+                        };
+                        jsonLayout.cards.splice(1, 0, benArray);
+
+                }
+                //console.log(benArray);
+
+
+                var t =new jetInfoCards('Pane1',jsonLayout);
+                t.on('select', function(){
+
+
+                        //console.log('Callback Function works !!!');
+                        let JetFunction = (arguments[0].data.jetFunction);
+                        //console.log(JetFunction);
+                        let parameters = (arguments[0].data.jetFunctionParams);
+                        if(JetFunction){
+                                let parameters = (arguments[0].data.jetFunctionParams);
+                                if(parameters){
+
+                                        window[JetFunction].apply(this, parameters);//
+
+                                }
+                        }
+
+
+                });
+        }
+
+        thisTest.on('PostFail',function(){console.log('The Error WORKS'+ thisTest.serverResponse() );})
+}
+
+}
+
+//delet this function after allocating the jetInfoCards to the main application functions
+function jono()
+{
+        //console.log("Jono Called Works in node!!!");
+}
+
+
+
+//=========================================================================
+
+
+
+
+
+
+
+
+//
+///
+///Log file
+///
+///
+var base = document.getElementById('bottomNav');
+var pre = document.createElement('pre');
+
+base.appendChild(pre);
+
+pre.innerHTML += "<span style='color:lime'> Login 10:12";
+
+
+
+function logit(Message)
+{
+        var d = new Date();
+        var h = d.toLocaleTimeString();
+
+        pre.innerHTML += "<br><span style='color:lime'> "+h+" --- " +Message+"<span>";
+}
+
+
+//
+// Menu Events
+//
+function dashboard()
+{
+        logit(' dashboard is loading ');
+        callSection("dashboard");
+}
+//jetWorkBench
+//
+//
+function workbench()
+{
+        logit(' workbench is loading ');
+        callSection("workbench");
+}
+
+function creatNewProporty()
+{
+        logit(' creatNewProporty is loading ');
+        callSection("creatNewProporty");
+}
+function CreateBeneficiary()
+{
+        logit(' CreateBeneficiary is loading ');
+        callSection("CreateBeneficiary");
+}
+function allproportiesTable()
+{
+        logit(' all proportiesTable is loading ');
+        callSection("allproportiesTable");
+}
+function activeProporties()
+{
+        logit('Active Proporties Table is loading ');
+        callSection("activeProporties");
+}
+function disabledProporties()
+{
+        logit('Disabled Proporties Table is loading ');
+        callSection("disabledProporties");
+}
+function viewAllTenants()
+{
+        logit(' All Tenants  Table is loading ');
+        callSection("viewAllTenants");
+}
+function arrearsAnalysis()
+{
+        logit(' Arrears Analysis  Table is loading ');
+        callSection("arrearsAnalysis");
+}
+//viewAllBeneficiaries
+function viewAllBeneficiaries()
+{
+        logit(' View All Beneficiaries  Table is loading ');
+        callSection("viewAllBeneficiaries");
+}
+//CreateTenant
+function CreateTenant()
+{
+        logit(' Create a tenant Form is loading ');
+        callSection("CreateTenant");
+}
+//CreditChecks
+//C
+function CreditChecks()
+{
+        logit(' Credit Checks a tenant Form is loading ');
+        callSection("CreditChecks");
+}
+//DamageDeposits
+//D
+function DamageDeposits()
+{
+        logit(' Damage Deposits Form is loading ');
+        callSection("DamageDeposits");
+}
+
+//DamageDeposits
+//D
+function DamageDepositsMovement()
+{
+        logit(' Damage Deposits Movement  Form is loading ');
+        callSection("DamageDepositsMovement");
+}
+//DamageDeposits
+//D
+function ActiveTenants()
+{
+        logit(' Active Tenants Deposits Form is loading ');
+        callSection("ActiveTenants");
+}
+//DamageDeposits
+//D
+function BlockedAccounts()
+{
+        logit(' Blocked Accounts Form is loading ');
+        callSection("BlockedAccounts");
+}
+//TenantMovement
+function TenantMovement()
+{
+        logit(' Tenant Movement Form is loading ');
+        callSection("TenantMovement");
+}
+//DebitOrders
+function DebitOrders()
+{
+        logit(' Debit Orders  Form is loading ');
+        callSection("DebitOrders");
+}
+//TenantStatements
+function TenantStatements()
+{
+        logit(' Tenant Statements  Form is loading ');
+        callSection("TenantStatements");
+}
+//benificiariesWithABalance
+function benificiariesWithABalance()
+{
+        logit(' Benificiaries with a balance Form is loading ');
+        callSection("benificiariesWithABalance");
+}
+//Activebenificiaries
+function Activebenificiaries()
+{
+        logit('Active benificiaries Form is loading ');
+        callSection("Activebenificiaries");
+}
+//DisabledBeneficiaries
+function DisabledBeneficiaries()
+{
+        logit('Disabled Beneficiaries Form is loading ');
+        callSection("DisabledBeneficiaries");
+}
+//CommissionPayments
+function CommissionPayments()
+{
+        logit('Commission Payments Form is loading ');
+        callSection("CommissionPayments");
+}
+//DirectDeposits
+function DirectDeposits()
+{
+        logit('Direct Deposits Form is loading ');
+        callSection("DirectDeposits");
+}
+//UnreconciledDirectDeposits
+function UnreconciledDirectDeposits()
+{
+        logit('Unreconciled Direct Deposits Form is loading ');
+        callSection("UnreconciledDirectDeposits");
+}
+function UnreconciledDirectDeposits2()
+{
+        logit('Unreconciled Direct Deposits Form 2 is loading ');
+        callSection("UnreconciledDirectDeposits2");
+}
+//PendingDirectDeposits
+function PendingDirectDeposits()
+{
+        logit('Pending Direct Deposits Form is loading ');
+        callSection("PendingDirectDeposits");
+}
+//PaymentsToApprove
+function PaymentsToApprove()
+{
+        logit('Payments To Approve Form is loading ');
+        callSection("PaymentsToApprove");
+}
+//ContactDetails
+function ContactDetails()
+{
+        logit('Contact Details Form is loading ');
+        callSection("ContactDetails");
+}
+//Reminders
+function Reminders()
+{
+        logit('Reminders Form is loading ');
+        callSection("Reminders");
+}
+//Bulma
+function Bulma()
+{
+        logit('audit log Form is loading ');
+        callSection("audi");
+}
+
+//resources
+function resources()
+{
+        logit('resources Form is loading ');
+        callSection("resources");
+}
+
+// exports.Reminders=Reminders;
+
+//inv_cred_deb
+function inv_cred_deb()
+{
+        logit('inv_cred_deb Form is loading ');
+        callSection("inv_cred_deb");
+}
+//agent
+function CreateAgent()
+{
+        logit('new Agent Form is loading ');
+        callSection("createAgent");
+}
+
+//Administrators
+function CreateAdmin()
+{
+        logit('new Admin Form is loading ');
+        callSection("createAdmin");
+}
+
+
+//Bulma
+function ShowTemplate()
+{
+        logit('BulmaTemplate Form is loading ');
+        callSection("Bulma");
+
+}
+function doIt()
+{
+        //console.log("works");
+}
+//quicklinks
+function quicklinks()
+{
+        logit('BulmaTemplate Form is loading ');
+        callSection("quicklinks");
+}
+
+function clearPanel()
+{
+
+        var mainPanel = document.getElementById("MainNav");
+        mainPanel.innerHTML = '';
+}
+function newPropertyWizard()
+{
+        logit('newPropertyWizard Popup is loading ');
+        callSection("newPropertyWizard");
+}
+
+
+
+//
+//Sample Functions
+//
+function sampleEvent(a ,b ,c ,d)
+{
+        let cnsStyle1 = 'background: #fff; color: green;';
+        let cnsStyle2 = 'background: #gray; color: black;';
+        //console.log('%c a Parameter :'+a+'\n b Parameter :'+b+' \n c Parameter :'+c+'\n d Parameter :'+d,cnsStyle1);
+}
+
+function toggleStyle()
+{
+        var body=  document.getElementsByTagName("BODY")[0];
+        if(body.classList.contains('theme-dark')){ body.classList.remove('theme-dark');}else { body.classList.add('theme-dark'); }
+}
+function loadCal()
+{
+        var myhtml = '<iframe src="calendar.html" style="height:100%"></iframe>';
+
+        //document.getElementById('MainNav').innerHTML = myhtml;
+}
+function loadTable()
+{
+        var myhtml = '<iframe src="tables.html" style="height:100%"></iframe>';
+        //
+        document.getElementById('MainNav').innerHTML = myhtml;
+}
+function loadDash()
+{
+        //var myhtml =dash;
+        //var myhtml = '<iframe src="BLOCKS%20-%20Bootstrap%20Dashboard%20Theme.html" style="height:100%"></iframe>';
+
+        document.getElementById('MainNav').innerHTML = myhtml;
+}
+function ShowPop()
+{
+        //alert("popup");
+        //var myhtml =dash;// '<iframe src="popupform.html" style="height:100%"></iframe>';
+
+        document.getElementById('MainNav').innerHTML = myhtml;
+}
+function ShowForm1()
+{
+        var closePopup = document.getElementById("popupclose");
+        var overlayme = document.getElementById("overlayme");
+        var popup = document.getElementById("popup");
+        var button = document.getElementById("button");
+        overlayme.className = 'show';
+        popup.className = 'show';
+}
+function closewin()
+{
+        var window = remote.getCurrentWindow();
+        window.close();
+}
+
+//
+// Attach events
+//
+
+//*******************************************************************
+//Sample
+// auto call function Usage with jetFunction and jetFunctionParams
+// 1 : parameters must be declared before the JetMenu JSON object
+// 2 : functions can be called after the JetMenu JSON object
+// ******************************************************************
+t.on('select', function () {
+        // console.log(arguments[0].data.jetCommonName);
+});
+
+
+//*******************************************************************
+//Sample
+// auto call function Usage with jetFunction and jetFunctionParams
+// 1 : parameters must be declared before the JetMenu JSON object
+// 2 : functions can be called after the JetMenu JSON object
+// ******************************************************************
+t.on('select', function () {
+        let parameters = (arguments[0].data.jetFunctionParams);
+        let JetFunction = (arguments[0].data.jetFunction);
+        if(JetFunction){
+                if(parameters){
+                        window[JetFunction].apply(this, parameters);//
+                }else{
+                        //console.log('%c NOTE : \n  jetFunctionParams not defined check the JSON entry....','background: #fff; color: orange;');
+                }}else{
+                        //console.log('%c NOTE : \n jetFunction not defined check the JSON entry....','background: #fff; color: orange;');
+                }
+        });
+
+        const remote = require('electron').remote;
+
+        document.getElementById("min-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.minimize();
+        });
+
+        document.getElementById("max-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                if (!window.isMaximized()) {
+                        window.maximize();
+                } else {
+                        window.unmaximize();
+                }
+        });
+
+        document.getElementById("close-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.close();
+        });
+
+        var svgbiz = '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="160" fill="#444" stroke="#aaa" stroke-linecap="round" xmlns:xlink="http://www.w3.org/1999/xlink">  <path d="M 30.658203 0.80664062 A 29.7995 29.7995 0 0 0 0.859375 30.605469 A 29.7995 29.7995 0 0 0 30.658203 60.404297 A 29.7995 29.7995 0 0 0 60.458984 30.605469 A 29.7995 29.7995 0 0 0 30.658203 0.80664062 z M 49.160156 19.048828 L 49.205078 23.767578 L 32.101562 23.810547 L 32.011719 19.091797 L 49.160156 19.048828 z M 29.175781 19.132812 L 29.175781 42.304688 L 28.140625 44.492188 L 25.708984 46.980469 L 23.728516 47.710938 L 17.607422 47.796875 L 15.582031 46.939453 L 13.376953 44.664062 L 12.027344 41.488281 L 12.027344 40.029297 L 16.978516 39.988281 L 17.023438 41.574219 L 17.742188 42.5625 L 18.914062 43.205078 L 22.558594 43.291016 L 23.820312 42.5625 L 24.404297 41.574219 L 24.179688 23.896484 L 14.546875 23.939453 L 14.501953 19.175781 L 29.175781 19.132812 z M 32.101562 31.482422 L 46.279297 31.492188 L 46.234375 35.783203 L 32.236328 35.816406 L 32.101562 31.482422 z"></path>     </svg>';
+        var cssbiz = 'background: url(\'data:image/svg+xml;utf8,' + svgbiz + '\') left top no-repeat; font-size: 13px;font-family: "Lucida Sans Unicode"; margin-left:10px;margin-top:10px';
+        //        console.log('%c    \n\n\n\n Jet Controls (1.0.1) \n ----------------', cssbiz);
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+//    var remote = = require('electron');
+//
+
+</script>
+</html>
