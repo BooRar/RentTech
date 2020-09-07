@@ -1,0 +1,118 @@
+.progressbar li {
+        list-style-type: none;
+        width: 80%;
+        float: left;
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+        padding: 2px;
+        /* text-transform: uppercase; */
+        color: #7d7d7d;
+        min-width: min-content;
+}
+.progressbar li:before {
+        width: 40px;
+height: 40px;
+content: "";
+line-height: 36px;
+
+            border: 3px solid #7d7d7d;
+            display: block;
+            text-align: center;
+            margin: 0 auto 3px auto;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            background-color: #fff
+}
+.progressbar li:after {
+        width: 103%;
+        height: 12px;
+        content: '';
+        position: absolute;
+        background-color: #7d7d7d;
+        border-right: 5px;
+        top: 20px;
+        left: -50%;
+        z-index: 0;
+        opacity: .6;
+}
+.progressbar li:first-child:after {
+        content: none;
+}
+.progressbar li.active {
+        color:#0cff62;;
+        /* font-weight: bold; */
+}
+.progressbar li.active:before {
+        border-color: #00f134;
+        background: #0073e8;
+}
+.progressbar li.active + li:after {
+        background-color: #00f134;
+}
+.progressbar li.active:before {
+        background: #034005 ;
+        background-size: 60%;
+}
+
+
+.progressbar li.done {
+        color: #0073e8;
+        /* font-weight: bold; */
+}
+.progressbar li.done:before {
+        border-color: #0079F1;
+        background: #0073e8;
+}
+.progressbar li.done + li:after {
+        background-color: #0073e8;
+}
+.progressbar li.done:before {
+        background: #051b69  ;
+        background-size: 60%;
+}
+
+
+.progressbar li::before {
+        background: #1b1919 ;
+        background-size: 60%;
+}
+.progressbar {
+        counter-reset: step;
+        margin: 2px auto;
+        /* line-height: 1.4; */
+        padding-left: 0px;
+        /* border: 3px solid #0073e8; */
+        border-radius: 5px;
+        /* text-align: justify; */
+        display: flex;
+        justify-content: center;
+        margin-left: -25px;
+        margin-right: -25px;
+}
+.progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+}
+
+
+.step-title {
+        font-size: 17px;
+        color: #67b3ff;
+}
+.step-info {
+        display: inline-grid;
+    text-align: left;
+        /* display: block;
+        text-align: center; */
+        font-size: 12px;
+        color: #feffff;
+        /* padding-left: 19px; */
+        line-height: 15px;
+        font-weight: 200;
+        letter-spacing: .03em;
+}
+ dialog .dialog-content ul,{
+        padding-left: -20px;
+}
