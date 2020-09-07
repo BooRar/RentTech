@@ -1,0 +1,49 @@
+{
+  "name": "Seeff-Account-Management",
+  "version": "1.0.0",
+  "description": "A Seeff application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo",
+    "electron-packager"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^7.1.3",
+    "electron-packager": "^13.1.1"
+  },
+  "dependencies": {
+    "electron-pdf-window": "^1.0.12",
+    "jet-info-cards": "file:jet-info-cards-1.0.0.tgz",
+    "jet-input-form": "file:jet-input-form-1.0.0.tgz",
+    "jet-json-editor": "file:jet-json-editor-1.0.0.tgz",
+    "jet-mask": "file:jet-mask-1.0.0.tgz",
+    "jet-modal-form": "file:jet-modal-form-1.0.0.tgz",
+    "jet-notifications": "file:jet-notifications-1.0.0.tgz",
+    "jet-paginator": "file:jet-paginator-1.0.0.tgz",
+    "jet-popin-table": "file:jet-popin-table-1.0.0.tgz",
+    "jet-progressbar": "file:jet-progressbar-1.0.0.tgz",
+    "jet-table": "file:jet-table-1.0.0.tgz",
+    "jet-tables": "file:jet-tables-1.0.0.tgz",
+    "jet-tree-view": "file:jet-tree-view-1.0.0.tgz",
+    "jet-wizard-datastore": "file:jet-wizard-datastore-1.0.0.tgz",
+    "jet-work-bench": "file:jet-work-bench-1.0.0.tgz",
+    "jet-xhr": "file:jet-xhr-1.0.0.tgz",
+    "jetcanvajsextender": "file:jetcanvajsextender-1.0.0.tgz",
+    "jetform": "file:jetform-1.0.0.tgz",
+    "jetformspanel": "file:jetformspanel-1.0.0.tgz",
+    "jetmenu": "file:jetmenu-1.0.0.tgz",
+    "jetpannel": "file:jetpannel-1.0.0.tgz",
+    "lightpick": "file:lightpick-1.3.4.tgz",
+    "update-electron-app": "^1.5.0"
+  }
+}

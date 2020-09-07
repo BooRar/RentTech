@@ -1,0 +1,437 @@
+var menu = [{
+    name: 'Dashboard',
+    children: [
+    {
+        name: 'workbench',
+        jetCommonName: 'workbench',
+        jetFunction: 'workbench',
+        jetFunctionParams: [],
+        accelerator: 'Ctrl+N',
+
+    },
+        {
+            name: 'Dashboard',
+            jetCommonName: 'dashboard',
+            jetFunction: 'dashboard',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+
+        },
+        {
+            name: 'Audit log',
+            jetCommonName: 'Bulma',
+            jetFunction: 'Bulma',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+
+        },
+        {
+            name: 'Resources',
+            jetCommonName: 'resources',
+            jetFunction: 'resources',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+
+        },
+
+        // the old stuff
+        //
+        //
+        {
+            name: '<hr>'
+        },
+
+        {
+            name: 'Toggle Style ...',
+            jetCommonName: 'toggleStyle',
+            jetFunction: 'toggleStyle',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+
+        }, {
+            name: 'Exit',
+            accelerator: 'Ctrl+X',
+            children: []
+        }]
+    },
+    //menu 2
+
+
+    {
+        name: 'Properties',
+        children: [{
+            name: 'View All Properties',
+            jetCommonName: 'allproportiesTable',
+            jetFunction: 'allproportiesTable',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N'
+        }, {
+            name: 'Create A property',
+            jetCommonName: 'creatNewProporty',
+            jetFunction: 'creatNewProporty',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+        },
+        {
+            name: 'Property accounts',
+            jetCommonName: 'loadDash',
+            jetFunction: 'loadDash',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+        },
+
+        {
+            name: 'Active properties',
+            jetCommonName: 'activeProporties',
+            jetFunction: 'activeProporties',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+        },
+        {
+            name: 'Disabled properties',
+            jetCommonName: 'disabledProporties',
+            jetFunction: 'disabledProporties',
+            jetFunctionParams: [],
+            accelerator: 'Ctrl+N',
+        },
+
+    ]}, {
+    name: 'Beneficiaries',
+    myEvent: 'ShowForm1',
+    children: [  {
+        name: 'View all beneficiaries',
+        jetCommonName: 'viewAllBeneficiaries',
+        jetFunction: 'viewAllBeneficiaries',
+        jetFunctionParams: [],
+        accelerator: 'Ctrl+N',
+        children: []
+    },
+
+    {
+        name: 'Create beneficiary',
+        jetCommonName: 'CreateBeneficiary',
+        jetFunction: 'CreateBeneficiary',
+        jetFunctionParams: [],
+        accelerator: 'Ctrl+N',
+        children: []
+    },
+    {
+        name: 'Beneficiaries with a balance',
+        jetFunction: 'benificiariesWithABalance',
+        jetFunctionParams: [],
+        accelerator: 'Ctrl+N',
+        children: []
+    },
+    {
+        name: 'Active beneficiaries',
+        jetFunction: 'Activebenificiaries',
+        jetFunctionParams: [],
+        accelerator: 'Ctrl+N',
+        children: []
+    },
+    {
+        name: 'Disabled beneficiaries',
+        jetFunction: 'DisabledBeneficiaries',
+        jetFunctionParams: [],
+        accelerator: 'Ctrl+N',
+        children: []
+    },
+
+    { name: '<hr>'},
+    {
+        name: 'ShowForm1',
+        jetFunction: 'CreateTenant',
+        jetFunctionParams: [],
+        accelerator: 'Ctrl+N',
+        children: []
+    }]
+
+},{
+name: 'Tenants',
+myEvent: 'ShowForm1',
+
+children: [  {
+    name: 'View all tenants',
+    jetCommonName: 'viewAllTenants',
+    jetFunction: 'viewAllTenants',
+    jetFunctionParams: [],
+    accelerator: 'Ctrl+N',
+    children: []
+},
+{
+   name: 'Create tenant',
+   jetCommonName: 'CreateTenant',
+   jetFunction: 'CreateTenant',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Arrears analysis',
+   jetCommonName: 'arrearsAnalysis',
+   jetFunction: 'arrearsAnalysis',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Credit checks',
+   jetFunction: 'CreditChecks',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Damage deposits',
+   jetFunction: 'DamageDeposits',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+  name: 'Damage deposit movement',
+  jetFunction: 'DamageDepositsMovement',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+{
+    name : '<hr>',
+},
+{
+  name: 'Active tenants',
+  jetFunction: 'ActiveTenants',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+  },
+{
+  name: 'Blocked accounts',
+  jetFunction: 'BlockedAccounts',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+
+{
+   name: 'Tenant movement',
+   jetFunction: 'TenantMovement',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+  name: 'Debit orders',
+  jetFunction: 'DebitOrders',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+}
+,
+{
+  name: 'Tenant statements',
+  jetFunction: 'TenantStatements',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+}
+]
+
+
+},{
+name: 'Reports',
+myEvent: 'ShowForm1',
+children: [  {
+    name: 'View all reports',
+    jetFunction: 'CreateTenant',
+    jetFunctionParams: [],
+    accelerator: 'Ctrl+N',
+    children: []
+},
+{
+   name: 'Income',
+   jetFunction: 'CommissionPayments',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Direct deposits',
+   jetFunction: 'DirectDeposits',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Unreconciled direct deposits',
+   jetFunction: 'UnreconciledDirectDeposits',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Unreconciled direct deposits2',
+   jetFunction: 'UnreconciledDirectDeposits2',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Pending direct deposits',
+   jetFunction: 'PendingDirectDeposits',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+  name: 'Payments to approve',
+  jetFunction: 'PaymentsToApprove',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+
+{
+  name: 'Invoices, credit & debit notes',
+  jetFunction: 'inv_cred_deb',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+{
+  name: 'Contacts',
+  jetFunction: 'ContactDetails',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+
+{
+   name: 'Reminders',
+   jetFunction: 'Reminders',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+}
+
+,
+{
+  name: 'Tenant statements',
+  jetFunction: 'CreateTenant',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+}
+]
+
+}
+,{
+name: 'Settings',
+myEvent: 'ShowForm1',
+ children: [
+{
+    name: 'Account profile',
+    jetFunction: 'CreateTenant',
+    jetFunctionParams: [],
+    accelerator: 'Ctrl+N',
+    children: []
+},
+{
+   name: 'Your logo',
+   jetFunction: 'CreateTenant',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Agents',
+   jetFunction: 'CreateAgent',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'Users & permissions',
+   jetFunction: 'CreateAdmin',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+     name:'<hr>'
+},
+{
+   name: 'Change your password',
+   jetFunction: 'CreateTenant',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+     name:'<hr>'
+},
+{
+   name: 'Application settings',
+   jetFunction: 'CreateTenant',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+  name: 'Integrations',
+  jetFunction: 'CreateTenant',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+
+{
+  name: 'Import & export',
+  jetFunction: 'CreateTenant',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+{
+  name: 'TPN settings',
+  jetFunction: 'CreateTenant',
+  jetFunctionParams: [],
+  accelerator: 'Ctrl+N',
+  children: []
+},
+
+{
+   name: 'Documents',
+   jetFunction: 'CreateTenant',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+N',
+   children: []
+},
+{
+   name: 'ShowTemplate',
+   jetFunction: 'ShowTemplate',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+A',
+   children: []
+},
+{
+   name: 'QuickLings',
+   jetFunction: 'quicklinks',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+A',
+   children: []
+},
+{
+   name: 'PopupTest',
+   jetFunction: 'newPropertyWizard',
+   jetFunctionParams: [],
+   accelerator: 'Ctrl+A',
+   children: []
+}
+
+]
+
+}
+];
+
+exports.menu = menu ;

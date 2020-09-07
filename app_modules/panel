@@ -1,0 +1,549 @@
+
+var mainPanelSettings =     {
+    mainLabelName: 'Sample',
+        size: 'full',
+    subPanels: [ {
+        labelname: 'Pane1',
+        id: 'Pane1',
+        size: 'half'
+    }, {
+        labelname: 'Pane2',
+        id: 'Pane2',
+        size: 'half'
+    }, {
+        labelname: 'Pane3',
+        id: 'Pane3',
+        size: 'half'
+    },{
+        labelname: 'Pane4',
+        id: 'Pane4',
+        size: 'half'
+    },{
+        labelname: 'Pane5',
+        id: 'Pane5',
+        size: 'quarter'
+    },{
+        labelname: 'Pane6',
+        id: 'Pane6',
+        size: 'quarter'
+    },{
+        labelname: 'Pane7',
+        id: 'Pane7',
+        size: 'half'
+    }
+]
+};
+// createNewAgent
+var createNewAgent =     {
+    mainLabelName: 'Create New Agent',
+    subPanels: [ {
+        labelname: 'Create New Agent ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+// CreateNewAdmin
+var createNewAdmin =     {
+    mainLabelName: 'Create New Administrator',
+    subPanels: [ {
+        labelname: 'Users and Permissions',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+// Dashboard
+
+var dashboard =      {
+    mainLabelName: 'Dashboard',
+    size: 'full',
+    subPanels: [ {
+        labelname: 'Portfolio overview',
+        id: 'Pane12',
+        size: 'half',
+    }, {
+        labelname: 'Portfolio growth',
+        id: 'Pane13',
+        size: 'half',
+    }
+]
+};
+
+// Dashboard
+
+var workbench =      {
+    mainLabelName: 'Workbench',
+    size: 'full',
+    subPanels: [ {
+        labelname: 'Workbench ',
+        id: 'Pane1',
+        size: 'half',
+    }
+]
+};
+
+
+
+// creatNewProporty
+
+var creatNewProporty =     {
+    mainLabelName: 'create New Property',
+    subPanels: [ {
+        labelname: 'create New Property ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//CreateBeneficiary
+
+var CreateBeneficiary =     {
+    mainLabelName: 'Create a beneficiary',
+    subPanels: [ {
+        labelname: 'Create a beneficiary ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//allproportiesTable
+
+var allproportiesTable =     {
+    mainLabelName: 'all Properties',
+    subPanels: [ {
+        labelname: 'all Properties ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//activeProporties
+
+
+
+var activeProporties =     {
+    mainLabelName: 'Active Properties',
+    subPanels: [ {
+        labelname: 'Active Properties ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+//disabledProporties
+var disabledProporties =     {
+    mainLabelName: 'Disabled Properties',
+    subPanels: [ {
+        labelname: 'Disabled Properties ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+
+//viewAllTenants
+var viewAllTenants =     {
+    mainLabelName: 'All Tenants',
+    subPanels: [ {
+        labelname: 'All Tenants ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+
+//arrearsAnalysis
+
+var arrearsAnalysis =     {
+    mainLabelName: 'Arrears Analysis',
+    subPanels: [ {
+        labelname: 'Arrears Analysis',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+// viewAllBenificiaries
+var viewAllBenificiaries =     {
+    mainLabelName: 'View All Beneficiaries',
+    subPanels: [ {
+        labelname: 'View All Beneficiaries',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+//CreateTenant
+var CreateTenant =     {
+    mainLabelName: 'Create a Tenant',
+    subPanels: [ {
+        labelname: 'Create a Tenant',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+
+//CreditChecks
+var CreditChecks =     {
+    mainLabelName: 'Credit Checks',
+    subPanels: [ {
+        labelname: 'Credit Checks',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//DamageDeposits
+var DamageDeposits =     {
+    mainLabelName: 'Damage Deposits',
+    subPanels: [ {
+        labelname: 'Damage Deposits',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//////////////////////
+//DamageDepositMovement
+var DamageDepositMovement =     {
+    mainLabelName: 'Damage Deposits Movement',
+    subPanels: [ {
+        labelname: 'Damage Deposits Movement',
+        id: 'Pane1',
+       size: 'full'
+    }
+
+]
+};
+//ActiveTenants
+var ActiveTenants =     {
+    mainLabelName: 'Active Tenants',
+    subPanels: [ {
+        labelname: 'Active Tenants',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+//BlockedAccounts
+var BlockedAccounts =  {
+    mainLabelName: 'Blocked Accounts',
+   subPanels: [
+{
+       labelname: 'Blocked Accounts',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+//TenantMovement
+var TenantMovement =  {
+    mainLabelName: 'Tenant Movement',
+   subPanels: [
+{
+       labelname: 'Tenant Movement',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+//DebitOrders
+var DebitOrders =  {
+    mainLabelName: 'Debit Orders',
+   subPanels: [
+{
+       labelname: 'Debit Orders',
+       id: 'Pane1',
+        size: 'full'
+    },
+    {
+           labelname: 'Rejected Debit Orders',
+           id: 'Pane2',
+            size: 'full'
+        }
+
+]
+};
+
+//TenantStatements
+var TenantStatements =  {
+    mainLabelName: 'Tenant Statements',
+   subPanels: [
+{
+       labelname: 'Tenant Statements',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//benificiariesWithABalance
+var benificiariesWithABalance =  {
+    mainLabelName: 'benificiaries With A Balance',
+   subPanels: [
+{
+       labelname: 'benificiaries With A Balance',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//Activebenificiaries
+var Activebenificiaries =  {
+    mainLabelName: 'Active beneficiaries',
+   subPanels: [
+{
+       labelname: 'Active beneficiaries',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//DisabledBeneficiaries
+var DisabledBeneficiaries =  {
+    mainLabelName: 'Disabled Beneficiaries',
+   subPanels: [
+{
+       labelname: 'Disabled Beneficiaries',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+//Reports =====================================================================
+
+//CommissionPayments
+var CommissionPayments =  {
+    mainLabelName: 'Commission Payments',
+   subPanels: [
+{
+       labelname: 'Commission Payments',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+// DirectDeposits
+var DirectDeposits =  {
+    mainLabelName: 'Direct Deposits',
+   subPanels: [
+{
+       labelname: 'Direct Deposits',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//UnreconciledDirectDeposits
+var UnreconciledDirectDeposits =  {
+    mainLabelName: 'Unreconciled Direct Deposits',
+   subPanels: [
+{
+       labelname: 'Unreconciled Direct Deposits',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//PendingDirectDeposits
+var PendingDirectDeposits =  {
+    mainLabelName: 'Pending Direct Deposits',
+   subPanels: [
+{
+       labelname: 'Pending Direct Deposits',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//PaymentsToApprove
+var PaymentsToApprove =  {
+    mainLabelName: 'Payments To Approve',
+   subPanels: [
+{
+       labelname: 'Payments To Approve',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//ContactDetails
+var ContactDetails =  {
+    mainLabelName: 'Contact Details',
+   subPanels: [
+{
+       labelname: 'Contact Details',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//Reminders
+var Reminders =  {
+    mainLabelName: 'Reminders',
+   subPanels: [
+{
+       labelname: 'Reminders',
+       id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+//resources
+var resources =  {
+    mainLabelName: 'Resources',
+   subPanels: [
+{
+       labelname: 'Lease / Mandate',
+       id: 'Pane1',
+        size: 'half'
+    },
+    {
+           labelname: 'Training Manuals',
+           id: 'Pane2',
+            size: 'half'
+        }
+
+]
+};
+//inv_cred_deb
+var inv_cred_deb =  {
+    mainLabelName: 'Invoices and Credit/Debit notes',
+   subPanels: [
+{
+       labelname: 'Invoices and Credit/Debit notes',
+       id: 'Pane1',
+        size: 'half'
+    }
+
+]
+};
+//audi
+var audi =  {
+    mainLabelName: 'Audit log ',
+   subPanels: [
+{
+       labelname: 'Audit log summary',
+       id: 'Pane1',
+        size: 'half'
+    }
+
+]
+};
+
+
+// Quicklinks
+var quickLinks =     {
+    mainLabelName: 'Property Relationship Overview',
+    subPanels: [ {
+        labelname: 'Property Setup ',
+        id: 'Pane1',
+        size: 'full'
+    }
+
+]
+};
+
+//Quicklinks ==============================
+
+exports.quickLinks =quickLinks ;
+
+
+//Reports ==================================================
+exports.CommissionPayments = CommissionPayments;
+//exports.AgentCommisionReport = AgentCommisionReport;
+exports.DirectDeposits=DirectDeposits;
+exports.UnreconciledDirectDeposits =UnreconciledDirectDeposits;
+exports.PendingDirectDeposits=PendingDirectDeposits;
+exports.PaymentsToApprove = PaymentsToApprove;
+exports.ContactDetails=ContactDetails;
+exports.Reminders=Reminders;
+
+
+//tenants
+
+exports.createNewAgent = createNewAgent;
+exports.createNewAdmin = createNewAdmin;
+
+exports.CreateTenant = CreateTenant;
+exports.CreditChecks = CreditChecks;
+exports.DamageDeposits = DamageDeposits;
+
+exports.DamageDepositMovement = DamageDepositMovement;
+exports.ActiveTenants = ActiveTenants;
+exports.BlockedAccounts = BlockedAccounts;
+exports.TenantMovement=TenantMovement;
+exports.DebitOrders =DebitOrders;
+exports.TenantStatements = TenantStatements;
+
+//benificiaries
+exports.viewAllBenificiaries = viewAllBenificiaries;
+exports.benificiariesWithABalance = benificiariesWithABalance;
+exports.Activebenificiaries =Activebenificiaries;
+exports.DisabledBeneficiaries=DisabledBeneficiaries;
+
+
+
+
+exports.layout1 = mainPanelSettings;
+exports.dashboard = dashboard;
+exports.workbench = workbench;
+exports.creatNewProporty = creatNewProporty;
+exports.CreateBeneficiary = CreateBeneficiary;
+exports.allproportiesTable = allproportiesTable;
+exports.activeProporties = activeProporties;
+exports.disabledProporties = disabledProporties;
+exports.viewAllTenants = viewAllTenants;
+exports.arrearsAnalysis = arrearsAnalysis;
+
+
+exports.resources=resources;
+exports.inv_cred_deb=inv_cred_deb;
+exports.audi=audi;

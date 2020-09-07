@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"   rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/bulma.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="css/styleEdited.css">
+
+    <style media="screen">
+        .foomagic {
+                height: 95vh;
+        }
+    </style>
+    <style media="screen">
+    .padded{
+        padding: 5px;
+        /* margin :5px; */
+        /* background-color: red; */
+    }
+
+    .dash-MainPannel{
+
+        Margin-bottom: 30px;
+        padding-bottom: 30px;
+        border: 1px solid #383737;
+        background-color: #1D1F21;
+        color: #fff;
+
+
+    }
+    label {
+        /* margin-top: 10px; */
+    }
+    input checkbox {
+        margin-top: 10px;
+    }
+    input checkbox{
+        margin-bottom: 100px;
+    }
+    .row-component{
+        line-height: 100%;
+        margin-bottom: 20px;
+        /* border: 1px solid #383737; */
+        padding: 5px;
+    }
+
+
+    .dialog-footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        border-top: var(--base-border);
+        padding: var(--spacing-double);
+
+    }
+
+    .button-group{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: -webkit-fill-available;
+    }
+    .button-group .button-component{
+
+        width: -webkit-fill-available;
+    }
+    table {
+        width: 100%;
+
+        background-color: #222222;
+        color: white;
+        border-collapse: collapse;
+    }
+
+    table th {
+        padding: 10px;
+        text-align: left;
+    }
+
+    table td {
+        padding: 2px 10px;
+    }
+
+    table td:last-child {
+        width: 100%;
+    }
+
+    table td:nth-child(odd), table th:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    table tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    table tr:last-child td {
+        padding-bottom: 10px;
+    }
+
+
+    legend {
+    display: block;
+        text-align: right;
+        text-transform: uppercase;
+    color: #8ca9ff;
+    font-family: var(--font-family-sans-serif);
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 11px;
+    line-height: inherit;
+    /* color: #386caf; */
+    /* border: 0; */
+    border-bottom: 1px dashed #8ca9ff;
+    }
+
+
+    .pagination {
+        display: flex;
+        padding-left: 0;
+        margin: 5px 0;
+        border-radius: 4px;
+        float: right;
+        /* color: blanchedalmond; */
+    }
+    .pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.428571429;
+    text-decoration: none;
+    background-color: #1d2125;
+    border:  1px solid #0079f1;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span {
+    color: #999;
+    cursor: not-allowed;
+    background-color: #1d2125;
+    border-color: #428bca;
+}
+select
+{
+    border: 1px solid #1d1f21;
+    border-radius: var(--border-radius);
+    background: var(--box-background-color);
+    color: currentColor;
+    font-size: var(--font-size);
+    font-family: var(--font-family-sans-serif);
+    height: var(--text-field-height);
+    padding: 0 var(--spacing-half);
+    padding: 0;
+}
+
+</style>
+
+<!-- css elements from payprop -->
+
+<!-- <link href="./PayPropcss/bootstrap.css" rel="stylesheet">
+<link href="./PayPropcss/bootstrap-responsive.css" rel="stylesheet">
+<link href="./PayPropcss/application.css" rel="stylesheet"> -->
+
+
+
+
+
+
+
+
+
+
+<!-- <script type="text/javascript" src="./webforms/dashboard.js">
+
+</script> -->
+
+
+
+
+</head>
+<body class="platform-win32 theme-dark blueTheme">
+
+
+
+
+    <div class="" id="desktop-app-title-bar">
+        <div class="resize-handle top"></div>
+        <div class="resize-handle left"></div>
+        <svg aria-hidden="true" class="octicon app-icon" version="1.1" viewBox="0 0 60 60">
+            <path d="M 30.658203 0.80664062 A 29.7995 29.7995 0 0 0 0.859375 30.605469 A 29.7995 29.7995 0 0 0 30.658203 60.404297 A 29.7995 29.7995 0 0 0 60.458984 30.605469 A 29.7995 29.7995 0 0 0 30.658203 0.80664062 z M 49.160156 19.048828 L 49.205078 23.767578 L 32.101562 23.810547 L 32.011719 19.091797 L 49.160156 19.048828 z M 29.175781 19.132812 L 29.175781 42.304688 L 28.140625 44.492188 L 25.708984 46.980469 L 23.728516 47.710938 L 17.607422 47.796875 L 15.582031 46.939453 L 13.376953 44.664062 L 12.027344 41.488281 L 12.027344 40.029297 L 16.978516 39.988281 L 17.023438 41.574219 L 17.742188 42.5625 L 18.914062 43.205078 L 22.558594 43.291016 L 23.820312 42.5625 L 24.404297 41.574219 L 24.179688 23.896484 L 14.546875 23.939453 L 14.501953 19.175781 L 29.175781 19.132812 z M 32.101562 31.482422 L 46.279297 31.492188 L 46.234375 35.783203 L 32.236328 35.816406 L 32.101562 31.482422 z"></path>
+        </svg>
+        <!--
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    -->
+
+    <div id="app-menu-bar" role="menubar" aria-label="Application menu">
+
+    </div>
+    <!--
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-->
+<div class="window-controls">
+    <button id='min-btn' aria-label="Minimize" tabindex="-1" class="window-control minimize">
+        <svg aria-hidden="true" version="1.1" width="10" height="10">
+            <path d="M 0,5 10,5 10,6 0,6 Z"></path>
+        </svg>
+    </button>
+    <button  id='max-btn' aria-label="Maximize" tabindex="-1" class="window-control maximize">
+        <svg aria-hidden="true" version="1.1" width="10" height="10">
+            <path d="M 0,0 0,10 10,10 10,0 Z M 1,1 9,1 9,9 1,9 Z"></path>
+        </svg>
+    </button>
+    <button id='close-btn' aria-label="Close" tabindex="-1" class="window-control close">
+        <svg aria-hidden="true" version="1.1" width="10" height="10">
+            <path d="M 0,0 0,0.7 4.3,5 0,9.3 0,10 0.7,10 5,5.7 9.3,10 10,10 10,9.3 5.7,5 10,0.7 10,0 9.3,0 5,4.3 0.7,0 Z"></path>
+        </svg>
+    </button>
+</div>
+</div>
+
+
+
+<div class="foo" style="">
+
+</div>
+
+<!-- <script src="resizerPanel.js"></script> -->
+<script type="text/javascript">
+
+var sliderPanelSettings =     {
+    hasMenu: true,
+    hasFooter: true,
+    menuSize: "10px",
+    footerSize: "10px",
+    hasBottomSlider: true,
+    style: "grayTheme"
+};
+
+
+var jetpannel = require("jetpannel");
+
+var mynew = new jetpannel(".foo", sliderPanelSettings);
+
+
+
+
+//document.getElementById('MainNav').innerHTML += myhtml;
+
+
+
+
+</script>
+
+
+
+
+
+<!-- <script type="text/javascript" src="./node_modules/jetmenu/js/jetmenu.js"></script> -->
+
+<script type="text/javascript">
+//var jetMenu = require('./js/jetMenu.js');
+var jetmenu = require('jetmenu');
+
+
+
+//
+// Tree Structure
+//
+
+/**
+* [description]
+* @return {[type]} [description]
+*
+*/
+var var1= "var1 example";
+var var2= "Called from a VAR Node example ";
+
+
+
+
+
+
+//
+// Create the JetMenu
+//
+
+//var t = new JetMenu(menu, 'app-menu-bar');
+//
+var menu  = require("./app_modules/menu");
+var t = new jetmenu(menu.menu, 'app-menu-bar');
+
+
+
+
+
+
+
+//
+//Sample Functions
+//
+
+
+function sampleEvent(a ,b ,c ,d)
+{
+    let cnsStyle1 = 'background: #fff; color: green;';
+    let cnsStyle2 = 'background: #gray; color: black;';
+    console.log('%c a Parameter :'+a+'\n b Parameter :'+b+' \n c Parameter :'+c+'\n d Parameter :'+d,cnsStyle1);
+}
+
+function toggleStyle()
+{
+    var body=  document.getElementsByTagName("BODY")[0];
+    if(body.classList.contains('theme-dark')){ body.classList.remove('theme-dark');}else { body.classList.add('theme-dark'); }
+}
+function loadCal()
+{
+    var myhtml = '<iframe src="calendar.html" style="height:100%"></iframe>';
+
+    //document.getElementById('MainNav').innerHTML = myhtml;
+}
+function loadTable()
+{
+    var myhtml = '<iframe src="tables.html" style="height:100%"></iframe>';
+//
+    document.getElementById('MainNav').innerHTML = myhtml;
+}
+function loadDash()
+{
+    var myhtml =dash;
+    //var myhtml = '<iframe src="BLOCKS%20-%20Bootstrap%20Dashboard%20Theme.html" style="height:100%"></iframe>';
+
+    document.getElementById('MainNav').innerHTML = myhtml;
+}
+function ShowPop()
+{
+    //alert("popup");
+    var myhtml =dash;// '<iframe src="popupform.html" style="height:100%"></iframe>';
+
+    document.getElementById('MainNav').innerHTML = myhtml;
+}
+function ShowForm1()
+{
+    var closePopup = document.getElementById("popupclose");
+    var overlayme = document.getElementById("overlayme");
+    var popup = document.getElementById("popup");
+    var button = document.getElementById("button");
+    overlayme.className = 'show';
+    popup.className = 'show';
+}
+function closewin()
+{
+    var window = remote.getCurrentWindow();
+    window.close();
+}
+//
+// Attach events
+//
+
+//*******************************************************************
+//Sample
+// auto call function Usage with jetFunction and jetFunctionParams
+// 1 : parameters must be declared before the JetMenu JSON object
+// 2 : functions can be called after the JetMenu JSON object
+// ******************************************************************
+t.on('select', function () { console.log(arguments[0].data.jetCommonName); });
+
+
+//*******************************************************************
+//Sample
+// auto call function Usage with jetFunction and jetFunctionParams
+// 1 : parameters must be declared before the JetMenu JSON object
+// 2 : functions can be called after the JetMenu JSON object
+// ******************************************************************
+t.on('select', function () {
+    let parameters = (arguments[0].data.jetFunctionParams);
+    let JetFunction = (arguments[0].data.jetFunction);
+    if(JetFunction){
+        if(parameters){
+            window[JetFunction].apply(this, parameters);//
+        }else{
+            console.log('%c NOTE : \n  jetFunctionParams not defined check the JSON entry....','background: #fff; color: orange;');
+        }}else{console.log('%c NOTE : \n jetFunction not defined check the JSON entry....','background: #fff; color: orange;');}
+    });
+
+    //const remote = require('electron').remote;
+
+    document.getElementById("min-btn").addEventListener("click", function (e) {
+        var window = remote.getCurrentWindow();
+        window.minimize();
+    });
+
+    document.getElementById("max-btn").addEventListener("click", function (e) {
+        var window = remote.getCurrentWindow();
+        if (!window.isMaximized()) {
+            window.maximize();
+        } else {
+            window.unmaximize();
+        }
+    });
+
+    document.getElementById("close-btn").addEventListener("click", function (e) {
+        var window = remote.getCurrentWindow();
+        window.close();
+    });
+
+    var svgbiz = '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="160" fill="#444" stroke="#aaa" stroke-linecap="round" xmlns:xlink="http://www.w3.org/1999/xlink">  <path d="M 30.658203 0.80664062 A 29.7995 29.7995 0 0 0 0.859375 30.605469 A 29.7995 29.7995 0 0 0 30.658203 60.404297 A 29.7995 29.7995 0 0 0 60.458984 30.605469 A 29.7995 29.7995 0 0 0 30.658203 0.80664062 z M 49.160156 19.048828 L 49.205078 23.767578 L 32.101562 23.810547 L 32.011719 19.091797 L 49.160156 19.048828 z M 29.175781 19.132812 L 29.175781 42.304688 L 28.140625 44.492188 L 25.708984 46.980469 L 23.728516 47.710938 L 17.607422 47.796875 L 15.582031 46.939453 L 13.376953 44.664062 L 12.027344 41.488281 L 12.027344 40.029297 L 16.978516 39.988281 L 17.023438 41.574219 L 17.742188 42.5625 L 18.914062 43.205078 L 22.558594 43.291016 L 23.820312 42.5625 L 24.404297 41.574219 L 24.179688 23.896484 L 14.546875 23.939453 L 14.501953 19.175781 L 29.175781 19.132812 z M 32.101562 31.482422 L 46.279297 31.492188 L 46.234375 35.783203 L 32.236328 35.816406 L 32.101562 31.482422 z"></path>     </svg>';
+    var cssbiz = 'background: url(\'data:image/svg+xml;utf8,' + svgbiz + '\') left top no-repeat; font-size: 13px;font-family: "Lucida Sans Unicode"; margin-left:10px;margin-top:10px';
+    console.log('%c    \n\n\n\n Jet Controls (1.0.1) \n ----------------', cssbiz);
+</script>
+
+
+
+
+
+
+
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- <script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/bootstrap.js.download"></script>
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/lineandbars.js.download"></script>
+
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/dash-charts.js.download"></script>
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/gauge.js.download"></script> -->
+
+<!-- NOTY JAVASCRIPT -->
+<!-- <script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/jquery.noty.js.download"></script>
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/top.js.download"></script>
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/topLeft.js.download"></script>
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/topRight.js.download"></script>
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/topCenter.js.download"></script> -->
+
+<!-- You can add more layouts if you want -->
+<!-- <script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/default.js.download"></script> -->
+<!-- <script type="text/javascript" src="assets/js/dash-noty.js"></script> This is a Noty bubble when you init the theme-->
+<!-- <script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/highcharts.js.download"></script>
+<script src="./BLOCKS - Bootstrap Dashboard Theme_files/jquery.flexslider.js.download" type="text/javascript"></script>
+
+<script type="text/javascript" src="./BLOCKS - Bootstrap Dashboard Theme_files/admin.js.download"></script> -->
+
+</html>

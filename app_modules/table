@@ -1,0 +1,868 @@
+var jsonInfo =      [
+{
+"Product": "Apple",
+"Cardinality": 5,
+"Price per item": "$2"
+},
+{
+"Product": "Pear",
+"Cardinality": 3,
+"Price per item": "$3"
+},
+{
+"Product": "Sausage",
+"Cardinality": 10,
+"Price per item": "$0.5"
+},
+{
+"Product": "Pineapple",
+"Cardinality": 2,
+"Price per item": "$8"
+},
+{
+"Product": "Tomato",
+"Cardinality": 5,
+"Price per item": "$1"
+},
+{
+"Product": "Lightsaber",
+"Cardinality":4,
+"Price per item": "$99 999"
+}
+];
+
+// all Properties
+
+var activeProporties = [
+{
+"Num":"1",
+"Property" :"12 Quebeck Crescent",
+"Benificiary" :"Cedrick Mulder",
+"Tenant":"Lungile"
+},
+{
+"Num" :"2",
+"Property" :"15 Jay street Sunningdale",
+"Benificiary" :"Mr R Deizal",
+"Tenant":"Bw Strydom"
+},
+{
+"Num" :"3",
+"Property" :"26 Bel Avista",
+"Benificiary" :"coetzee ,Mulder, Nel",
+"Tenant":"James 009002"
+},
+{
+Num :"4",
+"Property" :"73 9de Laan Boston",
+"Benificiary" :"Peter Paul Pitorius",
+"Tenant":"pp"
+},
+{
+"Num" :"5",
+"Property" :"apple Blaar Straat 23",
+"Benificiary" :"David Laubsher",
+"Tenant":"Linsay Chantell 01003"
+},
+{
+"Num" :"6",
+"Property" :"Arennt Straat 104b",
+"Benificiary" :"Ryan Thorper",
+"Tenant":"JJ engelbrecht"
+},
+{
+"Num" :"7",
+"Property" :"12 Quebeck Crescent",
+"Benificiary" :"Cedrick Mulder",
+"Tenant":"Lungile"
+},
+{
+"Num" :"8",
+"Property" :"15 Jay street Sunningdale",
+"Benificiary" :"Mr R Deizal",
+"Tenant":"Bw Strydom"
+},
+{
+"Num" :"9",
+"Property" :"26 Bel Avista",
+"Benificiary" :"coetzee ,Mulder, Nel",
+"Tenant":"James 009002"
+},
+{
+"Num" :"10",
+"Property" :"73 9de Laan Boston",
+"Benificiary" :"Peter Paul Pitorius",
+"Tenant":"ll"
+},
+{
+"Num" :"11",
+"Property" :"apple Blaar Straat 23",
+"Benificiary" :"David Laubsher",
+"Tenant":"Linsay Chantell 01003"
+},
+{
+"Num" :"12",
+"Property" :"Arennt Straat 104b",
+"Benificiary" :"Ryan Thorper",
+"Tenant":"JJ engelbrecht"
+}
+];
+
+// Active Property
+
+var allproporties = [
+{
+"Num":"1",
+"Property" :"12 Quebeck Crescent",
+"Benificiary" :"Cedrick Mulder",
+"Tenant":"Lungile"
+},
+{
+"Num" :"2",
+"Property" :"15 Jay street Sunningdale",
+"Benificiary" :"Mr R Deizal",
+"Tenant":"Bw Strydom"
+},
+{
+"Num" :"3",
+"Property" :"26 Bel Avista",
+"Benificiary" :"coetzee ,Mulder, Nel",
+"Tenant":"James 009002"
+},
+{
+Num :"4",
+"Property" :"73 9de Laan Boston",
+"Benificiary" :"Peter Paul Pitorius",
+"Tenant":"pp"
+},
+{
+"Num" :"5",
+"Property" :"apple Blaar Straat 23",
+"Benificiary" :"David Laubsher",
+"Tenant":"Linsay Chantell 01003"
+},
+{
+"Num" :"6",
+"Property" :"Arennt Straat 104b",
+"Benificiary" :"Ryan Thorper",
+"Tenant":"JJ engelbrecht"
+},
+{
+"Num" :"7",
+"Property" :"12 Quebeck Crescent",
+"Benificiary" :"Cedrick Mulder",
+"Tenant":"Lungile"
+},
+{
+"Num" :"8",
+"Property" :"15 Jay street Sunningdale",
+"Benificiary" :"Mr R Deizal",
+"Tenant":"Bw Strydom"
+},
+{
+"Num" :"9",
+"Property" :"26 Bel Avista",
+"Benificiary" :"coetzee ,Mulder, Nel",
+"Tenant":"James 009002"
+},
+{
+"Num" :"10",
+"Property" :"73 9de Laan Boston",
+"Benificiary" :"Peter Paul Pitorius",
+"Tenant":"ll"
+},
+{
+"Num" :"11",
+"Property" :"apple Blaar Straat 23",
+"Benificiary" :"David Laubsher",
+"Tenant":"Linsay Chantell 01003"
+},
+{
+"Num" :"12",
+"Property" :"Arennt Straat 104b",
+"Benificiary" :"Ryan Thorper",
+"Tenant":"JJ engelbrecht"
+}
+];
+
+//disabledProporties
+var disabledProporties = [
+{
+"Num":"1",
+"Property" :"12 Quebeck Crescent",
+"Benificiary" :"Cedrick Mulder",
+"Tenant":"Lungile"
+},
+{
+"Num" :"2",
+"Property" :"15 Jay street Sunningdale",
+"Benificiary" :"Mr R Deizal",
+"Tenant":"Bw Strydom"
+}
+
+];
+//viewAllTenants
+
+var viewAllTenants = [
+    {
+        "Id":"1",
+        "TenantName":"Tony Kriel",
+        "Property":"",
+        "DepositId":"",
+    },
+    {
+        "Id":"2",
+        "TenantName":"Tony Kriel",
+        "Property":"Orchard 11894",
+        "DepositId":"AC191",
+    },
+    {
+        "Id":"3",
+        "TenantName":"Tony Kriel",
+        "Property":"Meadow 11473",
+        "DepositId":"AC192",
+    },
+    {
+        "Id":"4",
+        "TenantName":"Tony Kriel",
+        "Property":"Rose Cottage 11308",
+        "DepositId":"",
+    },
+    {
+        "Id":"5",
+        "TenantName":"Tony Kriel",
+        "Property":"Holly 8131",
+        "DepositId":"AC1242",
+    },
+    {
+        "Id":"6",
+        "TenantName":"Tony Kriel",
+        "Property":"Oak 8032",
+        "DepositId":"AC1283",
+    },
+    {
+        "Id":"7",
+        "TenantName":"Tony Kriel",
+        "Property":"Willow 7913",
+        "DepositId":"",
+    },
+    {
+        "Id":"8",
+        "TenantName":"Tony Kriel",
+        "Property":"Sunnyside 3982",
+        "DepositId":"AC152",
+    },
+    {
+        "Id":"9",
+        "TenantName":"Tony Kriel",
+        "Property":"Springfield 3958",
+        "DepositId":"AC192",
+    }
+
+];
+
+
+
+var arrearsAnalysis=[
+    {
+
+        "TenantName":"TOTALS",
+        "Property":"",
+        "ID":"",
+        "0-30":"4,111,909.04",
+        "31-60":"16,555.00",
+        "61-90":"20,568.98",
+        "91-120":"6,437.00",
+        ">120":"22,480.00",
+        "Total":"4,045,200.00",
+    },
+{
+"TenantName":"Tony Kriel",
+"Property":"OU Dorp 2",
+"ID":"1",
+"0-30":"1,200.00",
+"31-60":"",
+"61-90":"",
+"91-120":"",
+">120":"",
+"Total":"1,200.00",
+
+
+},
+{
+"TenantName":"Lizett Kriel",
+"Property":"OU Dorp 2",
+"ID":"2",
+"0-30":"5,605.00",
+"31-60":"5,605.00",
+"61-90":"5,605.00",
+"91-120":"1,200.00",
+">120":"",
+"Total":"18,015.00",
+
+},
+{
+"TenantName":"Cristene Else",
+"Property":"Waterbessie 8",
+"ID":"3",
+"0-30":"3,200.00",
+"31-60":"3,200.00",
+"61-90":"3,200.00",
+"91-120":"1,600.00",
+">120":"",
+"Total":"12,700.00",
+
+
+},
+{
+"TenantName":"O Shambisa",
+"Property":"Mtaba Eco Village 4",
+"ID":"4",
+"0-30":"3,700.00",
+"31-60":"3,700.00",
+"61-90":"3,700.00",
+"91-120":"1,600.00",
+">120":"",
+"Total":"12,700.00",
+
+
+},
+{
+"TenantName":"Du Ploy",
+"Property":"Waterburg 12",
+"ID":"5",
+"0-30":"350.00",
+"31-60":"350.00",
+"61-90":"350.00",
+"91-120":"350.00",
+">120":"8,650,00",
+"Total":"10,050.00",
+
+
+},
+];
+
+
+//view all benificiaries
+var viewAllBenificiaries = [
+  {
+    "No":"1",
+    "Beneficiary":"Ben Rogers",
+    "Property":"The Willows 102",
+    "Account":"2324"
+
+  },
+  {
+    "No":"2",
+    "Beneficiary":"Alice Crow",
+    "Property":"Grand Central 540",
+    "Account":"4455"
+
+  },
+  {
+    "No":"3",
+    "Beneficiary":"The Handyman",
+    "Property":"Brompton Village 14",
+    "Account":"5667"
+
+  },
+  {
+    "No":"4",
+    "Beneficiary":"Fred Basson",
+    "Property":"Fred Dormell 2",
+    "Account":"5668"
+
+  },
+  {
+    "No":"5",
+    "Beneficiary":"Mark Shivel",
+    "Property":"Campshill 44 ",
+    "Account":"5669"
+
+  }
+];
+
+
+var CreditChecks = [
+{
+    "No" : "",
+    "Name" :"",
+    "ID Number" :"",
+    "Date" :"",
+    "Tenant" :"",
+    "Deposit Guarantee" :"",
+    "Report" :"",
+
+
+
+}
+];
+
+var DamageDeposits = [
+{
+    "No" : "",
+    "Tenant" :"",
+    "Property" :"",
+    "Deposit ID" : "",
+    "Balance" :"" ,
+    "j":""
+
+}
+];
+
+ var DamageDepositMovement = [
+ {
+     "No" : "",
+     "Property" :"",
+     "Deposit ID" : "",
+     "Opening Balance" :"" ,
+     "Ammount In" :"" ,
+     "Ammount Out" :"" ,
+    "Interest" :"" ,
+    "Fees" :"" ,
+    "Closing Balance" :"" ,
+     "j":""
+
+ }
+ ];
+ var ActiveTenants = [
+ {
+     "No" : "",
+     "Tenant" :"",
+     "Property" :"",
+     "Dep ID" : "",
+     "Ammount" : "",
+     "Balance" :"" ,
+     "Day" :"" ,
+     "Type" :"" ,
+     "Deposit" :"" ,
+     "End-Date" :"" ,
+     "Notify" :"" ,
+     "Status" :"" ,
+     "j":""
+
+ }
+ ];
+var BlockedAccounts = [
+{
+     "No" : "",
+     "Property" :"",
+     "Type" :"",
+     "Name" :"",
+     "Reason" :"",
+     "Account No" :"",
+    "Branch Code" :"",
+     "Account Type" :""
+}
+];
+var TenantMovement = [
+{
+    "No" : "",
+    "Tenant" :"",
+    "Property" :"",
+    "Opening Balance" :"",
+    "Invoices" :"",
+    "Debit Notes" :"",
+    "Credit Notes" :"",
+    "Payments" :"",
+    "Closing Balance" :""
+
+
+},
+];
+var DebitOrders = [
+{
+    "Date" : "",
+    "Tenant" :"",
+    "Property" :"",
+    "Account" :"",
+    "File" :"",
+    "Debit Notes" :"",
+    "Credit Notes" :"",
+    "Payments" :"",
+    "Closing Balance" :""
+
+
+}
+];
+var RejectedDebitOrders = [
+{
+    "Date" : "",
+    "Tenant" :"",
+    "Property" :"",
+    "Account" :"",
+    "File" :"",
+    "Debit Notes" :"",
+    "Credit Notes" :"",
+    "Payments" :"",
+    "Closing Balance" :""
+
+
+}
+];
+
+var TenantStatements = [
+{
+    "Date Requested" : "",
+    "Statement Date" :"",
+    "Description" :"",
+    "Archive Details" :"",
+    "Download Link" :""
+
+
+
+},
+];
+
+//benificiariesWithABalance
+var benificiariesWithABalance = [{
+"No":"1",
+   "Benificiary name" : "Anchorprops 205 (Pty) Ltd",
+  "Property":"U-B507",
+  "Description": "78 BRYANT STREET	MARLON COMMISSION",
+    "Date":"2017-02-23",
+  "Ammount" : "45.60"
+},
+{
+"No":"2",
+   "Benificiary name" : "Anchorprops 205 (Pty) Ltd",
+  "Property":"U-A000 ",
+  "Description": "ADMIN PROPERTY	COMMISSION (MOUILLE POINT COMMERCIAL, GROUND FLOOR, SHOP 103, TWO OCEANS BEACH, MOUILLE POINT)",
+    "Date":"2017-02-23",
+  "Ammount" : "21,025.80"
+},
+{
+"No":"3",
+    "Benificiary name" : "Anchorprops 205 (Pty) Ltd",
+  "Property":"SSS",
+  "Description": "37 UPPER TREE ROAD COMMISSION",
+    "Date":"2017-02-23",
+  "Ammount" : "2,539.74"
+},
+{
+"No":"4",
+  "Benificiary name" : "Anchorprops 205 (Pty) Ltd",
+  "Property":"U-A000 - ADMIN",
+  "Description": "PROPERTY	COMMISSION (RAYMOND GNESIN INVESTMENTS, 412-414 MANHATTAN PLACE, 4TH FLOOR, 130 BREE STREET, CAPE TOWN)",
+  "Date":"2017-02-23",
+  "Ammount" : "22,800.00"
+}
+];
+
+//Activebenificiaries
+var Activebenificiaries = [{
+  "no":	"	1	",
+  "Benificiary name" :	"	43 VICTORIA ROAD CAMPS BAY CC	",
+  "Agent" :		"BARBRA-ANN BRINER & VIVIEN ADLER	",
+  "Type":	"	Owner	",
+  "Property":	"	U-A182 - 36 AVE ST BARTHOLOMEW	",
+  "Percentage": 	"	100.00%	",
+  "Ammount" :	"	0.00%	",
+  "Notify":	"	<i class='far fa-envelope fa-fw'></i>	",
+  "Status":	"	Active	",
+},
+{
+  "no":	"	2	",
+  "Benificiary name" :	"	A HUGO	",
+  "Agent" :		"BARBRA-ANN BRINER & VIVIEN ADLER	",
+  "Type":	"	Owner	",
+  "Property":	"	U-A121 - 11 AVE DE L'HERMITE	",
+  "Percentage": 	"	100.00%	",
+  "Ammount" :	"	0.00%	",
+  "Notify":	"	<i class='far fa-envelope fa-fw'></i>	",
+  "Status":	"	Active	",
+},
+{
+  "no":	"	3	",
+  "Benificiary name" :	"	ABDIAH BOOLEY-COHEN	",
+  "Agent" :		"PASCALE PAPAS & JESSICA CRAMB	",
+  "Type":	"	Owner	",
+  "Property":	"	M-A213 - 64 AMBASSADOR	",
+  "Percentage": 	"	100.00%	",
+  "Ammount" :	"	0.00%	",
+  "Notify":	"	<i class='far fa-envelope fa-fw'></i>	",
+  "Status":	"	Active	",
+},
+{
+  "no":	"	4	",
+  "Benificiary name" :	"	ABDOLMISAGH ESHRAGHI	",
+  "Agent" :		"CHRISTINE IRELAND & TAMAR CHEERIN (50/50 SPLIT)	",
+  "Type":	"	Owner	",
+  "Property":	"	U-B509 - 19C BARBRA ROAD	",
+  "Percentage": 	"	100.00%	",
+  "Ammount" :	"	0.00%	",
+  "Notify":	"	<i class='far fa-envelope fa-fw'></i>	",
+  "Status":	"	Active	",
+},
+{
+  "no":	"	5	",
+  "Benificiary name" :	"	ABLAZE TRADING 106CC	",
+  "Agent" :		"ELZUNIA SINGER	",
+  "Type":	"	Owner	",
+  "Property":	"	U-R088 - 13 RUGLEY ROAD	",
+  "Percentage": 	"	100.00%	",
+  "Ammount" :	"	0.00%	",
+  "Notify":	"	<i class='far fa-envelope fa-fw'></i>	",
+  "Status":	"	Active	",
+},
+{
+  "no":	"	6	",
+  "Benificiary name" :	"	ABRAM SANK	",
+  "Agent" :		"BARBRA-ANN BRINER & VIVIEN ADLER	",
+  "Type":	"	Owner	",
+  "Property":	"	U-A187 - 2 AVENUE MARINA	",
+  "Percentage": 	"	100.00%	",
+  "Ammount" :	"	0.00%	",
+  "Notify":	"	<i class='far fa-envelope fa-fw'></i>	",
+  "Status":	"	Active	",
+},
+{
+  "no":	"	7	",
+  "Benificiary name" :	"	ADAM DELANEY	",
+  "Agent" :		"BARBRA-ANN BRINER & VIVIEN ADLER	",
+  "Type":	"	Owner	",
+  "Property":	"	M-L059 - 6B LU RUTH	",
+  "Percentage": 	"	100.00%	",
+  "Ammount" :	"	0.00%	",
+  "Notify":	"	<i class='far fa-envelope fa-fw'></i>	",
+  "Status":	"	Active	",
+}
+];
+
+//DisabledBeneficiaries
+var DisabledBeneficiaries = [{
+  "No":"",
+  "Benificiary Name":"",
+  "Type":"",
+  "Property":"",
+  "Percentage":"",
+  "Ammount":"",
+  "Notify":"",
+  "Status":""
+}];
+
+
+//====================================================
+//CommissionPayments
+var CommissionPayments =[{
+"	Date	":"	2019-04-01	",
+"	Amount	":"	545,681.48	",
+"	Settled	":"	545,681.48	",
+"	Balance	":"	0	",
+"	view	":"	<i class='fa fa-search-plus'></i>	",
+},
+{
+"	Date	":"	2019-03-01	",
+"	Amount	":"	140,953.89	",
+"	Settled	":"	140,953.89	",
+"	Balance	":"	0	",
+"	view	":"	<i class='fa fa-search-plus'></i>	",
+
+},	{
+"	Date	":"	2019-02-01	",
+"	Amount	":"	36,396.27	",
+"	Settled	":"	36,396.27	",
+"	Balance	":"	0	",
+"	view	":"	<i class='fa fa-search-plus'></i>	",
+
+},
+{
+"	Date	":"	2019-01-01	",
+"	Amount	":"	31,790.79	",
+"	Settled	":"	31,790.79	",
+"	Balance	":"	0	",
+"	view	":"	<i class='fa fa-search-plus'></i>	",
+
+}
+			];
+
+
+
+var AgentCommisionReport = [{
+"	Responsible agent	":"	BARBRA-ANN BRINER & VIVIEN ADLER	",
+"	Gross commission	":"	301,556.17	",
+"	Other income	":"	0	",
+"	Transaction fees	":"	378.23	",
+"	Service fees	":"	5,385.67	",
+"	Nett commission	":"	295,792.27	",
+},
+{
+"	Responsible agent	":"	CELESTE DAVIDSON	",
+"	Gross commission	":"	40,812.19	",
+"	Other income	":"	0	",
+"	Transaction fees	":"	96.3	",
+"	Service fees	":"	1,470.71	",
+"	Nett commission	":"	39,245.18	",
+},
+{
+"	Responsible agent	":"	CHRISTINE IRELAND	",
+"	Gross commission	":"	80,703.49	",
+"	Other income	":"	0	",
+"	Transaction fees	":"	187.3	",
+"	Service fees	":"	1,470.95	",
+"	Nett commission	":"	79,045.24	",
+},
+{
+"	Responsible agent	":"	CRAIG WATCHURST	",
+"	Gross commission	":"	67,024.08	",
+"	Other income	":"	1700	",
+"	Transaction fees	":"	238.85	",
+"	Service fees	":"	1,585.78	",
+"	Nett commission	":"	66,899.45	",
+},
+{
+"	Responsible agent	":"	ELZUNIA SINGER 	",
+"	Gross commission	":"	36,683.32	",
+"	Other income	":"	0	",
+"	Transaction fees	":"	215.5	",
+"	Service fees	":"	1,422.85	",
+"	Nett commission	":"	35,044.97	",
+}	];
+
+var DirectDeposits = [{
+"Date":"",
+"Description":"",
+"Ammount":"",
+"Reconciled":"",
+"Reconciled to":"",
+"ID":"",
+"":"",
+}];
+
+var UnreconciledDirectDeposits =[{
+"	Date	":"	2019-03-13	",
+"	Description	":"	ACB CREDIT INVESTECPB201 La Montange SETTLEMENT 	",
+"	Amount	":"	22,250.00	",
+"	Reference	":"	<input id='' name='First_Name' placeholder='ID' >	",
+"	Recon	":"	<input id='sms_notifications' name='sms_notifications' type='checkbox'>	",
+"	Balance	":"	0.00	",
+"	ID	":"	10305724	",
+"	Action	":"	<select id='BusinessOrIndividual' name='BusinessOrIndividual'><option value='Business'>None</option><option value='Individual'>Split</option><option value='Business'>Add Note</option></select>	",
+},
+{
+"	Date	":"	2019-03-22	",
+"	Description	":"	IBANK PAYMENT FROM ABSA BANK I817532F45B6 DERIV OPS 	",
+"	Amount	":"	271,140.00	",
+"	Reference	":"	<input id='' name='First_Name' placeholder='ID' >	",
+"	Recon	":"	<input id='sms_notifications' name='sms_notifications' type='checkbox'>	",
+"	Balance	":"	0.00	",
+"	ID	":"	10320897	",
+"	Action	":"	<select id='BusinessOrIndividual' name='BusinessOrIndividual'><option value='Business'>None</option><option value='Individual'>Split</option><option value='Business'>Add Note</option></select>	",
+},
+{
+"	Date	":"	2019-03-27	",
+"	Description	":"	ACB CREDIT 504 Bantry Hills Ilford Street SETTLEMENT 	",
+"	Amount	":"	40,000.00	",
+"	Reference	":"	<input id='' name='First_Name' placeholder='ID' >	",
+"	Recon	":"	<input id='sms_notifications' name='sms_notifications' type='checkbox'>	",
+"	Balance	":"	0.00	",
+"	ID	":"	10345351	",
+"	Action	":"	<select id='BusinessOrIndividual' name='BusinessOrIndividual'><option value='Business'>None</option><option value='Individual'>Split</option><option value='Business'>Add Note</option></select>	",
+},
+	{
+"	Date	":"	2019-03-28	",
+"	Description	":"	ACB CREDIT INVESTECPB201 La Montange SETTLEMENT 	",
+"	Amount	":"	20,750.00	",
+"	Reference	":"	<input id='' name='First_Name' placeholder='ID' >	",
+"	Recon	":"	<input id='sms_notifications' name='sms_notifications' type='checkbox'>	",
+"	Balance	":"	0.00	",
+"	ID	":"	10354869	",
+"	Action	":"	<select id='BusinessOrIndividual' name='BusinessOrIndividual'><option value='Business'>None</option><option value='Individual'>Split</option><option value='Business'>Add Note</option></select>	",
+},
+{
+"	Date	":"	2019-04-01	",
+"	Description	":"	ACB CREDIT C286 A Schiegl SETTLEMENT 	",
+"	Amount	":"	4,449.20	",
+"	Reference	":"	<input id='' name='First_Name' placeholder='ID' >	",
+"	Recon	":"	<input id='sms_notifications' name='sms_notifications' type='checkbox'>	",
+"	Balance	":"	0.00	",
+"	ID	":"	10392313	",
+"	Action	":"	<select id='BusinessOrIndividual' name='BusinessOrIndividual'><option value='Business'>None</option><option value='Individual'>Split</option><option value='Business'>Add Note</option></select>	",
+}	];
+
+var PendingDirectDeposits =[{
+"Date":"",
+"Description":"",
+"Ammount":"",
+"Allocated":"",
+"Split":"",
+"Unconfirmed":"",
+"ID":"",
+"Availible":"",
+"":""
+
+
+}];
+
+var PaymentsToApprove =[{
+"Property":"",
+"Recon Date":"",
+"Tenant":"",
+"Benificiary":"",
+"Ammount":"",
+"TR Fee":"",
+"S Fee":"",
+"Status":"",
+"Action":""
+
+
+
+}];
+
+
+var ContactDetails = [{
+"Name":"",
+"Type":"",
+"Email address":"",
+"Mobile":""
+
+}];
+
+var Reminders = [{
+  "No":"",
+  "Due Date":"",
+  "Property":"",
+  "Tenant":"",
+  "Beneficiary":"",
+  "Reminders":"",
+  "User":"",
+}];
+
+//Reports
+exports.CommissionPayments = CommissionPayments;
+exports.AgentCommisionReport = AgentCommisionReport;
+exports.DirectDeposits=DirectDeposits;
+exports.UnreconciledDirectDeposits =UnreconciledDirectDeposits;
+exports.PendingDirectDeposits=PendingDirectDeposits;
+exports.PaymentsToApprove = PaymentsToApprove;
+exports.ContactDetails=ContactDetails;
+exports.Reminders=Reminders;
+
+//Tenants
+exports.viewAllTenants = viewAllTenants;
+exports.CreditChecks=CreditChecks;
+exports.DamageDeposits=DamageDeposits;
+exports.DamageDepositMovement=DamageDepositMovement;
+exports.ActiveTenants=ActiveTenants;
+exports.BlockedAccounts=BlockedAccounts;
+exports.TenantMovement = TenantMovement;
+exports.DebitOrders = DebitOrders;
+exports.RejectedDebitOrders= RejectedDebitOrders;
+exports.TenantStatements = TenantStatements;
+
+
+
+
+//benificiaries
+exports.viewAllBenificiaries = viewAllBenificiaries;
+exports.benificiariesWithABalance = benificiariesWithABalance;
+exports.Activebenificiaries =Activebenificiaries;
+exports.DisabledBeneficiaries=DisabledBeneficiaries;
+
+
+
+exports.arrearsAnalysis = arrearsAnalysis;
+exports.sampleTable = jsonInfo;
+exports.allproporties = allproporties ;
+exports.activeProporties = activeProporties ;
+exports.disabledProporties = disabledProporties ;

@@ -1,0 +1,1449 @@
+var jsonInfo =     {
+    sizeFromTop: "44px",
+    formName: "A basic Application Form",
+    formId : "doGood",
+    postAction:"http://localhost/05_API_tests/post.php",
+    formElements : [{
+        type : "textBox",
+        labelName : "Surname",
+        dataName : "Surname",
+        id :"theIDName",
+        placeholder:"your surname"
+
+
+    },
+    {
+        type : "checkBox",
+
+        dataName : "colgroup",
+        labelName : "Checkbox Initialize this repository with a README for 3",
+        id :"__Checkbox_Initialize_this_repository_with_a_README",
+
+
+
+    },
+    {
+    type : "legend",
+    labelName : "Address Details"
+    },
+    {
+        type : "dropBox",
+        dataName : "furname",
+        labelName : "Has a Value String",
+        id :"__Select_Git_ignore",
+        option:["none","something","something_else","something_fun"]
+
+
+    },
+    {
+        type : "fileSelect",
+        dataName : "filename",
+        labelName : "Checkbox Initialize this repository with a README",
+        id :"file2fileupload",
+
+
+
+    }
+]
+
+
+};
+
+// LEASE ====================================
+var createNewLease =     {
+    sizeFromTop: "44px",
+    formName: "Create New Lease",
+    formId : "newaLease",
+    postAction:"http://localhost/05_API_tests/post.php",
+    formElements : [{
+        type : "textBox",
+        labelName : "contract inception",
+        dataName : "contract_inception",
+        id :"contract_inception",
+        placeholder:""
+
+
+    },                {
+                          type : "legend",
+                          labelName : "Lease Details"
+                      },
+    {
+        type : "textBox",
+        labelName : "contract expiration",
+        dataName : "contract_expiration",
+        id :"contract_expiration",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "deposit ammount",
+        dataName : "deposit_ammount",
+        id :"deposit_ammount",
+        placeholder:"R"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "rental term",
+        dataName : "rental_term",
+        id :"rental_term",
+        placeholder:"12"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "rental frequency",
+        dataName : "rental_frequency",
+        id :"rental_frequency",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "rental ammount",
+        dataName : "rental_ammount",
+        id :"rental_ammount",
+        placeholder:"R"
+
+
+    },
+    {
+                     type : "legend",
+                     labelName : "Collection Details Monthly"
+                 },
+    {
+        type : "textBox",
+        labelName : "monthly payment due by",
+        dataName : "monthly_payment_due_by",
+        id :"monthly_payment_due_by",
+        placeholder:"12"
+
+
+    },
+    {
+                     type : "legend",
+                     labelName : "Collection Details Weekly"
+                 },
+
+    {
+        type : "textBox",
+        labelName : "week1_payment_by",
+        dataName : "week1_payment_by",
+        id :"week1_payment_by",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "week2_payment_by",
+        dataName : "week2_payment_by",
+        id :"week2_payment_by",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "week3_payment_by",
+        dataName : "week3_payment_by",
+        id :"week3_payment_by",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "week4_payment_by",
+        dataName : "week4_payment_by",
+        id :"week4_payment_by",
+        placeholder:""
+
+
+    },
+    {
+                     type : "legend",
+                     labelName : "Notes"
+                 },
+    {
+        type : "textArea",
+        labelName : "notes",
+        dataName : "notes",
+        id :"notes",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "isActive",
+        dataName : "isActive",
+        id :"isActive",
+        placeholder:""
+
+
+    }
+
+]
+
+
+};
+
+
+
+// AGENTS ======================================
+var createNewAgent =     {
+    sizeFromTop: "44px",
+    formName: "Create New Agent",
+    formId : "newagent",
+    postAction:"http://localhost/05_API_tests/post.php",
+    formElements : [{
+        type : "textBox",
+        labelName : "First Name",
+        dataName : "firstname",
+        id :"firstname",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Surname",
+        dataName : "lastname",
+        id :"lastname",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Mobile number",
+        dataName : "cell",
+        id :"cell",
+        placeholder:"000-000-0000"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Land Line",
+        dataName : "telephonenumber",
+        id :"telephonenumber",
+        placeholder:"(000) 000-0000"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Agent Code",
+        dataName : "agentcode",
+        id :"agentcode",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Passport/ID number",
+        dataName : "idnumber",
+        id :"idnumber",
+        placeholder:""
+
+
+    },
+
+]
+
+
+};
+
+// ADMIN ======================================
+
+
+
+var createNewAdmin =     {
+    sizeFromTop: "44px",
+    formName: "Create New Admin User",
+    formId : "newagent",
+    postAction:"http://localhost/05_API_tests/post.php",
+    formElements : [{
+        type : "textBox",
+        labelName : "First Name",
+        dataName : "firstname",
+        id :"firstname",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Surname",
+        dataName : "lastname",
+        id :"lastname",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "e-mail",
+        dataName : "email",
+        id :"email",
+        placeholder:""
+
+
+    },
+    {
+        type : "checkBox",
+        labelName : "enable e-mail Notifications",
+        dataName : "enableemail",
+        id :"enableemail",
+        placeholder:""
+
+
+    },
+
+    {
+        type : "textBox",
+        labelName : "Mobile number",
+        dataName : "mobilenumber",
+        id :"mobilenumber",
+        placeholder:"000-000-0000"
+
+
+    },
+    {
+        type : "checkBox",
+        labelName : "enable SMS Notifications",
+        dataName : "enablesms",
+        id :"enablesms",
+        placeholder:""
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Password",
+        dataName : "password",
+        id :"password",
+        placeholder:""
+
+
+    },
+    {
+    type : "legend",
+    labelName : "Permissions"
+    },
+    {
+        type : "checkBox",
+        labelName : "Select all",
+        dataName : "permpropupdate",
+        id :"permpropupdate",
+        placeholder:""
+
+
+    },
+        {
+        type : "legend",
+        labelName : "Properties"
+        },
+
+        {
+            type : "checkBox",
+            labelName : "Create or update a property",
+            dataName : "permpropupdate",
+            id :"permpropupdate",
+            placeholder:""
+
+
+        },
+        {
+            type : "checkBox",
+            labelName : "Archive or restore a property",
+            dataName : "permproprestore",
+            id :"permproprestore",
+            placeholder:""
+
+
+        },
+        {
+            type : "checkBox",
+            labelName : "Access all properties",
+            dataName : "permpropaccesallprop",
+            id :"permpropaccesallprop",
+            placeholder:""
+
+
+        },
+        {
+            type : "checkBox",
+            labelName : "Access budgets",
+            dataName : "permpropaccesbudget",
+            id :"permpropaccesbudget",
+            placeholder:""
+
+
+        },
+
+
+
+        {
+        type : "legend",
+        labelName : "Beneficiaries"
+        },
+
+        {
+            type : "checkBox",
+            labelName : "Create a beneficiary",
+            dataName : "permbencreate",
+            id :"permbencreate",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Update a beneficiary (excluding bank details)",
+            dataName : "permbenubdate",
+            id :"permbenubdate",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Update a beneficiary's bank details",
+            dataName : "permbenupdatebank",
+            id :"permbenupdatebank",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Archive or restore a beneficiary",
+            dataName : "permbenrestore",
+            id :"permbenrestore",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Create or update beneficiary payments",
+            dataName : "permbencreatpayments",
+            id :"permbencreatpayments",
+            placeholder:""
+        },
+        {
+        type : "legend",
+        labelName : "Tenants"
+        },
+        {
+            type : "checkBox",
+            labelName : "Create or update a tenant",
+            dataName : "permtencreate",
+            id :"permtencreate",
+            placeholder:""
+        },
+
+        {
+            type : "checkBox",
+            labelName : "Archive or restore a tenant",
+            dataName : "permtenarchiveorrestore",
+            id :"permtenarchiveorrestore",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Change a tenant's bank details",
+            dataName : "permtenbankdetails",
+            id :"permtenbankdetails",
+            placeholder:""
+        },
+
+        {
+            type : "checkBox",
+            labelName : "Create or update tenant invoices",
+            dataName : "permteninvoices",
+            id :"permteninvoices",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Create credit/debit notes",
+            dataName : "permtendebitorcreditnotes",
+            id :"permtendebitorcreditnotes",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Request damage deposit release",
+            dataName : "permtendamagedep",
+            id :"permtendamagedep",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Approve damage deposit release",
+            dataName : "permtenapprovedamagedeprelease",
+            id :"permtenapprovedamagedeprelease",
+            placeholder:""
+        },
+
+        {
+            type : "checkBox",
+            labelName : "View Tenant TPN Report",
+            dataName : "permtentenantcredtreport",
+            id :"permtentenantcredtreport",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Send payment reminders",
+            dataName : "permtensendpaymentreminder",
+            id :"permtensendpaymentreminder",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Do credit checks",
+            dataName : "permtencreditcheck",
+            id :"permtencreditcheck",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Send letters of demand",
+            dataName : "permtenlettersofdemand",
+            id :"permtenlettersofdemand",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "View tenants in arrears",
+            dataName : "permtenviewtenantarrears",
+            id :"permtenviewtenantarrears",
+            placeholder:""
+        },
+        {
+        type : "legend",
+        labelName : "Reports"
+        },
+        {
+            type : "checkBox",
+            labelName : "View commission reports",
+            dataName : "permrepviewcomm",
+            id :"permrepviewcomm",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "View transaction history reports",
+            dataName : "permrepviewtransactionhist",
+            id :"permrepviewtransactionhist",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "View payment confirmations",
+            dataName : "permrepviewpaymentconfirmation",
+            id :"permrepviewpaymentconfirmation",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "View audit log",
+            dataName : "permrepviewauditlog",
+            id :"permrepviewauditlog",
+            placeholder:""
+        },
+
+
+
+
+        {
+        type : "legend",
+        labelName : "Bank statement & payments"
+        },
+        {
+            type : "checkBox",
+            labelName : "Reject beneficiary payments",
+            dataName : "permbankrejectbenpayments",
+            id :"permbankrejectbenpayments",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "View direct deposits",
+            dataName : "permbankviewdirectdeposits",
+            id :"permbankviewdirectdeposits",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Reconcile direct deposits",
+            dataName : "permbankrecondirectdeposits",
+            id :"permbankrecondirectdeposits",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "View tenants in arrears",
+            dataName : "permbankapprovebenpayments",
+            id :"permbankapprovebenpayments",
+            placeholder:""
+        },
+
+
+        {
+        type : "legend",
+        labelName : "System settings"
+        },
+        {
+            type : "checkBox",
+            labelName : "Create or update users",
+            dataName : "permsyscreateusers",
+            id :"permsyscreateusers",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Update profile settings",
+            dataName : "permsysupdatesettings",
+            id :"permsysupdatesettings",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Import data",
+            dataName : "permsysimportdata",
+            id :"permsysimportdata",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Export Data",
+            dataName : "permsysexportdata",
+            id :"permsysexportdata",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Update TPN Settings",
+            dataName : "permsysupdatetpn",
+            id :"permsysupdatetpn",
+            placeholder:""
+        },
+        {
+            type : "checkBox",
+            labelName : "Upload Documents",
+            dataName : "permsysuploaddocuments",
+            id :"permsysuploaddocuments",
+            placeholder:""
+        },
+
+
+
+
+
+
+
+
+]
+
+
+};
+
+// PROPORTIES ============================================
+
+var creatNewProporty =     {
+    sizeFromTop: "144px",
+    formName: "Create property",
+    formId : "Create_property",
+    postAction:"http://localhost/05_API_tests/post.php",
+    formElements : [{
+
+
+        type : "textBox",
+        labelName : "Property name ",
+        dataName : "propertyname",
+        id :"propertyname",
+        placeholder:" "
+
+
+    },
+    {
+          type : "legend",
+          labelName : "agent Details"
+      },{
+
+
+        type : "textBox",
+        labelName : "Agent",
+        dataName : "Agent",
+        id :"Agent",
+        placeholder:" "
+
+
+    },
+    {
+
+
+    type : "dropBox",
+    dataName : "User",
+    labelName : "Admin User",
+    id :"User",
+    option:["none","51: Sharon Kayster","59: Janine  Adkins","58: Samantha Murphy","57: Catherine  Martin ","55: Natalie Muller","53: Pascale Papas","52: Jessica  Cramb"]
+
+
+    },
+      {
+            type : "legend",
+            labelName : "Payment Details"
+        },
+        {
+
+
+        type : "dropBox",
+        dataName : "Managed",
+        labelName : "Managed / Unmanaged",
+        id :"managed",
+        option:["Managed","Unmanaged"]
+
+
+        },
+
+    {
+        type : "checkBox",
+        dataName : "Allow Payments",
+        labelName : "Allow Payments",
+        id :"Allow_Payments",
+
+    },{
+
+
+        type : "textBox",
+        labelName : "Monthly payment *",
+        dataName : "Monthly_payment",
+        id :"Monthly payment",
+        placeholder:"R"
+
+
+    },{
+
+
+        type : "textBox",
+        labelName : "Minimum balance",
+        dataName : "Minimum_balance",
+        id :"Minimum_balance",
+        placeholder:"R"
+
+
+    },    {
+            type : "checkBox",
+
+            dataName : "Allow Payments",
+            labelName : "Send all incoming payments to property account Keep this minimum balance in the property account",
+            id :"Allow_Payments",
+
+
+
+        },
+        {
+              type : "legend",
+              labelName : "Listing Details"
+          },
+        {
+
+
+            type : "textBox",
+            labelName : "Listing from ",
+            dataName : "Listing_from",
+            id :"Listing_from",
+            placeholder:"YYYY-MM-DD"
+
+
+        },
+        {
+
+
+            type : "textBox",
+            labelName : "Listing to ",
+            dataName : "Listing_to",
+            id :"Listing_to",
+            placeholder:"YYYY-MM-DD"
+
+
+        },
+        {
+
+
+            type : "textArea",
+            labelName : "Notes",
+            dataName : "notes",
+            id :"notes",
+            placeholder:""
+
+
+        },
+        {
+              type : "legend",
+              labelName : "Address Details"
+          },
+        {
+
+
+            type : "textBox",
+            labelName : "Property address",
+            dataName : "complex",
+            id :"complex",
+            placeholder:" Subdivision / Block / Building Name"
+
+
+        },
+        {
+
+
+            type : "textBox",
+            labelName : "",
+            dataName : "street",
+            id :"street",
+            placeholder:"Street"
+
+
+        },
+        {
+
+
+            type : "textBox",
+            labelName : "",
+            dataName : "suburb",
+            id :"suburb",
+            placeholder:"Suburb"
+
+
+        },
+        {
+
+
+            type : "textBox",
+            labelName : "City",
+            dataName : "city",
+            id :"city",
+            placeholder:""
+
+
+        },
+        {
+
+
+            type : "textBox",
+            labelName : "Province",
+            dataName : "province",
+            id :"province",
+            placeholder:""
+
+
+        },
+        {
+
+
+            type : "textBox",
+            labelName : "Postal code",
+            dataName : "postalcode",
+            id :"postalcode",
+            placeholder:""
+
+
+        },
+
+
+    {
+        type : "dropBox",
+        dataName : "Country",
+        labelName : "Country",
+        id :"Country",
+        option:["United States of America"," Afghanistan"," Albania"," Algeria"," Andorra"," Angola"," Antigua & Deps"," Argentina"," Armenia"," Australia"," Austria"," Azerbaijan"," Bahamas"," Bahrain"," Bangladesh"," Barbados"," Belarus"," Belgium"," Belize"," Benin"," Bhutan"," Bolivia"," Bosnia Herzegovina"," Botswana"," Brazil"," Brunei"," Bulgaria"," Burkina"," Burma"," Burundi"," Cambodia"," Cameroon"," Canada"," Cape Verde"," Central African Rep"," Chad"," Chile"," People's Republic of China"," Republic of China"," Colombia"," Comoros"," Democratic Republic of the Congo"," Republic of the Congo"," Costa Rica",""," Croatia"," Cuba"," Cyprus"," Czech Republic"," Danzig"," Denmark"," Djibouti"," Dominica"," Dominican Republic"," East Timor"," Ecuador"," Egypt"," El Salvador"," Equatorial Guinea"," Eritrea"," Estonia"," Ethiopia"," Fiji"," Finland"," France"," Gabon"," Gaza Strip"," The Gambia"," Georgia"," Germany"," Ghana"," Greece"," Grenada"," Guatemala"," Guinea"," Guinea-Bissau"," Guyana"," Haiti"," Holy Roman Empire"," Honduras"," Hungary"," Iceland"," India"," Indonesia"," Iran"," Iraq"," Republic of Ireland"," Israel"," Italy"," Ivory Coast"," Jamaica"," Japan"," Jonathanland"," Jordan"," Kazakhstan"," Kenya"," Kiribati"," North Korea"," South Korea"," Kosovo"," Kuwait"," Kyrgyzstan"," Laos"," Latvia"," Lebanon"," Lesotho"," Liberia"," Libya"," Liechtenstein"," Lithuania"," Luxembourg"," Macedonia"," Madagascar"," Malawi"," Malaysia"," Maldives"," Mali"," Malta"," Marshall Islands"," Mauritania"," Mauritius"," Mexico"," Micronesia"," Moldova"," Monaco"," Mongolia"," Montenegro"," Morocco"," Mount Athos"," Mozambique"," Namibia"," Nauru"," Nepal"," Newfoundland"," Netherlands"," New Zealand"," Nicaragua"," Niger"," Nigeria"," Norway"," Oman"," Ottoman Empire"," Pakistan"," Palau"," Panama"," Papua New Guinea"," Paraguay"," Peru"," Philippines"," Poland"," Portugal"," Prussia"," Qatar"," Romania"," Rome"," Russian Federation"," Rwanda"," St Kitts & Nevis"," St Lucia"," Saint Vincent & the"," Grenadines"," Samoa"," San Marino"," Sao Tome & Principe"," Saudi Arabia"," Senegal"," Serbia"," Seychelles"," Sierra Leone"," Singapore"," Slovakia"," Slovenia"," Solomon Islands"," Somalia"," South Africa"," Spain"," Sri Lanka"," Sudan"," Suriname"," Swaziland"," Sweden"," Switzerland"," Syria"," Tajikistan"," Tanzania"," Thailand"," Togo"," Tonga"," Trinidad & Tobago"," Tunisia"," Turkey"," Turkmenistan"," Tuvalu"," Uganda"," Ukraine"," United Arab Emirates"," United Kingdom"," Uruguay"," Uzbekistan"," Vanuatu"," Vatican City"," Venezuela"," Vietnam"," Yemen"," Zambia"," Zimbabwe"]
+
+
+    }
+]
+
+
+};
+
+//== Create beneficiary ===============================================
+
+var CreateBeneficiary =     {
+    sizeFromTop: "44px",
+    formName: "A basic Application Form",
+    formId : "CreateBeneficiary",
+    postAction:"http://localhost/05_API_tests/post.php",
+    formElements : [      {
+            type : "dropBox",
+            dataName : "businessorindividual",
+            labelName : "Business/Individual",
+            id :"businessorindividual",
+            option:["Individual","Business"]
+
+
+        },
+          {
+          type : "legend",
+          labelName : "Individual"
+      },
+      {
+        type : "textBox",
+        labelName : "First Name",
+        dataName : "firstname",
+        id :"firstname",
+        placeholder:"First Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Last_Name",
+        dataName : "lastname",
+        id :"lastname",
+        placeholder:"Last Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "ID  /  Passport No",
+        dataName : "idnumber",
+        id :"idnumber",
+        placeholder:"ID  /  Passport No"
+
+
+    },
+    {
+          type : "legend",
+          labelName : "Business"
+      },
+
+
+      {
+          type : "textBox",
+          labelName : "Business name *",
+          dataName : "businessname",
+          id :"businessname",
+          placeholder:"Business name *"
+
+
+      },{
+        type : "textBox",
+        labelName : "First Name",
+        dataName : "busfirstname",
+        id :"busfirstname",
+        placeholder:"First Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Last_Name",
+        dataName : "buslastname",
+        id :"buslastname",
+        placeholder:"Last Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Registration no. *",
+        dataName : "registrationno",
+        id :"registrationno",
+        placeholder:"Registration_no"
+
+
+    },
+    {
+          type : "legend",
+          labelName : "VAT"
+      },
+      {
+          type : "textBox",
+          labelName : "VAT Number",
+          dataName : "vatno",
+          id :"vatno",
+          placeholder:"VAT Number"
+
+
+      },
+      {
+            type : "legend",
+            labelName : "Contact Details"
+        },
+        {
+            type : "textBox",
+            labelName : "Email address",
+            dataName : "email",
+            id :"email",
+            placeholder:"Email address"
+
+
+        },
+        {
+            type : "textBox",
+            labelName : "Mobile Number",
+            dataName : "mobilenumber",
+            id :"mobilenumber",
+            placeholder:"000-000-0000"
+
+
+        },    {
+                type : "checkBox",
+
+                dataName : "smsnotifications",
+                labelName : "Enable SMS notifications",
+                id :"smsnotifications",
+
+
+
+            },
+        {
+            type : "textBox",
+            labelName : "Phone Number",
+            dataName : "phonenumber",
+            id :"phonenumber",
+            placeholder:"(000) 000-0000 "
+
+
+        },
+        {
+            type : "textBox",
+            labelName : "Fax Number",
+            dataName : "faxnumber",
+            id :"faxnumber",
+            placeholder:"(000) 000-0000"
+
+
+        },
+        {
+            type : "textArea",
+            labelName : "Notes",
+            dataName : "notes",
+            id :"notes",
+            placeholder:""
+
+
+        },
+
+        //--------------------------
+        {
+              type : "legend",
+              labelName : "Banking Details"
+          },
+          //--------------------------
+          {
+              type : "textBox",
+              labelName : "Account name",
+              dataName : "accountname",
+              id :"accountname",
+              placeholder:"ABC Retailers"
+
+
+          },
+          {
+              type : "textBox",
+              labelName : "Bank",
+              dataName : "bank",
+              id :"bank",
+              placeholder:"FNB / ABSA / StandardBank / Capiteck"
+
+
+          },
+          {
+              type : "textBox",
+              labelName : "Branch name",
+              dataName : "branchname",
+              id :"branchname",
+              placeholder:"Branch name"
+
+
+          },
+          {
+              type : "textBox",
+              labelName : "Branch code",
+              dataName : "branchcode",
+              id :"branchcode",
+              placeholder:"0000"
+
+
+          },
+          {
+              type : "textBox",
+              labelName : "Account No",
+              dataName : "accountno",
+              id :"accountno",
+              placeholder:"0000000000"
+
+
+          },
+          {
+              type : "dropBox",
+              labelName : "Account type",
+              dataName : "accounttype",
+              id :"accounttype",
+              placeholder:"",
+              option:["Current","Savings","Credit Card"]
+
+
+          },
+
+          // Account name	FOSCHINI RETAIL GROUP PTY LTD
+         // Bank	FNB
+         // Branch name
+         // Branch code	204109
+         // Account No	62015513262
+         // Account type	Current
+         // Account verification	 Not yet verified (Verify account)
+
+          //======================
+
+
+
+          {
+                type : "legend",
+                labelName : "Address Details"
+            },
+          {
+
+
+              type : "textBox",
+              labelName : "Property address",
+              dataName : "complex",
+              id :"complex",
+              placeholder:" Subdivision / Block / Building Name"
+
+
+          },
+          {
+
+
+              type : "textBox",
+              labelName : "",
+              dataName : "street",
+              id :"street",
+              placeholder:"Street"
+
+
+          },
+          {
+
+
+              type : "textBox",
+              labelName : "",
+              dataName : "suburb",
+              id :"suburb",
+              placeholder:"Suburb"
+
+
+          },
+          {
+
+
+              type : "textBox",
+              labelName : "City",
+              dataName : "city",
+              id :"city",
+              placeholder:""
+
+
+          },
+          {
+
+
+              type : "textBox",
+              labelName : "Province",
+              dataName : "province",
+              id :"province",
+              placeholder:""
+
+
+          },
+          {
+
+
+              type : "textBox",
+              labelName : "Postal code",
+              dataName : "postalcode",
+              id :"postalcode",
+              placeholder:""
+
+
+          },
+
+
+      {
+          type : "dropBox",
+          dataName : "country",
+          labelName : "Country",
+          id :"country",
+          option:["United States of America"," Afghanistan"," Albania"," Algeria"," Andorra"," Angola"," Antigua & Deps"," Argentina"," Armenia"," Australia"," Austria"," Azerbaijan"," Bahamas"," Bahrain"," Bangladesh"," Barbados"," Belarus"," Belgium"," Belize"," Benin"," Bhutan"," Bolivia"," Bosnia Herzegovina"," Botswana"," Brazil"," Brunei"," Bulgaria"," Burkina"," Burma"," Burundi"," Cambodia"," Cameroon"," Canada"," Cape Verde"," Central African Rep"," Chad"," Chile"," People's Republic of China"," Republic of China"," Colombia"," Comoros"," Democratic Republic of the Congo"," Republic of the Congo"," Costa Rica",""," Croatia"," Cuba"," Cyprus"," Czech Republic"," Danzig"," Denmark"," Djibouti"," Dominica"," Dominican Republic"," East Timor"," Ecuador"," Egypt"," El Salvador"," Equatorial Guinea"," Eritrea"," Estonia"," Ethiopia"," Fiji"," Finland"," France"," Gabon"," Gaza Strip"," The Gambia"," Georgia"," Germany"," Ghana"," Greece"," Grenada"," Guatemala"," Guinea"," Guinea-Bissau"," Guyana"," Haiti"," Holy Roman Empire"," Honduras"," Hungary"," Iceland"," India"," Indonesia"," Iran"," Iraq"," Republic of Ireland"," Israel"," Italy"," Ivory Coast"," Jamaica"," Japan"," Jonathanland"," Jordan"," Kazakhstan"," Kenya"," Kiribati"," North Korea"," South Korea"," Kosovo"," Kuwait"," Kyrgyzstan"," Laos"," Latvia"," Lebanon"," Lesotho"," Liberia"," Libya"," Liechtenstein"," Lithuania"," Luxembourg"," Macedonia"," Madagascar"," Malawi"," Malaysia"," Maldives"," Mali"," Malta"," Marshall Islands"," Mauritania"," Mauritius"," Mexico"," Micronesia"," Moldova"," Monaco"," Mongolia"," Montenegro"," Morocco"," Mount Athos"," Mozambique"," Namibia"," Nauru"," Nepal"," Newfoundland"," Netherlands"," New Zealand"," Nicaragua"," Niger"," Nigeria"," Norway"," Oman"," Ottoman Empire"," Pakistan"," Palau"," Panama"," Papua New Guinea"," Paraguay"," Peru"," Philippines"," Poland"," Portugal"," Prussia"," Qatar"," Romania"," Rome"," Russian Federation"," Rwanda"," St Kitts & Nevis"," St Lucia"," Saint Vincent & the"," Grenadines"," Samoa"," San Marino"," Sao Tome & Principe"," Saudi Arabia"," Senegal"," Serbia"," Seychelles"," Sierra Leone"," Singapore"," Slovakia"," Slovenia"," Solomon Islands"," Somalia"," South Africa"," Spain"," Sri Lanka"," Sudan"," Suriname"," Swaziland"," Sweden"," Switzerland"," Syria"," Tajikistan"," Tanzania"," Thailand"," Togo"," Tonga"," Trinidad & Tobago"," Tunisia"," Turkey"," Turkmenistan"," Tuvalu"," Uganda"," Ukraine"," United Arab Emirates"," United Kingdom"," Uruguay"," Uzbekistan"," Vanuatu"," Vatican City"," Venezuela"," Vietnam"," Yemen"," Zambia"," Zimbabwe"]
+
+
+      }
+]
+
+
+};
+
+
+
+
+//== Create Tenant ===============================================
+
+var CreateTenant =     {
+    sizeFromTop: "44px",
+    formName: "CreateTenant",
+    formId : "CreateTenant",
+    postAction:"http://localhost/05_API_tests/post.php",
+    formElements : [      {
+            type : "dropBox",
+            dataName : "businessorindividual",
+            labelName : "Business/Individual",
+            id :"businessorindividual",
+            option:["Individual","Business"]
+
+
+        },
+          {
+          type : "legend",
+          labelName : "Individual"
+      },
+      {
+        type : "textBox",
+        labelName : "First Name",
+        dataName : "firstname",
+        id :"firstname",
+        placeholder:"First Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Last_Name",
+        dataName : "lastname",
+        id :"lastname",
+        placeholder:"Last Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "ID  /  Passport No",
+        dataName : "idnumber",
+        id :"idnumber",
+        placeholder:"ID  /  Passport No"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Date of birth",
+        dataName : "dateofbirth",
+        id :"dateofbirth",
+        placeholder:"YYYY-MM-DD"
+
+
+    },
+    {
+          type : "legend",
+          labelName : "Business"
+      },
+
+
+      {
+          type : "textBox",
+          labelName : "Business name *",
+          dataName : "businessname",
+          id :"businessname",
+          placeholder:"Business name *"
+
+
+      },{
+        type : "textBox",
+        labelName : "First Name",
+        dataName : "busfirstname",
+        id :"busfirstname",
+        placeholder:"First Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Last_Name",
+        dataName : "buslastname",
+        id :"buslastname",
+        placeholder:"Last Name"
+
+
+    },
+    {
+        type : "textBox",
+        labelName : "Registration no. *",
+        dataName : "registrationno",
+        id :"registrationno",
+        placeholder:"Registration_no"
+
+
+    },
+    {
+          type : "legend",
+          labelName : "VAT"
+      },
+      {
+          type : "textBox",
+          labelName : "VAT Number",
+          dataName : "vatno",
+          id :"vatno",
+          placeholder:"VAT Number"
+
+
+      },
+      {
+            type : "legend",
+            labelName : "Contact Details"
+        },
+        {
+            type : "textBox",
+            labelName : "Email address",
+            dataName : "email",
+            id :"email",
+            placeholder:"Email address"
+
+
+        },
+        {
+            type : "textBox",
+            labelName : "Mobile Number",
+            dataName : "mobilenumber",
+            id :"mobilenumber",
+            placeholder:"000-000-0000"
+
+
+        },    {
+                type : "checkBox",
+
+                dataName : "smsnotifications",
+                labelName : "Enable SMS notifications",
+                id :"smsnotifications",
+
+
+
+            },
+        {
+            type : "textBox",
+            labelName : "Phone Number",
+            dataName : "phonenumber",
+            id :"phonenumber",
+            placeholder:"(000) 000-0000 "
+
+
+        },
+        {
+            type : "textBox",
+            labelName : "Fax Number",
+            dataName : "faxnumber",
+            id :"faxnumber",
+            placeholder:"(000) 000-0000"
+
+
+        },
+        {
+            type : "textArea",
+            labelName : "Notes",
+            dataName : "notes",
+            id :"notes",
+            placeholder:""
+
+
+        },        //--------------------------
+                {
+                      type : "legend",
+                      labelName : "Banking Details"
+                  },
+                  //--------------------------
+                  {
+                      type : "textBox",
+                      labelName : "Account name",
+                      dataName : "accountname",
+                      id :"accountname",
+                      placeholder:"ABC Retailers"
+
+
+                  },
+                  {
+                      type : "textBox",
+                      labelName : "Bank",
+                      dataName : "bank",
+                      id :"bank",
+                      placeholder:"FNB / ABSA / StandardBank / Capiteck"
+
+
+                  },
+                  {
+                      type : "textBox",
+                      labelName : "Branch name",
+                      dataName : "branchname",
+                      id :"branchname",
+                      placeholder:"Branch name"
+
+
+                  },
+                  {
+                      type : "textBox",
+                      labelName : "Branch code",
+                      dataName : "branchcode",
+                      id :"branchcode",
+                      placeholder:"0000"
+
+
+                  },
+                  {
+                      type : "textBox",
+                      labelName : "Account No",
+                      dataName : "accountno",
+                      id :"accountno",
+                      placeholder:"0000000000"
+
+
+                  },
+                  {
+                      type : "dropBox",
+                      labelName : "Account type",
+                      dataName : "accounttype",
+                      id :"accounttype",
+                      placeholder:"",
+                      option:["Current","Savings","Credit Card"]
+
+
+                  }
+
+
+
+]
+
+
+};
+
+
+
+
+
+
+
+
+
+
+// exports ============================================================================
+
+exports.formSample = jsonInfo;
+exports.creatNewProporty = creatNewProporty;
+exports.CreateBeneficiary = CreateBeneficiary;
+exports.CreateTenant = CreateTenant;
+exports.createNewAgent= createNewAgent;
+exports.createNewAdmin =createNewAdmin;
+exports.createNewLease = createNewLease;
